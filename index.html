@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-83Z8WE8GE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-83Z8WE8GE6');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מדריך התפתחות התינוק שלך 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Noto+Sans+Hebrew:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== CSS VARIABLES ===== */
+  :root {
+    --bg: #07080f;
+    --bg2: #0d0f1a;
+    --bg3: #121525;
+    --pink: #ff6b9d;
+    --pink-light: #ffadc7;
+    --purple: #c084fc;
+    --purple-dark: #9333ea;
+    --teal: #2dd4bf;
+    --amber: #fbbf24;
+    --rose: #fb7185;
+    --text: #f0e8ff;
+    --text-muted: #9d8fc0;
+    --border: rgba(192, 132, 252, 0.15);
+    --glass: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glow-pink: rgba(255, 107, 157, 0.2);
+    --glow-purple: rgba(192, 132, 252, 0.2);
+    --glow-teal: rgba(45, 212, 191, 0.2);
+  }
+
+  /* ===== RESET ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; max-width: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans Hebrew', 'Heebo', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-height: 100vh;
+  }
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+  /* ===== BACKGROUND ===== */
+  .bg-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(192,132,252,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(192,132,252,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+    animation: orbFloat 12s ease-in-out infinite;
+  }
+  .orb-1 { width: 550px; height: 550px; background: radial-gradient(circle, #9333ea, transparent); top: -200px; right: -150px; animation-delay: 0s; }
+  .orb-2 { width: 450px; height: 450px; background: radial-gradient(circle, #ff6b9d, transparent); bottom: 20%; left: -100px; animation-delay: -4s; }
+  .orb-3 { width: 400px; height: 400px; background: radial-gradient(circle, #2dd4bf, transparent); top: 50%; right: 25%; animation-delay: -8s; }
+  .orb-4 { width: 350px; height: 350px; background: radial-gradient(circle, #fbbf24, transparent); bottom: 5%; right: 15%; animation-delay: -2s; opacity: 0.35; }
+
+  @keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -40px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(7, 8, 15, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(192, 132, 252, 0.15);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+    font-size: 1.55rem;
+    letter-spacing: -0.3px;
+    color: var(--text);
+    text-decoration: none;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .nav-logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,107,157,0.2), rgba(192,132,252,0.2));
+    border: 1px solid rgba(255,107,157,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  .nav-logo-text {
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .nav-links {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+  }
+  .nav-links a {
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+  .nav-links a:hover {
+    color: var(--text);
+    background: rgba(255, 107, 157, 0.08);
+  }
+  .nav-links a.active {
+    color: var(--pink);
+    background: rgba(255, 107, 157, 0.12);
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-muted);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  main {
+    position: relative;
+    z-index: 1;
+    padding-top: 64px;
+  }
+  section {
+    padding: 80px 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ===== HERO ===== */
+  .hero-logo {
+    width: 360px;
+    max-width: 85vw;
+    height: auto;
+    margin-bottom: 1.5rem;
+    animation: fadeDown 0.6s ease both;
+  }
+  .hero {
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 2rem;
+    max-width: 100%;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255,107,157,0.35);
+    background: rgba(255,107,157,0.1);
+    color: var(--pink);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    animation: fadeDown 0.6s ease both;
+  }
+  .hero-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 1.25rem;
+    animation: fadeDown 0.6s 0.1s ease both;
+  }
+  .hero-title .grad-pink {
+    background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 50%, var(--teal) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-muted);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    animation: fadeDown 0.6s 0.2s ease both;
+  }
+  .hero-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.875rem;
+    max-width: 980px;
+    width: 100%;
+    animation: fadeDown 0.6s 0.3s ease both;
+  }
+  .hero-card {
+    border-radius: 20px;
+    padding: 1.75rem 1.1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    cursor: pointer;
+    transition: transform 260ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 260ms ease, border-color 260ms ease;
+    text-align: center;
+    position: relative;
+    background: var(--card-bg, linear-gradient(160deg, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.05) 100%));
+    border: 1px solid var(--card-border, rgba(255,255,255,0.13));
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* shimmer line at top */
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 15%; right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  }
+  /* colored inner glow — appears on hover */
+  .hero-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: radial-gradient(ellipse at 50% -10%, var(--card-glow) 0%, transparent 68%);
+    opacity: 0;
+    transition: opacity 260ms ease;
+    pointer-events: none;
+  }
+  .hero-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.15);
+  }
+  .hero-card:hover::after { opacity: 1; }
+  .hero-card:active { transform: translateY(-2px); transition-duration: 80ms; }
+
+  .hero-card-icon {
+    width: 50px; height: 50px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--card-icon-bg, rgba(255,255,255,0.08));
+    border: 1px solid var(--card-icon-border, rgba(255,255,255,0.12));
+    color: var(--card-icon-color, rgba(255,255,255,0.75));
+    transition: color 260ms ease, background 260ms ease, border-color 260ms ease, transform 260ms cubic-bezier(0.34,1.56,0.64,1);
+    position: relative; z-index: 1;
+  }
+  .hero-card:hover .hero-card-icon {
+    background: var(--card-icon-bg, rgba(255,255,255,0.08));
+    filter: brightness(1.25);
+    color: #fff;
+    transform: scale(1.08);
+  }
+  .hero-card-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: rgba(240,232,255,0.65);
+    line-height: 1.4;
+    transition: color 260ms ease;
+    position: relative; z-index: 1;
+  }
+  .hero-card:hover .hero-card-label { color: rgba(240,232,255,0.93); }
+
+  /* זכוכית צבועה — כל כרטיסייה עם זהות צבעונית ברורה */
+  .card-tracker {
+    --card-glow: rgba(255,107,157,0.25);
+    --card-bg: linear-gradient(145deg, rgba(255,107,157,0.18) 0%, rgba(255,107,157,0.07) 60%, rgba(180,50,100,0.12) 100%);
+    --card-border: rgba(255,107,157,0.35);
+    --card-icon-bg: rgba(255,107,157,0.18);
+    --card-icon-border: rgba(255,107,157,0.30);
+    --card-icon-color: rgba(255,160,190,0.95);
+    box-shadow: 0 0 18px rgba(255,107,157,0.20), 0 0 40px rgba(255,107,157,0.08);
+  }
+  .card-growth {
+    --card-glow: rgba(45,212,191,0.22);
+    --card-bg: linear-gradient(145deg, rgba(45,212,191,0.15) 0%, rgba(45,212,191,0.06) 60%, rgba(10,140,130,0.11) 100%);
+    --card-border: rgba(45,212,191,0.30);
+    --card-icon-bg: rgba(45,212,191,0.16);
+    --card-icon-border: rgba(45,212,191,0.28);
+    --card-icon-color: rgba(100,240,220,0.95);
+    box-shadow: 0 0 18px rgba(45,212,191,0.16), 0 0 36px rgba(45,212,191,0.07);
+  }
+  .card-tastes {
+    --card-glow: rgba(251,191,36,0.20);
+    --card-bg: linear-gradient(145deg, rgba(251,191,36,0.15) 0%, rgba(251,191,36,0.05) 60%, rgba(180,130,10,0.10) 100%);
+    --card-border: rgba(251,191,36,0.28);
+    --card-icon-bg: rgba(251,191,36,0.15);
+    --card-icon-border: rgba(251,191,36,0.26);
+    --card-icon-color: rgba(255,215,100,0.95);
+    box-shadow: 0 0 16px rgba(251,191,36,0.16), 0 0 34px rgba(251,191,36,0.07);
+  }
+  .card-tips {
+    --card-glow: rgba(192,132,252,0.24);
+    --card-bg: linear-gradient(145deg, rgba(192,132,252,0.17) 0%, rgba(192,132,252,0.07) 60%, rgba(120,60,200,0.12) 100%);
+    --card-border: rgba(192,132,252,0.33);
+    --card-icon-bg: rgba(192,132,252,0.17);
+    --card-icon-border: rgba(192,132,252,0.30);
+    --card-icon-color: rgba(215,175,255,0.95);
+    box-shadow: 0 0 18px rgba(192,132,252,0.22), 0 0 40px rgba(192,132,252,0.09);
+  }
+  .card-about {
+    --card-glow: rgba(56,189,248,0.22);
+    --card-bg: linear-gradient(145deg, rgba(56,189,248,0.16) 0%, rgba(56,189,248,0.06) 60%, rgba(10,100,180,0.11) 100%);
+    --card-border: rgba(56,189,248,0.32);
+    --card-icon-bg: rgba(56,189,248,0.16);
+    --card-icon-border: rgba(56,189,248,0.28);
+    --card-icon-color: rgba(130,210,255,0.95);
+    box-shadow: 0 0 18px rgba(56,189,248,0.20), 0 0 40px rgba(56,189,248,0.08);
+  }
+
+  .card-tracker:hover { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(255,107,157,0.55), 0 0 60px rgba(255,107,157,0.22); }
+  .card-growth:hover  { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(45,212,191,0.50),  0 0 60px rgba(45,212,191,0.18);  }
+  .card-tastes:hover  { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(251,191,36,0.48),  0 0 60px rgba(251,191,36,0.16);  }
+  .card-tips:hover    { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(192,132,252,0.55), 0 0 60px rgba(192,132,252,0.22); }
+  .card-about:hover   { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(56,189,248,0.52),  0 0 60px rgba(56,189,248,0.20);  }
+
+  /* ===== SPA PAGES ===== */
+  .page-section { display: none; }
+  .section-divider { display: none; }
+
+  /* ===== BACK BUTTON ===== */
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    padding: 0.5rem 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  .back-btn:hover {
+    background: rgba(255,255,255,0.08);
+    color: var(--text);
+    border-color: rgba(255,107,157,0.3);
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .section-header {
+    margin-bottom: 3rem;
+  }
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .tag-pink { background: rgba(255,107,157,0.1); border: 1px solid rgba(255,107,157,0.3); color: var(--pink); }
+  .tag-purple { background: rgba(192,132,252,0.1); border: 1px solid rgba(192,132,252,0.3); color: var(--purple); }
+  .tag-teal { background: rgba(45,212,191,0.1); border: 1px solid rgba(45,212,191,0.3); color: var(--teal); }
+  .tag-amber { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); color: var(--amber); }
+
+  .section-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+  .section-desc {
+    margin-top: 0.75rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  /* ===== WEEKS TIMELINE ===== */
+  .weeks-scroll-wrap {
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    margin: 0 -2rem;
+    padding: 0.5rem 2rem 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,107,157,0.4) transparent;
+  }
+  .weeks-scroll-wrap::-webkit-scrollbar { height: 4px; }
+  .weeks-scroll-wrap::-webkit-scrollbar-track { background: transparent; }
+  .weeks-scroll-wrap::-webkit-scrollbar-thumb { background: rgba(255,107,157,0.4); border-radius: 4px; }
+
+  .weeks-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    padding: 0.5rem 0;
+  }
+
+  .week-card {
+    width: 240px;
+    flex-shrink: 0;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .week-card:hover {
+    border-color: rgba(255,107,157,0.3);
+    box-shadow: 0 8px 28px rgba(255,107,157,0.12);
+    transform: translateY(-3px);
+  }
+  .week-card-header {
+    padding: 1.25rem 1.25rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--glass-border);
+    cursor: pointer;
+    user-select: none;
+  }
+  .week-num-wrap { display: flex; flex-direction: column; gap: 2px; }
+  .week-label { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em; }
+  .week-num { font-family: 'Heebo', sans-serif; font-size: 2rem; font-weight: 900; color: var(--pink); line-height: 1; }
+  .week-fruit { font-size: 2.2rem; }
+  .week-fruit-name { font-size: 0.78rem; color: var(--text-muted); text-align: left; margin-top: 2px; }
+
+  .week-chevron {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+    align-self: center;
+    font-size: 0.75rem;
+    margin-right: auto;
+    margin-left: 0.5rem;
+  }
+  .week-card.open .week-chevron { transform: rotate(180deg); }
+
+  .week-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .week-card.open .week-body { max-height: 400px; }
+  .week-items {
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .week-item {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .week-item-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .week-item-text { color: var(--text-muted); }
+  .week-item-text strong { color: var(--text); font-weight: 600; }
+  .week-tip {
+    margin-top: 0.4rem;
+    padding: 0.6rem 0.85rem;
+    border-radius: 10px;
+    background: rgba(255,107,157,0.08);
+    border: 1px solid rgba(255,107,157,0.2);
+    font-size: 0.82rem;
+    color: var(--pink-light);
+    line-height: 1.5;
+  }
+  .week-tip::before { content: "💡 "; }
+
+  /* ===== MONTHS GRID ===== */
+  .months-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .month-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .month-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, border-color 0.3s;
+  }
+  .month-card:hover {
+    box-shadow: 0 12px 36px rgba(192,132,252,0.12);
+    border-color: rgba(192,132,252,0.25);
+  }
+
+  .month-card-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+  }
+  .month-card-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 1.5rem;
+    left: 1.5rem;
+    height: 1px;
+    background: var(--glass-border);
+  }
+  .month-icon { font-size: 2.8rem; }
+  .month-meta { flex: 1; }
+  .month-range {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .month-sub { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+  .month-badge {
+    padding: 0.25rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    align-self: flex-start;
+  }
+  .badge-m34 { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .badge-m56 { background: rgba(251,191,36,0.1); color: var(--amber); border: 1px solid rgba(251,191,36,0.25); }
+  .badge-m78 { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
+  .badge-m910 { background: rgba(255,107,157,0.1); color: var(--pink); border: 1px solid rgba(255,107,157,0.25); }
+  .badge-m1112 { background: rgba(251,191,36,0.1); color: var(--amber); border: 1px solid rgba(251,191,36,0.25); }
+
+  .month-chevron-btn {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    padding: 4px;
+    transition: transform 0.3s, color 0.2s;
+  }
+  .month-card.open .month-chevron-btn { transform: rotate(180deg); color: var(--purple); }
+
+  .month-body { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+  .month-card.open .month-body { max-height: 5000px; }
+  .month-content { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .month-card { padding-bottom: 0.4rem; }
+  .month-card.open { padding-bottom: 0; }
+
+  .milestone-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .milestone-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .milestone-text {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.6;
+    padding-right: 1.2rem;
+  }
+  .allergens-grid { display: flex; flex-direction: row; gap: 1.5rem; margin-bottom: 2.5rem; }
+  .allergens-grid > div { flex: 1; min-width: 0; }
+
+  .food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  .food-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+  .food-item span { font-size: 1rem; }
+  .food-warn {
+    padding: 0.6rem 0.85rem;
+    border-radius: 10px;
+    background: rgba(251,191,36,0.08);
+    border: 1px solid rgba(251,191,36,0.2);
+    font-size: 0.83rem;
+    color: var(--amber);
+    line-height: 1.5;
+  }
+  .food-warn::before { content: "⚠️ "; }
+  .vaccine-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(251,191,36,0.1);
+    border: 1px solid rgba(251,191,36,0.25);
+    color: var(--amber);
+  }
+  .milestone-divider { height: 1px; background: var(--glass-border); margin: 0.25rem 0; }
+
+  /* ===== TIPS SECTION ===== */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    min-width: 0;
+  }
+  .tip-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(16px);
+    min-width: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+  }
+  .tip-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, border-color 0.3s;
+  }
+  .tip-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+  .tip-card:nth-child(1):hover { border-color: rgba(255,107,157,0.35); box-shadow: 0 8px 28px rgba(255,107,157,0.15); }
+  .tip-card:nth-child(2):hover { border-color: rgba(251,191,36,0.35); box-shadow: 0 8px 28px rgba(251,191,36,0.15); }
+  .tip-card:nth-child(3):hover { border-color: rgba(45,212,191,0.35); box-shadow: 0 8px 28px rgba(45,212,191,0.15); }
+  .tip-card:nth-child(4):hover { border-color: rgba(192,132,252,0.35); box-shadow: 0 8px 28px rgba(192,132,252,0.15); }
+  .tip-card:nth-child(5):hover { border-color: rgba(255,107,157,0.35); box-shadow: 0 8px 28px rgba(255,107,157,0.15); }
+  .tip-card:nth-child(6):hover { border-color: rgba(45,212,191,0.35); box-shadow: 0 8px 28px rgba(45,212,191,0.15); }
+  .tip-card:nth-child(7):hover { border-color: rgba(192,132,252,0.35); box-shadow: 0 8px 28px rgba(192,132,252,0.15); }
+  .tip-card:nth-child(8):hover { border-color: rgba(251,191,36,0.35); box-shadow: 0 8px 28px rgba(251,191,36,0.15); }
+
+  .tip-icon { font-size: 2.2rem; }
+  .tip-title { font-family: 'Heebo', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); flex: 1; }
+  .tip-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.35s ease, opacity 0.3s ease; }
+  .tip-card.open .tip-text { max-height: 600px; opacity: 1; }
+  .tip-header { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; user-select: none; }
+  .tip-chevron { font-size: 0.75rem; color: var(--text-muted); transition: transform 0.3s; margin-right: auto; flex-shrink: 0; }
+  .tip-card.open .tip-chevron { transform: rotate(180deg); }
+  .tip-card { cursor: pointer; }
+
+  /* ===== ABOUT ===== */
+  .about-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-content { max-width: 680px; width: 100%; text-align: center; margin: 0 auto; }
+  .about-title { font-family: 'Heebo', sans-serif; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; margin-bottom: 1rem; }
+  .about-text { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
+  .about-stats { display: flex; flex-direction: column; gap: 1rem; }
+  .stat-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .stat-icon { font-size: 2rem; }
+  .stat-num { font-family: 'Heebo', sans-serif; font-size: 1.8rem; font-weight: 900; line-height: 1; }
+  .stat-num.pink { color: var(--pink); }
+  .stat-num.purple { color: var(--purple); }
+  .stat-num.teal { color: var(--teal); }
+  .stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 3px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--glass-border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  footer {
+    border-top: 1px solid rgba(192,132,252,0.15);
+    background: rgba(7,8,15,0.5);
+  }
+  footer .footer-logo {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== SCROLL PROGRESS ===== */
+  .scroll-progress {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    left: 0;
+    height: 2px;
+    z-index: 99;
+    background: linear-gradient(90deg, var(--pink), var(--purple), var(--teal));
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+
+  /* ===== MOBILE NAV ===== */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background: rgba(7,8,15,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(192,132,252,0.15);
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    display: block;
+  }
+  .mobile-menu a:hover { color: var(--text); background: var(--glass); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .hero-cards { grid-template-columns: repeat(5, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .orb { opacity: 0.3; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-cards { grid-template-columns: repeat(3, 1fr); }
+    .months-grid { grid-template-columns: 1fr; }
+    .about-wrap { grid-template-columns: 1fr; }
+    section { padding: 60px 1.25rem; }
+    nav { padding: 0 1.25rem; }
+    .hero { min-height: unset; padding: 24px 1.25rem; }
+    section { padding: 32px 1.25rem; }
+    .allergens-grid { flex-direction: column !important; }
+    .allergens-grid > div { width: 100%; }
+  }
+  @media (max-width: 480px) {
+    .hero-cards { grid-template-columns: repeat(2, 1fr) !important; }
+    .allergens-grid { flex-direction: column !important; }
+    .allergens-grid .food-grid { grid-template-columns: 1fr 1fr; }
+    .food-grid { grid-template-columns: 1fr; }
+    section { padding: 28px 0.75rem; }
+    nav { padding: 0 0.75rem; }
+    .hero { padding: 20px 0.75rem; }
+    .hero-title { font-size: 2rem; }
+    .section-title { font-size: 1.5rem; }
+    .hero-sub { font-size: 0.95rem; }
+    .tracker-input-wrap { padding: 1.25rem; }
+  }
+  /* Touch scrolling pour iOS */
+  .month-body, .tips-grid, .dev-food-grid {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ===== HERO CTA BUTTON ===== */
+  .hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 24px rgba(255,107,157,0.4);
+    transition: all 0.3s;
+    animation: fadeDown 0.6s 0.3s ease both;
+  }
+  .hero-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(255,107,157,0.55);
+  }
+
+  /* ===== TRACKER SECTION ===== */
+  #tracker {
+    max-width: 800px;
+  }
+  #tastes {
+    max-width: 1060px;
+  }
+  .tracker-section-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 1rem;
+  }
+  .tracker-input-wrap {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .tracker-input-wrap h3 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .tracker-input-wrap p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .date-input-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .date-il-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(192,132,252,0.07);
+    border: 1px solid rgba(192,132,252,0.3);
+    border-radius: 12px;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+  .date-il-wrap:hover {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px rgba(255,107,157,0.15);
+  }
+  .date-il-text {
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-family: 'Heebo', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    width: 120px;
+    direction: ltr;
+  }
+  .date-il-text::placeholder { color: var(--text-muted); }
+  .date-il-cal { font-size: 1.1rem; }
+  .tracker-btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 16px rgba(255,107,157,0.3);
+  }
+  .tracker-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(255,107,157,0.45);
+  }
+
+  /* ===== PERIOD DISPLAY ===== */
+  .period-display { display: none; }
+  .period-display.active { display: block; }
+
+  .period-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .period-age-badge {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(255,107,157,0.12), rgba(192,132,252,0.12));
+    border: 1px solid rgba(192,132,252,0.3);
+    color: var(--pink-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .period-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ===== CAROUSEL NAV ===== */
+  .carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .carousel-periods {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.4rem 1rem;
+    cursor: grab;
+    user-select: none;
+    flex: 1;
+    max-width: 420px;
+  }
+  @media (max-width: 768px) {
+    .carousel-periods { max-width: 100%; }
+  }
+  .carousel-periods::-webkit-scrollbar { display: none; }
+  .carousel-periods.dragging { cursor: grabbing; scroll-behavior: auto; }
+  .carousel-period-item {
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--glass);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.25s, font-size 0.25s, color 0.25s, background 0.25s, box-shadow 0.25s;
+    white-space: nowrap;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+  .carousel-period-item.current {
+    color: white;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    border-color: transparent;
+    box-shadow: 0 2px 12px rgba(255,107,157,0.35);
+    font-size: 0.95rem;
+    transform: scale(1.05);
+  }
+  .carousel-period-item:not(.current):hover {
+    color: var(--text);
+    border-color: var(--glass-border);
+  }
+  .carousel-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .carousel-arrow:hover {
+    background: rgba(255,107,157,0.1);
+    border-color: rgba(255,107,157,0.3);
+    color: var(--pink);
+  }
+  .carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+  .carousel-arrow:disabled:hover {
+    background: var(--glass);
+    border-color: var(--glass-border);
+    color: var(--text-muted);
+  }
+
+  /* ===== DEVELOPMENT ITEMS GRID ===== */
+  .dev-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .dev-item {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: border-color 0.2s;
+  }
+  .dev-item:hover { border-color: rgba(192,132,252,0.3); }
+  .dev-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .dev-item-icon { font-size: 1.1rem; }
+  .dev-item-text {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .dev-tip-box {
+    background: rgba(255,107,157,0.07);
+    border: 1px solid rgba(255,107,157,0.2);
+    border-radius: 14px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.88rem;
+    color: var(--pink-light);
+    line-height: 1.6;
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+
+  /* ===== FOOD EXTRA ===== */
+  .dev-food-section {
+    margin-top: 1rem;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+  }
+  .dev-food-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.6rem;
+  }
+  .dev-food-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    overflow: hidden;
+  }
+  .dev-food-grid .food-item { display: inline-flex; align-items: center; gap: 0.25rem; min-width: 0; overflow-wrap: break-word; }
+  .dev-food-warn {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    background: rgba(251,191,36,0.08);
+    border: 1px solid rgba(251,191,36,0.2);
+    font-size: 0.82rem;
+    color: var(--amber);
+    line-height: 1.5;
+  }
+
+  /* ===== BACK TO TOP ===== */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 1.5rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 20px rgba(255,107,157,0.4);
+    z-index: 90;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .back-to-top:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 28px rgba(255,107,157,0.55);
+  }
+
+  /* ===== INLINE ERROR ===== */
+  .input-error {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: 12px;
+    background: rgba(251,113,133,0.1);
+    border: 1px solid rgba(251,113,133,0.3);
+    color: #fb7185;
+    font-size: 0.88rem;
+    font-weight: 500;
+    justify-content: center;
+  }
+  .input-error.show { display: flex; }
+
+  /* ===== DIVIDER ===== */
+  .section-divider {
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+
+<!-- Background -->
+<div class="bg-canvas" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Navigation -->
+<nav>
+  <a onclick="showPage('hero')" style="cursor:pointer;" class="nav-logo">
+    <div class="nav-logo-icon">🍼</div>
+    <span class="nav-logo-text">My Baby Dev</span>
+  </a>
+  <ul class="nav-links">
+    <li><a onclick="showPage('hero')" style="cursor:pointer;">בית</a></li>
+    <li><a onclick="showPage('tracker')" style="cursor:pointer;">המעקב שלי</a></li>
+    <li><a onclick="showPage('growth')" style="cursor:pointer;">גדילה ומשקל</a></li>
+    <li><a onclick="showPage('tastes')" style="cursor:pointer;">טעימות</a></li>
+    <li><a onclick="showPage('tips')" style="cursor:pointer;">טיפים</a></li>
+    <li><a onclick="showPage('about')" style="cursor:pointer;">אודות</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="תפריט" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('hero')">בית</a>
+  <a onclick="showPage('tracker')">המעקב שלי</a>
+  <a onclick="showPage('growth')">גדילה ומשקל</a>
+  <a onclick="showPage('tastes')">יוצאים למסע של טעמים</a>
+  <a onclick="showPage('tips')">טיפים</a>
+  <a onclick="showPage('about')">אודות</a>
+</div>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <img src="My_baby_dev_logo.png" alt="My Baby Dev" class="hero-logo">
+    <div class="hero-badge">מהלידה ועד גיל שנה</div>
+    <h1 class="hero-title">
+      מדריך התפתחות<br>
+      <span class="grad-pink">של התינוק שלך</span>
+    </h1>
+    <p class="hero-sub">
+      שבוע אחר שבוע בחודש הראשון,<br>
+      וחודש בחודשו עד גיל שנה -<br>
+      כל מה שצריך לדעת, צעד אחר צעד, במקום אחד
+    </p>
+
+    <div class="hero-cards">
+      <div class="hero-card card-tracker" onclick="showPage('tracker')">
+        <div class="hero-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div class="hero-card-label">המעקב שלי</div>
+      </div>
+      <div class="hero-card card-growth" onclick="showPage('growth')">
+        <div class="hero-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+          </svg>
+        </div>
+        <div class="hero-card-label">גדילה ומשקל</div>
+      </div>
+      <div class="hero-card card-tastes" onclick="showPage('tastes')">
+        <div class="hero-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><line x1="7" y1="2" x2="7" y2="22"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3v7"/>
+          </svg>
+        </div>
+        <div class="hero-card-label">יוצאים למסע של טעמים</div>
+      </div>
+      <div class="hero-card card-tips" onclick="showPage('tips')">
+        <div class="hero-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14z"/>
+          </svg>
+        </div>
+        <div class="hero-card-label">טיפים</div>
+      </div>
+      <div class="hero-card card-about" onclick="showPage('about')">
+        <div class="hero-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+        </div>
+        <div class="hero-card-label">אודות</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== TRACKER ===== -->
+  <section id="tracker" class="page-section">
+    <button class="back-btn" onclick="showPage('hero')">→ בית</button>
+    <div class="tracker-input-wrap">
+      <div class="tracker-section-title">המעקב שלי</div>
+      <h3>מתי נולד/ה התינוק/ת שלך?</h3>
+      <p>הכניסי תאריך לידה ונראה יחד מה קורה השבוע/החודש</p>
+      <div class="date-input-row">
+        <div class="date-il-wrap" onclick="document.getElementById('hiddenDatePicker').showPicker()">
+          <input type="text" id="birthDateDisplay" placeholder="DD/MM/YYYY" readonly class="date-il-text">
+          <span class="date-il-cal">📅</span>
+          <input type="date" id="hiddenDatePicker" min="2025-01-01" max="2026-12-31" style="position:absolute;opacity:0;pointer-events:none;width:0;height:0;">
+        </div>
+        <button class="tracker-btn" onclick="calcAge()">הצגי לי!</button>
+      </div>
+      <div class="input-error" id="trackerError">⚠️ <span id="trackerErrorMsg"></span></div>
+    </div>
+
+    <!-- RESULT DISPLAY -->
+    <div class="period-display" id="periodDisplay">
+
+      <div class="period-header">
+        <div class="period-age-badge" id="ageBadge"></div>
+        <div class="period-title" id="periodTitle"></div>
+      </div>
+
+      <!-- CAROUSEL NAV -->
+      <div class="carousel-nav">
+        <button class="carousel-arrow" id="prevBtn" onclick="navigate(-1)" title="שבוע/חודש קודם">→</button>
+        <div class="carousel-periods" id="carouselPeriods"></div>
+        <button class="carousel-arrow" id="nextBtn" onclick="navigate(1)" title="שבוע/חודש הבא">←</button>
+      </div>
+
+      <!-- DEVELOPMENT CONTENT -->
+      <div class="dev-grid" id="devGrid"></div>
+      <div class="dev-tip-box" id="devTip"></div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ===== GROWTH PERCENTILE CALCULATOR ===== -->
+  <section id="growth" class="page-section">
+    <button class="back-btn" onclick="showPage('hero')">→ בית</button>
+    <div class="section-header">
+      <div class="section-tag tag-teal">גדילה ומשקל</div>
+      <h2 class="section-title">מחשבון אחוזוני<br>גדילה</h2>
+      <p class="section-desc">הזיני משקל, גובה וגיל - ותקבלי מיד את האחוזון לפי תקני ארגון הבריאות העולמי.</p>
+      <button onclick="toggleGrowthInfo()" style="margin-top:0.75rem; display:inline-flex; align-items:center; gap:0.5rem; background:rgba(192,132,252,0.12); border:1px solid rgba(192,132,252,0.35); border-radius:20px; padding:0.4rem 1rem; color:var(--purple); font-size:0.85rem; cursor:pointer; font-family:inherit; font-weight:600;">
+        <span style="width:20px; height:20px; border-radius:50%; background:rgba(192,132,252,0.25); display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem;">?</span>
+        מהי שיטת האחוזונים?
+      </button>
+    </div>
+
+    <div style="max-width:680px; margin:0 auto;">
+
+      <!-- CALCULATOR CARD -->
+      <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:24px; padding:2rem;">
+
+        <div style="display:grid; gap:1.5rem;">
+
+          <!-- GENDER -->
+          <div>
+            <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.6rem; font-weight:600;">מין התינוק/ת</div>
+            <div style="display:flex; gap:0.75rem;">
+              <label style="flex:1; cursor:pointer;">
+                <input type="radio" name="growthGender" value="boy" style="display:none;" checked onchange="updateGrowthGender(this)">
+                <div id="genderBoyBtn" style="text-align:center; padding:0.7rem; border-radius:12px; border:2px solid var(--pink); background:rgba(255,107,157,0.15); color:var(--pink); font-weight:700; font-size:0.9rem; transition:all 0.2s;">👦 בן</div>
+              </label>
+              <label style="flex:1; cursor:pointer;">
+                <input type="radio" name="growthGender" value="girl" style="display:none;" onchange="updateGrowthGender(this)">
+                <div id="genderGirlBtn" style="text-align:center; padding:0.7rem; border-radius:12px; border:2px solid var(--glass-border); background:var(--glass); color:var(--text-muted); font-weight:700; font-size:0.9rem; transition:all 0.2s;">👧 בת</div>
+              </label>
+            </div>
+          </div>
+
+          <!-- BIRTH DATE -->
+          <div>
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-bottom:0.6rem;">תאריך לידה</div>
+            <div class="date-il-wrap" onclick="document.getElementById('growthHiddenDate').showPicker()" style="position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
+              <input type="text" id="growthDateDisplay" placeholder="DD/MM/YYYY" readonly
+                style="background:transparent; border:none; color:var(--text); font-size:0.95rem; font-family:inherit; cursor:pointer; outline:none; width:100%; pointer-events:none;">
+              <span style="font-size:1.1rem; flex-shrink:0;">📅</span>
+              <input type="date" id="growthHiddenDate" min="2024-01-01" max="2026-12-31"
+                onchange="updateGrowthDateDisplay()"
+                style="position:absolute; opacity:0; pointer-events:none; width:0; height:0;">
+            </div>
+          </div>
+
+          <!-- MEASUREMENT DATE -->
+          <div>
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-bottom:0.6rem;">תאריך המדידה
+              <span style="font-size:0.75rem; font-weight:400; margin-right:0.4rem; color:var(--text-muted); opacity:0.7;">(ברירת מחדל: היום)</span>
+            </div>
+            <div class="date-il-wrap" onclick="document.getElementById('growthMeasureHidden').showPicker()" style="position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
+              <input type="text" id="growthMeasureDisplay" placeholder="DD/MM/YYYY" readonly
+                style="background:transparent; border:none; color:var(--text); font-size:0.95rem; font-family:inherit; cursor:pointer; outline:none; width:100%; pointer-events:none;">
+              <span style="font-size:1.1rem; flex-shrink:0;">📅</span>
+              <input type="date" id="growthMeasureHidden" min="2024-01-01" max="2026-12-31"
+                onchange="updateGrowthMeasureDisplay()"
+                style="position:absolute; opacity:0; pointer-events:none; width:0; height:0;">
+            </div>
+            <div id="growthAgeDisplay" style="display:none; margin-top:0.5rem; font-size:0.82rem; color:var(--teal); text-align:center; font-weight:600;"></div>
+          </div>
+
+          <!-- WEIGHT + HEIGHT -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div>
+              <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.6rem; font-weight:600;">משקל (ק"ג)</div>
+              <input type="number" id="growthWeight" placeholder="לדוגמה: 6.2" step="0.1" min="1" max="20"
+                style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; color:var(--text); font-size:1rem; font-family:inherit;">
+            </div>
+            <div>
+              <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.6rem; font-weight:600;">גובה / אורך (ס"מ)</div>
+              <input type="number" id="growthHeight" placeholder="לדוגמה: 62" step="0.5" min="30" max="100"
+                style="width:100%; box-sizing:border-box; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; color:var(--text); font-size:1rem; font-family:inherit;">
+            </div>
+          </div>
+
+          <!-- CALCULATE BUTTON -->
+          <button onclick="calcGrowthPercentile()" style="background:linear-gradient(135deg,var(--teal),#0d9488); color:#07080f; border:none; border-radius:14px; padding:0.9rem; font-size:1rem; font-weight:800; cursor:pointer; font-family:inherit; letter-spacing:0.3px;">חשבי לי!</button>
+          <div class="input-error" id="growthError">⚠️ <span id="growthErrorMsg"></span></div>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="growthResults" style="display:none; margin-top:1.75rem; padding-top:1.75rem; border-top:1px solid var(--glass-border);"></div>
+      </div>
+
+      <!-- DISCLAIMER -->
+      <div style="margin-top:1.25rem; padding:1.25rem 1.5rem; background:rgba(45,212,191,0.06); border:1px solid rgba(45,212,191,0.18); border-radius:16px; font-size:0.82rem; color:var(--text-muted); line-height:1.8; display:flex; gap:0.75rem; align-items:flex-start;">
+        <div>
+          <strong style="color:var(--teal);">על החישוב:</strong> תוצאות המחשבון מבוססות על עקומות הגדילה הסטנדרטיות של <strong>ארגון הבריאות העולמי (WHO 2006)</strong>, המהוות את אמת המידה הקלינית המקובלת עולמית לניטור גדילת תינוקות וילדים. הנתונים מוצגים למטרות מידע והדרכה בלבד, ואינם תחליף להערכה קלינית מקצועית של רופא/ת הילדים.
+          <br><br>
+          <strong style="color:var(--amber);">⚠️ לתינוקות פגים:</strong> יש להשתמש ב<strong>גיל מתוקן</strong> - מגיל הלידה בפועל יש לגרוע את מספר שבועות הפגות. לדוגמה: תינוק שנולד בשבוע 32 (8 שבועות מוקדם) ועכשיו בן 4 חודשים - גילו המתוקן הוא חודשיים בלבד. יש להשתמש בגיל המתוקן עד גיל שנתיים.
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO MODAL -->
+    <div id="growthInfoModal" onclick="if(event.target===this)toggleGrowthInfo()" style="display:none; position:fixed; inset:0; background:rgba(7,8,15,0.88); backdrop-filter:blur(10px); z-index:1000; align-items:center; justify-content:center; padding:1rem;">
+      <div style="background:#12131f; border:1px solid var(--glass-border); border-radius:24px; max-width:500px; width:100%; max-height:90vh; display:flex; flex-direction:column;">
+
+        <!-- כותרת קבועה עם X — לא גוללת -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:1.1rem 1.5rem; border-bottom:1px solid var(--glass-border); flex-shrink:0;">
+          <div class="section-tag tag-purple" style="margin:0;">מה זה אחוזון?</div>
+          <button onclick="toggleGrowthInfo()" style="background:rgba(255,255,255,0.08); border:none; color:var(--text); width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">✕</button>
+        </div>
+
+        <!-- תוכן גלילה -->
+        <div style="overflow-y:auto; padding:1.5rem; -webkit-overflow-scrolling:touch;">
+          <p style="margin-bottom:1rem; color:var(--text); line-height:1.7;">אחוזון הוא מיקום התינוק/ת ביחס לכלל התינוקות באותו גיל ומין בעולם.</p>
+          <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.25rem;">
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="background:rgba(45,212,191,0.2); color:var(--teal); border-radius:8px; padding:0.25rem 0.7rem; font-weight:700; font-size:0.85rem; flex-shrink:0;">אחוזון 50</span>
+              <span style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">ממוצע - שוקל/ת יותר מ-50% מהתינוקות בגילו/ה</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="background:rgba(45,212,191,0.2); color:var(--teal); border-radius:8px; padding:0.25rem 0.7rem; font-weight:700; font-size:0.85rem; flex-shrink:0;">אחוזון 25</span>
+              <span style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">קטן/ה יחסית - תקין לחלוטין</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="background:rgba(45,212,191,0.2); color:var(--teal); border-radius:8px; padding:0.25rem 0.7rem; font-weight:700; font-size:0.85rem; flex-shrink:0;">אחוזון 75</span>
+              <span style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">גדול/ה יחסית - גם תקין לחלוטין</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="background:rgba(255,107,157,0.2); color:var(--pink); border-radius:8px; padding:0.25rem 0.7rem; font-weight:700; font-size:0.85rem; flex-shrink:0;">מתחת ל-3</span>
+              <span style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">מומלץ להתייעץ עם רופא/ת ילדים</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span style="background:rgba(255,107,157,0.2); color:var(--pink); border-radius:8px; padding:0.25rem 0.7rem; font-weight:700; font-size:0.85rem; flex-shrink:0;">מעל 97</span>
+              <span style="color:var(--text-muted); font-size:0.88rem; line-height:1.5;">מומלץ להתייעץ עם רופא/ת ילדים</span>
+            </div>
+          </div>
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.7;"><strong style="color:var(--pink);">הכלל החשוב ביותר:</strong> לא המספר המדויק אלא העקביות לאורך זמן. תינוק/ת שנמצא/ת תמיד באחוזון 10 - בריא/ה לחלוטין. ירידה חדה בין מדידות - סיבה לשיחה עם רופא/ת הילדים.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- ===== FIRST TASTES ===== -->
+  <section id="tastes" class="page-section">
+    <button class="back-btn" onclick="showPage('hero')">→ בית</button>
+    <div class="section-header">
+      <div class="section-tag tag-amber">יוצאים למסע של טעמים</div>
+      <h2 class="section-title">מדריך הטעימות<br>הנגיסה הראשונה</h2>
+      <p class="section-desc">כל מה שצריך לדעת על הכנסת מזון מוצק - חודש אחר חודש, שלב אחר שלב.</p>
+    </div>
+
+    <!-- GENERAL PRINCIPLES BANNER -->
+    <div style="background: linear-gradient(135deg, rgba(251,191,36,0.12), rgba(255,107,157,0.08)); border:1px solid rgba(251,191,36,0.25); border-radius:20px; padding:1.5rem 2rem; margin-bottom:2rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
+      <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+        <span style="font-size:1.4rem; flex-shrink:0;">🍼</span>
+        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">חלב - עדיין עיקר התפריט</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">מגיל 6-9 חודשים הטעימות הן חשיפה בלבד - חלב אם/פורמולה ממשיך להיות מקור האנרגיה הראשי</div></div>
+      </div>
+      <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+        <span style="font-size:1.4rem; flex-shrink:0;">⏱️</span>
+        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">3-5 ימי המתנה</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">כל מאכל חדש - 3 עד 5 ימים לפני הוספת הבא. כך מזהים תגובה אלרגית בבירור</div></div>
+      </div>
+      <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+        <span style="font-size:1.4rem; flex-shrink:0;">♨️</span>
+        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">אידוי - שיטת הבישול הטובה ביותר</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">שומר על ויטמינים ומינרלים. ירקות קשים: לאדות עד ריכוך ולטחון חלק. אחר כך לעבור למרקמים גסים יותר</div></div>
+      </div>
+      <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+        <span style="font-size:1.4rem; flex-shrink:0;">🙅</span>
+        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">לא לפני גיל 6 חודשים!</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">גם אם התינוק/ת מביט/ה בצלחת שלך בעניין רב - מערכת העיכול לא בשלה לזה לפני 6 חודשים מלאים</div></div>
+      </div>
+    </div>
+
+    <!-- MONTHLY STAGES -->
+    <div class="months-grid" style="margin-bottom: 2.5rem;">
+
+      <!-- STAGE 1 - MONTH 6 -->
+      <div class="month-card visible" style="opacity:1;transform:none;">
+        <div class="month-card-header" onclick="toggleMonth(this)">
+          <div class="month-icon">🥣</div>
+          <div class="month-meta">
+            <div class="month-range">חודש 6 - הטעימה הראשונה</div>
+            <div class="month-sub">חשיפה לירקות, פירות ודייסות • פעם ביום, כמות קטנה</div>
+          </div>
+          <span class="month-badge badge-m34">חודש 6</span>
+          <button class="month-chevron-btn">▼</button>
+        </div>
+        <div class="month-body">
+          <div class="month-content">
+            <div class="milestone-row">
+              <div class="milestone-label">כמות ותדירות</div>
+              <div class="milestone-text">מתחילים מכפית אחת ומגיעים בהדרגה ל-2-3 כפות, בארוחה פעם אחת ביום. לאחר כמה שבועות - עד 3-4 כפות לארוחה, פעם עד פעמיים ביום. חלב האם/פורמולה עדיין המזון העיקרי.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">ירקות</div>
+              <div class="milestone-text">מתחילים בירק אחד בכל פעם - מבושל היטב ומרוסק לפירה חלק. ממתינים 3-4 ימים לפני הוספת ירק חדש כדי לזהות תגובה אלרגית. מומלץ לפתוח עם טעמים עדינים (קישוא, בטטה) ולהתקדם לגזר, דלעת ותפוח אדמה.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">פירות</div>
+              <div class="milestone-text">פירות רכים (בננה, אבוקדו) אפשר להגיש טריים מרוסקים. תפוח ואגס - לאדות ולרסק. פירות מוסיפים מתיקות טבעית ומסייעים בעיכול. גם כאן - פרי אחד בכל פעם, 3-4 ימים המתנה בין הוספות.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">דייסת דגנים ללא חלב</div>
+              <div class="milestone-text">אחד המזונות הראשונים והטובים ביותר! דייסת אורז ללא חלב (rice cereal), דייסת כוסמת, דייסת שיבולת שועל - מדוללת עם מים, חלב אם או פורמולה. עשירה בברזל, קל לעיכול.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-label" style="margin-bottom:0.5rem">ירקות ופירות מומלצים</div>
+            <div class="food-grid">
+              <div class="food-item"><span>🥒</span>קישוא (מתחילים!)</div>
+              <div class="food-item"><span>🥕</span>גזר</div>
+              <div class="food-item"><span>🍠</span>בטטה</div>
+              <div class="food-item"><span>🎃</span>דלעת</div>
+              <div class="food-item"><span>🥔</span>תפוח אדמה</div>
+              <div class="food-item"><span>🥑</span>אבוקדו</div>
+              <div class="food-item"><span>🍌</span>בננה</div>
+              <div class="food-item"><span>🍎</span>תפוח</div>
+              <div class="food-item"><span>🍐</span>אגס</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">BLW או פירה?</div>
+              <div class="milestone-text">שתי הגישות תקינות. פירה חלק מאפשר כמות מדויקת ותגובה ברורה. BLW (Baby Led Weaning - האכלה בהנחיית התינוק) - חתיכות מזון רכות מבושלות שהתינוק/ת אוחז/ת ואוכל/ת בעצמ/ה - מפתח עצמאות ומוטוריקה עדינה.</div>
+            </div>
+            <div class="food-warn">שיטת אידוי שומרת על ויטמינים. לאחר הבישול - לטחון חלק. אחרי שבועיים-שלושה אפשר לעבור למרקם גרגרי יותר.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAGE 2 - MONTH 7 -->
+      <div class="month-card visible" style="opacity:1;transform:none;">
+        <div class="month-card-header" onclick="toggleMonth(this)">
+          <div class="month-icon">🍲</div>
+          <div class="month-meta">
+            <div class="month-range">חודש 7 - מרחיבים את התפריט</div>
+            <div class="month-sub">שילובים חדשים • חלבון • פחמימה • ירק • חלמון ביצה</div>
+          </div>
+          <span class="month-badge badge-m56">חודש 7</span>
+          <button class="month-chevron-btn">▼</button>
+        </div>
+        <div class="month-body">
+          <div class="month-content">
+            <div class="milestone-row">
+              <div class="milestone-label">כמות ותדירות</div>
+              <div class="milestone-text">2-3 ארוחות קטנות ביום, 4-6 כפות כל אחת. ממשיכים עם חלב אם/פורמולה 3-4 פעמים ביום. כמות האוכל גדלה, אבל חלב עדיין חשוב.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">פירה בשר עוף</div>
+              <div class="milestone-text">עוף מבושל היטב + ירק = פירה מזין ועשיר בברזל וחלבון. טוחנים בבלנדר עם קצת ציר בישול לפירה חלק. לאחר כמה שבועות, כשהתינוק/ת מורגל/ת לטעימות - אפשר לעבור למרקם גס יותר ולרסק במזלג. גם הודו וגם בקר מתאימים - מבושלים היטב, ללא תיבול.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">חלמון ביצה</div>
+              <div class="milestone-text">חלמון (לא חלבון) מגיל 7 חודשים - עשיר בברזל, כולין וחומצות שומן לפיתוח מוח. מבשלים קשה לגמרי. מתחילים ברבע חלמון ומגיעים לחלמון שלם תוך שבוע. אפשר לרסק לתוך פירה ירקות קיים, או בפני עצמו עם כמה טיפות חלב אם/פורמולה.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">ביסקוויטים לתינוקות</div>
+              <div class="milestone-text">ביסקוויטים ייעודיים לתינוקות (ללא מלח/סוכר) - נהדרים לאחיזה ולגירוי של ציצת הבקיעה. הם נמסים בפה, כך שאין סכנת חנק.</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-label" style="margin-bottom:0.5rem">שילובים מומלצים</div>
+            <div class="food-grid">
+              <div class="food-item"><span>🥕🥔</span>גזר + תפוח אדמה</div>
+              <div class="food-item"><span>🥒🥕🍗</span>קישוא + גזר + עוף</div>
+              <div class="food-item"><span>🍠🎃</span>בטטה + דלעת</div>
+              <div class="food-item"><span>🍗🥣</span>עוף + אורז מבושל היטב ורך + ציר מרק</div>
+              <div class="food-item"><span>🥦🍗🍝</span>ברוקולי + קציצה טחונה + פסטה מרוסקת</div>
+              <div class="food-item"><span>🍠🍗🥚</span>בטטה + עוף + חלמון ביצה</div>
+              <div class="food-item"><span>🥔🥩🥕</span>תפוח אדמה + בקר טחון + גזר</div>
+              <div class="food-item"><span>🥒🍠🍝</span>קישוא + בטטה + פסטה מרוסקת</div>
+              <div class="food-item"><span>🎃🍗🥣</span>דלעת + עוף + דייסת כוסמת</div>
+              <div class="food-item"><span>🥑🥚🍠</span>אבוקדו + חלמון ביצה + בטטה</div>
+            </div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">אלרגנים - מתחילים בזהירות</div>
+              <div class="milestone-text">שיטת גרגר האורז: ניסיון 1 = גרגר אחד, ניסיון 2 = שניים, ניסיון 3 = ארבעה. בין ניסיון לניסיון - לא חייב יום אחרי יום, אפשר כל כמה ימים. אחרי 3 ניסיונות ללא תגובה - משלבים בשגרה!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAGE 3 - MONTH 8+ -->
+      <div class="month-card" style="grid-column: 1 / -1; opacity:1; transform:none;">
+        <div class="month-card-header" onclick="toggleMonth(this)">
+          <div class="month-icon">🍽️</div>
+          <div class="month-meta">
+            <div class="month-range">חודש 8+ מוסיפים חלבי, דגים ולחם</div>
+            <div class="month-sub">גבינה • כפיר • דג • לחם • מיץ • מרקמים גסים יותר</div>
+          </div>
+          <span class="month-badge badge-m78">חודש 8+</span>
+          <button class="month-chevron-btn">▼</button>
+        </div>
+        <div class="month-body">
+          <div class="month-content">
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+
+              <!-- שורה 1: כמות + BLW -->
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:14px; padding:1rem;">
+                  <div class="milestone-label" style="margin-bottom:0.5rem">כמות ותדירות</div>
+                  <div class="milestone-text">3 ארוחות ביום + 2 חטיפים קטנים (פרי, יוגורט, ביסקוויט תינוקות). חלב 2-3 פעמים ביום. בגיל 9-12 חודשים אוכלים כמעט כמו שאר המשפחה - רק במרקם מרוסק.</div>
+                </div>
+                <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:14px; padding:1rem;">
+                  <div class="milestone-label" style="margin-bottom:0.5rem">מעבר לחתיכות אצבע</div>
+                  <div class="milestone-text">כשיש שליטה בישיבה ואחיזה בין האגודל לאצבע - אפשר לעבור מפירה לחתיכות בגודל שאפשר לאחוז באצבעות: ירקות מאודים רכים, בננה, אבוקדו, פסטה מבושלת היטב עד רכה (לא אל-דנטה), בשר מרוסק.</div>
+                </div>
+              </div>
+
+              <!-- שורה 2: מה מוסיפים -->
+              <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:14px; padding:1rem;">
+                <div class="milestone-label" style="margin-bottom:0.6rem">מה מוסיפים מחודש 8</div>
+                <div class="food-grid">
+                  <div class="food-item"><span>🧀</span>גבינת קוטג'/ריקוטה</div>
+                  <div class="food-item"><span>🥛</span>כפיר/יוגורט תינוקות</div>
+                  <div class="food-item"><span>🐟</span>דג לבן מבושל (טונה, בורי)</div>
+                  <div class="food-item"><span>🍞</span>לחם רך/קרקר תינוקות</div>
+                  <div class="food-item"><span>🧃</span>מיץ פירות מדולל (1:3)</div>
+                  <div class="food-item"><span>🍝</span>פסטה מבושלת היטב</div>
+                  <div class="food-item"><span>🫛</span>קטניות (עדשים, אפונה)</div>
+                  <div class="food-item"><span>🥚</span>ביצה שלמה מגיל 9 חודשים</div>
+                  <div class="food-item"><span>🥣</span>טחינה (50% שומשום)</div>
+                  <div class="food-item"><span>🌿</span>שמן זית איכותי</div>
+                </div>
+              </div>
+
+              <!-- שורה 3: פירות חומציים + חודש 9-12 -->
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div style="background:rgba(251,191,36,0.06); border:1px solid rgba(251,191,36,0.2); border-radius:14px; padding:1rem;">
+                  <div class="milestone-label" style="margin-bottom:0.6rem; color:var(--amber)">פירות וירקות חומציים - להמתין עד 9-10 חודשים</div>
+                  <div class="food-grid">
+                    <div class="food-item"><span>🍓</span>תות</div>
+                    <div class="food-item"><span>🥝</span>קיווי</div>
+                    <div class="food-item"><span>🍊</span>תפוז</div>
+                    <div class="food-item"><span>🍍</span>אננס</div>
+                    <div class="food-item"><span>🍅</span>עגבניה</div>
+                  </div>
+                </div>
+                <div style="background:rgba(45,212,191,0.06); border:1px solid rgba(45,212,191,0.2); border-radius:14px; padding:1rem;">
+                  <div class="milestone-label" style="margin-bottom:0.5rem; color:var(--teal)">חודש 9-12: אוכל שולחן מרוסק</div>
+                  <div class="milestone-text">כמעט כל מה שהמשפחה אוכלת - מרוסק, חתוך קטן, ללא מלח/תיבולים חזקים. ארוחות משפחה ביחד מפתחות קשרים חברתיים והרגלי אכילה בריאים לכל החיים.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ALLERGENS + RULES -->
+    <div class="allergens-grid" id="allergensGrid">
+
+      <!-- 8 ALLERGENS -->
+      <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:20px; padding:1.5rem;">
+        <div class="section-tag tag-pink" style="margin-bottom:1rem">8 האלרגנים הנפוצים</div>
+        <div class="food-grid">
+          <div class="food-item"><span>🥛</span>חלב פרה וגבינות</div>
+          <div class="food-item"><span>🥣</span>שומשום / טחינה</div>
+          <div class="food-item"><span>🥜</span>בוטנים ואגוזים</div>
+          <div class="food-item"><span>🥚</span>ביצים (חלמון קודם!)</div>
+          <div class="food-item"><span>🐟</span>כל סוגי הדגים</div>
+          <div class="food-item"><span>🌾</span>גלוטן / חיטה</div>
+          <div class="food-item"><span>🌱</span>סויה</div>
+          <div class="food-item"><span>🥝</span>קיווי</div>
+        </div>
+        <div style="margin-top:1rem; font-size:0.82rem; color:var(--text-muted); line-height:1.6;">
+          <strong style="color:var(--pink)">שיטת גרגר האורז:</strong> חושפים לכמות בגודל גרגר אורז אחד, ניסיון 2: שני גרגרים, ניסיון 3: ארבעה גרגרים. לא חייב יום אחרי יום - אפשר לדלג. אחרי 3 ניסיונות ללא תגובה - משלבים בשגרה! <br><br>
+          <strong style="color:var(--teal)">טיפ:</strong> לתת את האלרגן בבוקר - כך ניתן לעקוב אחרי תגובה במשך היום. לא לתת לפני שינה. <br><br>
+          <strong style="color:var(--amber)">סימני אלרגיה שיש לשים לב אליהם:</strong> פריחה, נפיחות, קושי בנשימה, הקאה לאחר אכילה - לפנות לרופא.</div>
+      </div>
+
+      <!-- RULES -->
+      <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:20px; padding:1.5rem;">
+        <div class="section-tag tag-amber" style="margin-bottom:1rem">כללי אצבע חשובים</div>
+        <div style="display:flex; flex-direction:column; gap:0.85rem;">
+          <div class="week-item"><span class="week-item-icon">🍯</span><span class="week-item-text"><strong>דבש - אסור לחלוטין עד גיל שנה!</strong> גורם לבוטוליזם תינוקות - מסכן חיים</span></div>
+          <div class="week-item"><span class="week-item-icon">🧂</span><span class="week-item-text"><strong>מלח:</strong> לא להוסיף כלל - הכליות עדיין לא בשלות לעיבוד מלח. מבשלים למשפחה? מוציאים מנה לתינוק לפני התיבול</span></div>
+          <div class="week-item"><span class="week-item-icon">🍬</span><span class="week-item-text"><strong>סוכר וממתיקים:</strong> עד גיל שנתיים - ללא סוכר, סילאן, מייפל או דבש תמרים</span></div>
+          <div class="week-item"><span class="week-item-icon">🥛</span><span class="week-item-text"><strong>חלב בקר כמשקה:</strong> רק מגיל 12 חודשים. גבינת קוטג'/יוגורט - מגיל 8 חודשים</span></div>
+          <div class="week-item"><span class="week-item-icon">🥜</span><span class="week-item-text"><strong>אגוזים שלמים:</strong> אסורים עד גיל 5 - סכנת חנק! חמאת אגוזים/בוטנים מרוסקת - מגיל 6 חודשים</span></div>
+          <div class="week-item"><span class="week-item-icon">♨️</span><span class="week-item-text"><strong>אידוי</strong> - שיטת הבישול הטובה ביותר לשימור ויטמינים ומינרלים</span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== TIPS ===== -->
+  <section id="tips" class="page-section">
+    <button class="back-btn" onclick="showPage('hero')">→ בית</button>
+    <div class="section-header">
+      <div class="section-tag tag-teal">ידע חשוב</div>
+      <h2 class="section-title">טיפים חיוניים<br>לשנה הראשונה</h2>
+      <p class="section-desc">הדברים הכי חשובים שכל הורה צריך לדעת - מהיום הראשון ועד גיל שנה.</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">💊</div>
+        <div class="tip-title">ויטמין D וברזל</div>
+        <div class="tip-text"><strong>ויטמין D:</strong> 400 IU ליום מהיום הראשון. חיוני לעצמות, חסינות ומוח. מומלץ לכולם - ניתן להתייעץ עם רופא הילדים על הצורך בתוסף.<br><br><strong>ברזל:</strong> מגיל 4 חודשים - ניתן להתייעץ עם רופא הילדים על הצורך בתוסף. בגיל 9-12 חודשים - בדיקת דם לברזל מומלצת לכולם.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌡️</div>
+        <div class="tip-title">חום - מתי לרופא?</div>
+        <div class="tip-text">גיל 0-3 חודשים: מעל 38° - כדאי לפנות לרופא באותו יום. גיל 3-6 חודשים: מעל 38.5° - לפנות לרופא. אחרי 6 חודשים: מעל 39° או חום מעל 3 ימים - לפנות לרופא.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🛌</div>
+        <div class="tip-title">שינה בטוחה - ABC</div>
+        <div class="tip-text"><strong>A</strong>lone - לבד בעריסה. <strong>B</strong>ack - תמיד על הגב. <strong>C</strong>rib - ללא כריות, שמיכות, צעצועים. חדר 20-22°. שינה על הבטן - מותר רק בהשגחה.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">👐</div>
+        <div class="tip-title">Tummy Time (שכיבה על הבטן)</div>
+        <div class="tip-text">מהשבוע הראשון - 3-5 פעמים ביום, 2-3 דקות. מחזק צוואר, גב וכתפיים. מונע Flat Head (שיטוח הראש מכיוון ששוכבים תמיד באותה תנוחה). אם בוכ/ה - זה בסדר! להמשיך בהדרגה ולהגיע ל-30 דקות ביום עד חודש 3.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🗣️</div>
+        <div class="tip-title">לדבר תמיד</div>
+        <div class="tip-text">כביסה, אמבטיה, טיול, החתלה - לספר מה קורה. "עכשיו אני מלביש/ה אותך, הנה הרגל..." - כל מילה בונה נוירונים ושפה. תינוקות שמדברים איתם מפתחים אוצר מילים גדול פי 2!</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📚</div>
+        <div class="tip-title">קריאה מיום הלידה</div>
+        <div class="tip-text">לא צריך להבין - הקול, הקצב והמגע מספיקים. 5-10 דקות ביום בונים אוצר מילים, ריכוז ואהבת קריאה לכל החיים. חודשים 1-3: ספרים שחור-לבן. מחודש 4: צבעוניים עם תמונות פשוטות.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌞</div>
+        <div class="tip-title">שגרה ועקביות</div>
+        <div class="tip-text">תינוקות מתפתחים בביטחון כשהעולם צפוי. ארוחות, שינה ומשחק באותן שעות - לא נוקשות, אלא גמישות קבועה. שגרה ברורה מקטינה בכי, משפרת שינה ומרגיעה גם את ההורים!</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">💕</div>
+        <div class="tip-title">קשר עין ומגע</div>
+        <div class="tip-text">קשר עין בהנקה ובהאכלה הוא הבסיס לקשר הרגשי. עור-לעור (קנגורו) מווסת טמפרטורה, לחץ דם ושינה - ואפילו מאיץ עלייה במשקל! נחיצות הקשר הפיזי בשנה הראשונה לא מוגזמת - לחבק, לנשק, להחזיק.</div>
+      </div>
+      <div class="tip-card" style="border-color: rgba(251,191,36,0.3);">
+        <div class="tip-icon">⚠️</div>
+        <div class="tip-title">לא לכפות ישיבה ועמידה</div>
+        <div class="tip-text">להושיב תינוק/ת לפני 6 חודשים עלול לפגוע בעמוד השדרה - עדיין לא יציב. בעמידה - להחזיק תינוק/ת זקוף/ה בידיים או לתת להיאחז בריהוט כשהוא/היא מושך/ת בעצמ/ה - בסדר גמור.</div>
+      </div>
+      <div class="tip-card" style="border-color: rgba(255,107,157,0.3);">
+        <div class="tip-icon">🌀</div>
+        <div class="tip-title">קפיצות התפתחות</div>
+        <div class="tip-text">לאורך השנה הראשונה עוברים תינוקות קפיצות התפתחות - תקופות של רגרסיה זמנית (יותר בכי, שינה פחות יציבה, קשיחות) שנמשכות בדרך כלל מספר ימים עד שבועיים ומסתיימות בקפיצה קדימה. הגילים המרכזיים: <strong>שבוע 5, שבוע 8, חודש 3, חודש 4.5, חודש 6, חודש 7.5, חודש 10, חודש 12.</strong> בחודש 3 הקפיצה בולטת במיוחד - בכי מוגבר, שינה פחות יציבה, התנגדות לאכילה. לא לשנות שגרה, לחבק ולהמשיך בסבלנות. כשקשה - כנראה שמשהו חדש בדרך.</div>
+      </div>
+      <div class="tip-card" style="border-color: rgba(45,212,191,0.3);">
+        <div class="tip-icon">🌪️</div>
+        <div class="tip-title">משבר שנה ראשונה</div>
+        <div class="tip-text">לקראת גיל שנה - עצמאות מתנגשת בצורך בביטחון. התינוק/ת מנסה/ת גבולות, עלול/ה לצרוח, להיצמד, לסרב לאוכל מוכר. זה לא פינוק - זה התפתחות נורמלית! להציב גבולות בעדינות ועקביות, ולהמשיך לחבק ולשמור על קשר עין.</div>
+      </div>
+      <div class="tip-card" style="border-color: rgba(255,107,157,0.3);">
+        <div class="tip-icon">🚨</div>
+        <div class="tip-title">דגלים אדומים לפי גיל</div>
+        <div class="tip-text"><strong>1-2 חודשים:</strong> לא מגיב לקולות חזקים / לא עוקב בעיניים. <strong>3-4 חודשים:</strong> לא מחייך / לא שולט בראש. <strong>6-7 חודשים:</strong> לא מגרגר / לא יושב עם תמיכה / לא מושיט יד לחפץ. <strong>9-10 חודשים:</strong> לא זוחל, לא מוציא צלילים מגוונים. <strong>כל גיל:</strong> לא עולה במשקל ← מומלץ להתייעץ עם הרופא.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="page-section">
+    <button class="back-btn" onclick="showPage('hero')">→ בית</button>
+    <div class="about-wrap" style="justify-content:center;">
+      <div class="about-content" style="text-align:center; max-width:700px;">
+        <div class="section-tag tag-amber" style="display:inline-flex; margin-bottom:0.75rem">אודות המדריך</div>
+        <h2 class="about-title">מדריך זה נבנה באהבה 💗</h2>
+        <p class="about-text">
+          המדריך נבנה כדי לעזור להורים ללוות את תינוקם בשנה הראשונה המדהימה לחייו - שבוע אחר שבוע, חודש אחר חודש.<br>הטקסט נכתב בלשון נקבה, אך מתייחס לכל הורה - אמא, אבא, או כל מי שמגדל תינוק.<br><br>
+          המידע מבוסס על הנחיות <strong>ארגון הבריאות העולמי (WHO)</strong>, <strong>האגודה הישראלית לרפואת ילדים</strong>, ועל ידע מצטבר של מומחים מובילים בתחום: רופאי ילדים, פסיכולוגים התפתחותיים, מומחי שינה לתינוקות, קלינאיות תקשורת, ומטפלות בהתפתחות הילד.<br><br>
+          <em>המידע באתר זה מוצג למטרות לימוד והעשרה בלבד, ואינו מהווה ייעוץ רפואי מקצועי. השימוש במידע הוא באחריותכם המלאה.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<button class="back-to-top" id="backToTopBtn" aria-label="חזרה למעלה" title="חזרה למעלה">↑</button>
+
+<footer>
+  <div class="footer-logo" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;">🍼 My Baby Dev</div>
+  <p style="margin-top:0.75rem; font-size:0.82rem; opacity:0.7;">נבנה ע"י <strong>יוליה ממצב</strong> בעזרת Claude Code 💗</p>
+  <p style="margin-top:0.5rem; font-size:0.75rem; opacity:0.4;">מעודכן לאפריל 2026</p>
+</footer>
+
+<script>
+  // ===== DEVELOPMENT DATA =====
+  const devData = {
+    weeks: {
+      1: {
+        title: 'שבוע 1',
+        items: [
+          { icon: '😴', label: 'שינה', text: 'הרך הנולד זקוק למנוחה - הוא/היא ישן/ה 18-20 שעות ביממה, מתעורר/ת 4 עד 11 פעמים. ההבחנה בין יום ולילה עדיין לא קיימת: כל פרק שינה הוא פרק עצמאי. מחזור השינה הפנימי של יילוד קצר (כ-45-60 דקות), ולכן הוא/היא עובר/ת בקלות בין שינה עמוקה לקלה.' },
+          { icon: '🍼', label: 'האכלה', text: 'הנקה לפי דרישה - 8 עד 12 פעמים ביממה, ולעתים אפילו יותר. קיבת הרך הנולד בגודל ענב: מחזיקה 5-7 מ"ל בלבד בימים הראשונים. בהאכלה מלאכותית מומלץ מרווח של 3-3.5 שעות, כ-7-8 פעמים ביממה. לתשומת לב: חלק מהתינוקות מאבדים עד 10% ממשקלם בשלושת הימים הראשונים ואז חוזרים למשקל הלידה - זה תהליך נורמלי לחלוטין.' },
+          { icon: '👁', label: 'ראייה', text: 'הראייה מטושטשת ומוגבלת לטווח של 20-30 ס"מ בלבד - בדיוק המרחק מפניך אל פניו/ה בזמן הנקה. אמנם הוא/היא לא רואה/ה את כל החדר, אבל עיניו/ה כבר מחפשות פרצופים, צבעים ניגודיים ותנועה. שחור-לבן הוא הצבע הכי מושך בשלב זה.' },
+          { icon: '👂', label: 'שמיעה', text: 'השמיעה פיתחה את עצמה כבר ברחם - קולך מוכר ומרגיע יותר מכל דבר אחר. קולות חזקים ופתאומיים יכולים להבהיל ולגרום לבכי, ואילו רעש לבן, רעש מונוטוני (כמו מאוורר), ושירי ערש מרגיעים את המערכת העצבית.' },
+          { icon: '👐', label: 'רפלקסים', text: 'המוח של הרך הנולד שולט על הגוף באמצעות רפלקסים מולדים: רפלקס יניקה (לפה כל מה שנוגע בשפתיים), רפלקס חיפוש (מסובב/ת ראש לכיוון הגירוי), רפלקס אחיזה (אוחז/ת אצבע בחוזקה), רפלקס הצעד האוטומטי ורפלקס הזחילה - כולם ביחד מצביעים על מוח בריא ומתפקד.' },
+          { icon: '💪', label: 'טונוס שרירים', text: 'בשבוע הראשון שרירי הכיפוף שולטים - ידיים ורגליים מכופפות ומוצמדות לגוף בתנוחה עוברית מוכרת. זה לא חוסר שליטה אלא טונוס גבוה (היפרטוניה) שמגן על הגפיים. בהדרגה, עם הזמן, שרירי המתיחה יתחזקו והגפיים יתחילו להשתחרר.' }
+        ],
+        tip: 'שמרי על קשר עין ישיר בזמן ההנקה - זה הרגע שבו נרקמת ההתקשרות הרגשית הכי עמוקה. אין צעצוע בעולם שמחליף את הפנים שלך.'
+      },
+      2: {
+        title: 'שבוע 2',
+        items: [
+          { icon: '😴', label: 'שינה', text: 'עדיין 18-20 שעות ביממה, מחולקות ל-4 עד 11 פרקי שינה שאינם קשורים לשעה ביום או בלילה. אל תצפי לסדר - המוח עדיין לומד להכיר את ההבדל בין חושך לאור. עקביות בחשיפה לאור שמש בבוקר תעזור בהמשך לכייל את השעון הביולוגי.' },
+          { icon: '🍼', label: 'האכלה', text: 'ריתמוס (קצב קבוע) ההנקה ממשיך - 8 עד 12 פעמים ביממה לפי דרישה. עלייה צפויה של 150-200 גרם בשבוע. אם חוזר/ת למשקל הלידה עד סוף השבוע השני - מדהים! אם לא, ניתן להתייעץ עם רופא ילדים.' },
+          { icon: '👁', label: 'ראייה', text: 'עיניו/ה מתחילות לעבוד יחד - מתחיל/ה לעקוב אחרי תנועה איטית לטווח קצר. לפעמים נראה שהעיניים קצת לא מיושרות (פזילה קלה) - זה תקין לגמרי כי שרירי העיניים עוד מתפתחים. שחור-לבן ניגודי ופרצופים מצוירים גדולים הכי מושכים את הראייה.' },
+          { icon: '🤲', label: 'תיאום צוואר', text: 'מתחיל/ה לחזק ולפתח את שרירי הצוואר לראשונה - כאשר שוכב/ת על הבטן, מנסה/ת להרים את הראש לשניות בודדות. זו ההתחלה של שרשרת מיומנויות ארוכה שתסתיים בהליכה.' },
+          { icon: '🫧', label: 'גזים ראשונים', text: 'הגזים מתחילים להופיע - מערכת העיכול מסתגלת לעבוד. עיסוי בטן עדין בכיוון השעון ("I Love You" - אותיות אנגליות על הבטן) עוזר. תנוחת "אופנוע" - רגליים מקופלות לכיוון הבטן - מוציאה גז ביעילות. שכיבה בתנוחת הנמר (הרך הנולד שוכב על הזרוע, פניו כלפי מטה) יכולה אף היא להקל מאוד על כאבי גזים.' },
+          { icon: '👂', label: 'שמיעה', text: 'מגיב/ה לקולות חזקים בתגובת בהלה - עשוי/ה להרחיב עיניים, לפרוש ידיים או לבכות. זוהי תגובת הבהלה (Moro Reflex) שמעידה על מוח בריא. דיבור רך ועקבי הוא התרופה - הקול שלך יוצר תחושת ביטחון.' }
+        ],
+        tip: 'Tummy Time (שכיבה על הבטן) - מהיום! 2-3 פעמים ביום, כל פעם 2-3 דקות. גם אם בוכ/ה - זה בסדר, להמשיך בהדרגה. שרירי צוואר חזקים = פחות Flat Head (שיטוח הראש מכיוון ששוכבים תמיד באותה תנוחה) = התפתחות מוטורית טובה יותר'
+      },
+      3: {
+        title: 'שבוע 3',
+        items: [
+          { icon: '👁', label: 'ראייה מתפתחת', text: 'עיניו/ה מתחילות לעקוב יחד אחרי תנועה - עוקב/ת אחרי עצם נע לאיטו לטווח של 20-30 ס"מ. ניגוד חד בין שחור ולבן הוא הדבר הכי מושך: כרטיסים בשחור-לבן, ספרים עם ניגוד גבוה, או פשוט הפנים שלך מוארות היטב - כל אלה "אימון" לקורטקס הראייה.' },
+          { icon: '😊', label: 'חיוך ראשון?', text: 'יכול לצוץ חיוך ספונטני ראשון - בגיל הזה לרוב רפלקסי (בדרך כלל בזמן שינה קלה), אבל לפעמים כבר מגיע בתגובה לקולך. חיוך חברתי אמיתי מגיע בדרך כלל בין שבוע 4 ל-8.' },
+          { icon: '👂', label: 'האזנה פעילה', text: 'מפנה את הראש לכיוון קולות מוכרים ונרגע כשקולך נשמע. השמיעה מספיק מפותחת כדי להבחין בין ניגוני דיבור - שינויי גובה ועוצמה. שירי, ספרי, דברי - הוא/היא שומע/ת ומגיב/ה גם אם לא מראה/ה זאת בצורה ברורה.' },
+          { icon: '🫧', label: 'שיא הגזים', text: 'שבוע 3 הוא לרוב שיא כאבי הגזים - מערכת העיכול מבשילה. בין הכלים שעוזרים: עיסוי בטן, תנוחת "אופנוע", שינוי תנוחת ההנקה, ותנוחת הנמר על עץ (שכיבה על הזרוע פנים כלפי מטה).' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'ב-Tummy Time (שכיבה על הבטן) כבר מרים/ה ראש לשניות בודדות ומחפשת/ת לאן לפנות. בזמן ערות, ידיו/ה מתחילות לנוע פחות בצורה כאוטית ויותר בכיוון מרכז הגוף - תחילתה של כוונה מוטורית.' },
+          { icon: '💕', label: 'קשר רגשי', text: 'קרבה פיזית היא הצורך הגדול ביותר בשלב זה. עור-לעור (קנגורו) ממשיך לווסת טמפרטורת גוף, קצב לב, נשימה, ורמות קורטיזול (הורמון לחץ). זה לא פינוק - זה פיזיולוגיה. הנשיאה הקרובה בונה ביטחון שיישאר לכל החיים.' }
+        ],
+        tip: 'Babywearing - נשיאה בעיגול (בד ארוך שעוטפים את התינוק וקושרים על הגוף) או מנשא ארגונומי מרגיעה גזים, מפחיתה בכי ומחזקת קשר. ידיים שלך חופשיות לטפל בדברים אחרים.'
+      },
+      4: {
+        title: 'שבוע 4',
+        items: [
+          { icon: '👁', label: 'ראייה', text: 'עוקב/ת אחרי עצמים נעים בטווח של 30-40 ס"מ, וסובב/ת ראש עד 90 מעלות כדי לעקוב אחרי פנים. אם העיניים נראות קצת לא מיושרות (פזילה קלה) - זה תקין בגיל הזה, שרירי העיניים עוד מתחזקים. מתעניין/ת בפרצופים ומנסה לשמור על קשר עין.' },
+          { icon: '😊', label: 'חיוך חברתי!', text: 'לקראת סוף השבוע הרביעי עשוי להופיע החיוך החברתי הראשון - מגיב/ה לחיוכך בחיוך מכוון! זה שונה מהחיוך הרפלקסי של השבועות הראשונים: הוא מגיע בתגובה לקולך, לפניך, לקשר עין. זו פריצת הדרך הרגשית הראשונה שלו/ה, ואולי הרגע הכי מרגש בחודש הראשון 🎉' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'ב-Tummy Time (שכיבה על הבטן) מרים/ה ראש לזווית של כ-45 מעלות ושומר/ת מספר שניות. שרירי הצוואר מתחזקים בקצב מדהים. הידיים מתחילות להיפתח בהדרגה - האגרוף הסגור הנצחי של השבועות הראשונים מתחיל להשתחרר.' },
+          { icon: '😴', label: 'שינה', text: 'מתחיל/ה להבחין בין יום ולילה - השעון הביולוגי מתחיל להתכייל. לעזור לתהליך: לחשוף לאור שמש ורעש ביום, לשמור על לילה כהה, שקט ורגוע. ההבדל בין שני הסביבות "מלמד" את המוח מתי לישון עמוק.' },
+          { icon: '👂', label: 'שמיעה', text: 'מפנה ראש בצורה ברורה יותר לכיוון קולות מוכרים, ובמיוחד לקולך. כבר יכול/ה להגיב לשמו/ה. שמיעתו/ה מפותחת יותר מאשר נדמה: מבחין/ה בניגודי עוצמה, גובה, ומקצב בדיבור.' },
+          { icon: '📈', label: 'גדילה', text: 'חודש ראשון מאחורינו - עלייה ממוצעת של 600-900 גרם ו-3-4 ס"מ. כל גרם מעבר למשקל הלידה הוא עדות להנקה/האכלה מוצלחת.' }
+        ],
+        tip: 'שגרת שינה עקבית: אמבטיה ← עיסוי ← הנקה/בקבוק ← שינה. אותו סדר, אותה שעה - המוח לומד לצפות מה מגיע אחרי מה ומכין את עצמו לשינה. עקביות מרגיעה גם אותך!'
+      }
+    },
+    months: {
+      1: {
+        title: 'חודש 1',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'בסוף החודש הראשון רוב התינוקות שוקלים בין 3.5 ל-5.5 ק"ג, גובה 51-56 ס"מ - הטווח הנורמלי רחב ותלוי במשקל הלידה. קצב הגדילה מדהים - 600-750 גרם ו-3-4 ס"מ בחודש.' },
+          { icon: '👁', label: 'ראייה', text: 'עוקב/ת בעיניים אחרי עצם נע לאיטו, עד 40 ס"מ, ועד 90 מעלות לצד. פרצופים, עיגולים, ושחור-לבן ניגודי הם הגירויים הכי מעניינים. לפעמים נשים לב לעיניים לא מסונכרנות - שרירי העיניים עוד בפיתוח, ובדרך כלל מסתדר לבד עד חודש 4-6.' },
+          { icon: '😊', label: 'חיוך חברתי ראשון', text: 'החיוך החברתי מתפתח ומתחזק - עד שבוע 6 כולם מחייכים בתגובה לפנים ולקול. הוא/היא מגיב/ה לפניך, לקולך, לקשר עין - וזה לא גז! זהו הסימן הראשון שמוחו/ה מעבד/ת מידע רגשי ויוצר קשר מכוון.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'ב-Tummy Time (שכיבה על הבטן) מרים/ה ראש לזווית של 45 מעלות ושומר/ת מספר שניות - המשך ישיר מהשבועות הקודמים. רפלקס האחיזה עדיין חזק - אוחז/ת בחוזקה בכל אצבע שמכניסים לכף ידו/ה. הידיים ממשיכות להיפתח בהדרגה - כפות הידיים נפתחות יותר לעומת השבועות הראשונים.' },
+          { icon: '👂', label: 'שמיעה וצלילים ראשונים', text: 'מפנה ראש בעקביות לכיוון קולך ולצלילים מוכרים. מתחיל/ה להשמיע קולות גרון קצרים - מעין "אה", "אאא" - ולא רק בכי. זה תחילתה של שפה! לענות לו/ה בחזרה עם אותה אינטונציה - כך לומדים "תורות" בשיחה שייארכו לכל החיים.' },
+          { icon: '😴', label: 'שינה', text: '15-17 שעות שינה ביממה, מחולקות בין לילה ויום - הפיזור משתנה מאוד מתינוק לתינוק. הלילות מתחילים להתארך - יש תינוקות שישנים 3-4 שעות ברצף בלילה. אל תצפי לעקביות עדיין, אבל הכיוון הוא לנכון.' }
+        ],
+        tip: 'סביב שבוע 6 הבכי עשוי להגיע לשיאו - זה שלב התפתחותי נורמלי. המוח גדל בקצב מהיר, ובכי הוא הדרך היחידה לבטא עומס. זה עובר. מגיל חודשיים-שלושה זה פוחת משמעותית.'
+      },
+      2: {
+        title: 'חודש 2',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'בסוף החודש השני: משקל ממוצע 5.1-6 ק"ג, גובה 58-63 ס"מ. מוסיף/ה בממוצע 800 גרם ו-3-4 ס"מ בחודש. עכשיו מתחיל להצטבר השומן התת-עורי ומשכבת השריר - הגוף מאבד את המראה "המקומט" של הרך הנולד ומתעגל לתינוק/ת ורוד/ה ושמנמן/ה.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'מחזיק/ה ראש בזקיפות לשניות בודדות כשנישא/ת על הידיים. ב-Tummy Time (שכיבה על הבטן) כבר מרים/ה חזה וחלק מהבטן מהמשטח - שרירי הגב מתחזקים! התנועות הופכות מעט מעט חלקות יותר, פחות כאוטיות, כששרירי הגו מתפתחים.' },
+          { icon: '👁', label: 'ראייה', text: 'עוקב/ת 180 מעלות עם העיניים - מצד לצד! מבחין/ה בפרצופים מוכרים ומגיב/ה אליהם בהתרגשות ברורה שאינה נראית כמו תגובה לזרים. קשר עין ממושך יותר, ותשומת לב מוגברת לפרטים בפנים.' },
+          { icon: '😄', label: 'שיחה ראשונה', text: 'מחייך/ת בתגובה לחיוכך, ומנהל/ת "שיחה" אמיתית - שומע/ת אותך מדברת, ממתין/ה, ואז מגיב/ה בצליל או בחיוך. זהו "Turn-Taking" - לימוד תורות בשיחה - אחד הכישורים החברתיים הכי יסודיים שיש.' },
+          { icon: '🗣', label: 'קולות ראשונים', text: 'מוציא/ה קולות גרון ראשונים - [ג] ו-[כ] - שלא היו קיימים בחודש הראשון. אלו הצלילים הראשונים של שפה, לפני שיבואו הצלילים השפתיים (ב, מ, פ). מגיב/ה לדיבור של מבוגרים בהאטת תנועות - ממש "מקשיב/ה בכל הגוף".' },
+          { icon: '😴', label: 'שינה', text: 'סה"כ 15-17 שעות ביממה, כ-8-10 שעות בלילה. שינות יום משתנות מאוד: יש תינוקות שישנים 3-4 שינות של שעה-שעתיים, ויש שישנים שינות קצרות רבות של 20-40 דקות - שניהם נורמליים לגמרי. תקופות ערות ארוכות יותר ביום - המוח צמא לגירוי חדש. שינת לילה של 5-6 שעות ברצף - ייתכן!' }
+        ],
+        tip: 'בגיל חודשיים המוח גדל בקצב מדהים - כל שיחה, שיר, ומגע בונים סינפסות שיישארו לכל החיים.'
+      },
+      3: {
+        title: 'חודש 3',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 5.9-6.9 ק"ג, גובה 58-62 ס"מ. הגדילה מתחילה להאט מעט לעומת החודשים הראשונים - זה נורמלי ומצוין. עכשיו יותר שריר ומוח, הגוף שומר על הרכות והעגלגלות האופייניות לתינוקות בשלב זה.' },
+          { icon: '🌟', label: 'קומפלקס ההתרגשות!', text: 'כשרואה/ת אותך - מניע/ה ידיים ורגליים, מחייך/ת ומשמיע/ה קולות בעת ובעונה אחת. זהו "קומפלקס ההתרגשות" - תגובה רגשית-מוטורית משולבת שמעידה על קפיצת מדרגה עצומה בהתפתחות המוח. זה עוד אחד מה-Milestones המרגשים של התינוקות!' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'מחזיק/ה ראש יציב בישיבה עם תמיכה. ב-Tummy Time (שכיבה על הבטן) נשען/ת על האמות ומרים/ה את החזה בזווית של כ-45 מעלות מהרצפה. בעיטות רגליים נמרצות, ויש תינוקות שכבר מראים תנועת "אינצ\'ורם" - מרימים ישבן ומושכים את הגוף קדימה. כל אלו בונים כוח צוואר, כתפיים וגב: הבסיס שיוביל בהמשך לזחילה. מושיט/ה יד לעצמים - לא תמיד מצליח/ה לאחוז, אבל הכוונה ברורה. אצבעות מתחילות להיפתח, עם יכולת להחזיק צעצוע קל שמוכנס לכף ידו/ה.' },
+          { icon: '😊', label: 'רפלקסים נעלמים', text: 'רפלקסי הרך הנולד מתחילים להיעלם - רפלקס מורו (פריסת ידיים ורגליים בתגובה לרעש פתאומי או לתחושת נפילה), רפלקס ההליכה האוטומטי (תנועות רגליים דמויות הליכה כשמחזיקים את התינוק/ת זקוף/ה), ורפלקס החדק (קימוט השפתיים קדימה בתגובה למגע על הלחי). היעלמותם היא סימן מצוין שהקורטקס המוחי מבשיל ומשתלט על הפעולות.' },
+          { icon: '👥', label: 'הכרת פנים', text: 'מבחין/ה בבירור בין פרצופים מוכרים לזרים - מגיב/ה לאמא, לאבא ולאנשים מוכרים בחיוך ובהתרגשות, ולזרים בהבעת "ממתין/ה לראות". מתחיל/ה להבחין ברגשות בפנים - מגיב/ה לחיוך בחיוך ולהבעה עצובה בדאגה.' },
+          { icon: '😴', label: 'שינה', text: 'עד 17 שעות ביממה, כולל 10-12 שעות בלילה (עם יקיצות) ו-4-5 שעות שינות יום. הלילות מתחילים להיות ארוכים יותר - "האור בקצה המנהרה" כבר מציץ. חלק מהתינוקות ישנים 6-8 שעות ברצף בחודש הזה - יש תקווה!' }
+        ],
+        tip: 'להתחיל לקרוא ספרים צבעוניים עם פרצופים גדולים - 5 דקות ביום מספיק לחלוטין. בגיל הזה הוא/היא כבר עוקב/ת בעיניים, מגיב/ה בחיוך, ואוהב/ת תמונות. זה לא מוקדם - זה בדיוק בזמן!'
+      },
+      4: {
+        title: 'חודש 4',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 6.5-7.6 ק"ג, גובה 60-65 ס"מ. בין חודש 2 ל-4 מתרחשת צמיחה פיזית בקצב הכי מהיר שיהיה אי פעם ביחס לגוף. בסוף חודש זה רוב התינוקות הכפילו את משקל לידתם - מדהים!' },
+          { icon: '🤲', label: 'התהפכות!', text: 'מתהפך/ת מגב לבטן - Milestone חשוב! זה לא מקרי: שרירי הגב, הצוואר, והבטן צריכים להתפתח ולעבוד יחד כדי לאפשר זאת. ב-Tummy Time (שכיבה על הבטן) נשען/ת כבר על כפות הידיים הפתוחות ומרים/ה חזה מהמשטח - תרגיל שמכין לזחילה.' },
+          { icon: '😄', label: 'צחוק בקול!', text: 'צוחק/ת בקול גדול וממש נוגע/ת בלב! מזהה את אמא מכל מרחק, ומגיב/ה לאנשים זרים בתגובת "עצירה-בדיקה-עניין" - מקפיא/ה תנועה, פוקח/ת עיניים, ואז - אם אוהב/ת מה שרואה - מגלגל/ת חיוך.' },
+          { icon: '🎯', label: 'תנועה מכוונת', text: 'מושיט/ה יד בכוונה ברורה לחפצים ולא עוד רק במקרה! יכול/ה להחזיק צעצוע בשתי ידיים ולהעביר מיד ליד. מחקה/ת תנועות פנים שמוצגות לפניה/ו - הוצאת לשון, פתיחת פה, חיוך.' },
+          { icon: '🗣', label: 'קולות מגוונים', text: 'מגרגר/ת, מקרקר/ת, ומנסה לחקות צלילים וביטויים שנשמעים מסביב. ה"שיחות" הופכות ארוכות יותר - עם הפסקות, ציפייה לתשובה, ותגובה לתגובתך. זהו לימוד השפה הראשוני: מילה, תגובה, חיוך - מחזור של תקשורת.' },
+          { icon: '😴', label: 'שינה', text: '14-17 שעות ביממה, 4-5 שינות יום. כאן מגיעה לפעמים רגרסיית שינה 4 חודשים - פתאום מתעורר/ת יותר בלילה. זה לא נסיגה: המוח עובר שינוי מבני אמיתי ומחזורי השינה משתנים להיות דומים לאלה של מבוגרים.' }
+        ],
+        tip: 'רגרסיית שינה 4 חודשים - הנפוצה ביותר ולעתים הקשה ביותר. המוח עובר ארגון מחדש, ומחזורי השינה משתנים לצמיתות. להישאר עקביים בשגרת ההשכבה - אותו סדר, אותה שעה. ככל שהשגרה עקבית יותר - כך ההסתגלות תהיה מהירה יותר.'
+      },
+      5: {
+        title: 'חודש 5',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 7.0-8.1 ק"ג, גובה 62-67 ס"מ. מוסיף/ה כ-700 גרם ו-2.5 ס"מ בחודש - הקצב מאט בהשוואה לחודשים הראשונים, וזה נורמלי לחלוטין. בגיל 5 חודשים כבר נראה/ית כמו תינוק/ת "גדול/ה", שלב הרך הנולד כבר חלף.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'מתהפך/ת לשני הכיוונים בצורה יציבה. יושב/ת עם תמיכה. מופיעות תנועות "תפיסה דו-ידנית" - שתי הידיים נעות יחד לכיוון חפץ בו-זמנית, מה שמחייב תיאום בין שתי חצאי המוח. מעביר/ה חפצים מיד ליד בקלות.' },
+          { icon: '🎯', label: 'תפיסה ופה', text: 'אוחז/ת חפצים בכף כל היד (Palm Grasp) - מחזיק/ה מה שנותנים ומביא/ה ישר לפה. הפה הוא כלי החקירה העיקרי בגיל הזה: כל מה שנוגע בשפתיים נבדק - מרקם, טמפרטורה, קשיות.' },
+          { icon: '🦷', label: 'שיניים בדרך', text: 'ייתכן שן ראשונה - לרוב האמצעיות התחתונות. הסימנים יכולים להופיע שבועות לפני השן עצמה: ריר מוגבר, נשיכות על כל דבר, עצבנות, ולפעמים חום נמוך. לא כל ריר הוא שיניים - לפעמים ריר מוגבר הוא פשוט הבשלת בלוטות הרוק.' },
+          { icon: '😄', label: 'חברתי', text: 'מגיב/ה לשמו/ה בסיבוב ראש ברור - כבר מזהה/ת שזה השם שלו/ה. מבחין/ה בין מוכרים לזרים ומביע/ה זאת בהבעת פנים, בכי, או ריחוק. צוחק/ת בקול ומשחק/ת "פיקאבו" בהנאה - המשחק של עכשיו אתה נמצא ועכשיו אתה נעלם.' },
+          { icon: '😴', label: 'שינה', text: '14-16 שעות ביממה, 3-4 שינות יום. חלק מהתינוקות מגיעים ל-6-8 שעות ברצף בלילה - אם לא, גם זה נורמלי. בגיל 5 חודשים עדיין לא "צריכים" לישון שינת לילה רצופה - הגוף המתפתח עדיין זקוק להאכלות לילה.' }
+        ],
+        tip: 'שיניים בדרך: טבעת שיניים קרה (מהמקרר, לא מהמקפיא) ועיסוי עדין של החניכיים עוזרים מאוד. לא לתת ג\'ל שיניים עם בנזוקאין - לא מומלץ לגיל זה.'
+      },
+      6: {
+        title: 'חודש 6',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 7.4-8.5 ק"ג, גובה 64-69 ס"מ. חצי שנה! מהלידה עד כאן - הגוף הכפיל את משקלו לפחות פעם אחת. בחצי שנה הקרובה הגדילה תהיה איטית יותר, אך כל Milestone מוטורי ושפתי יהיה מדהים להשגחה.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'יושב/ת עם תמיכה קלה ובדרך לישיבה עצמאית - חלק כבר יושבים לבד! מגיע/ה לחפצים ואוחז/ת בכוונה ברורה. מתחיל/ה לנסות להיאחז בריהוט ולמשוך עצמו/ה לעמידה - ה"חיפוש" לאחר אתגר חדש מניע את ההתפתחות.' },
+          { icon: '🥣', label: 'טעימות - מתחילים!', text: 'גיל 6 חודשים הוא החלון האידיאלי להתחלת אוכל מוצק - לא לפני, ולא הרבה אחרי. מתחילים בירק אחד מבושל (בטטה, גזר, קישוא), ממתינים 3-4 ימים לפני הוספת מזון חדש כדי לזהות תגובה אלרגית. חלב אם או פורמולה עדיין המזון העיקרי - האוכל המוצק משלים, לא מחליף. למדריך טעימות מפורט - ראו בהמשך.' },
+          { icon: '🎶', label: 'לפת ושפה', text: 'מתחיל/ה לבטא צלילים - "בבב", "ממם", "זזז" - צלילים דו-שפתיים ראשונים! מגיב/ה לשמו/ה בסיבוב ראש לכיוון הקול. מתחיל/ה להבין מילים בודדות - מפנה ראש לכיוון עצם שנקרא בשמו. זוהי "שפה פסיבית" - הבנה לפני דיבור.' },
+          { icon: '👁', label: 'ראייה ושמיעה', text: 'ראייה כמעט כשל מבוגר/ת - חדה, עם תיאום ידניים-עיניים מצוין. עוקב/ת אחרי עצמים קטנים ומהירים. השמיעה מבחינה בין צלילים הנבדלים בחצי טון בלבד - בסיס מצוין ללימוד מוזיקה ושפה.' },
+          { icon: '😴', label: 'שינה', text: '15 שעות ביממה, 10-12 שעות בלילה ו-3-5 שעות שינות יום (3-4 שינות). ישנה אפשרות לשינה רצופה של 8-10 שעות בלילה - ואם לא, גם 3-4 יקיצות נחשבות נורמה בגיל הזה.' }
+        ],
+        tip: 'שלושת סימני המוכנות לטעימות: יושב/ת עם תמיכה, מוציא/ה פחות לשון (רפלקס דחיית מזון פוחת), ומתעניין/ת בצלחת שלך. שלושתם יחד = מוכן/ה! לא לפני גיל 6 חודשים מלאים.'
+      },
+      7: {
+        title: 'חודש 7',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 7.7-8.9 ק"ג, גובה 65-70 ס"מ. לפעמים מופיעה ירידה זמנית בתיאבון - האנרגיה מופנית להתפתחות מוטורית מואצת. ירידה זמנית בהאכלה כשיש שינוי התפתחותי גדול - נורמלי.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'יושב/ת לבד! זו פריצת הדרך הגדולה של החודש הזה. מתחיל/ה לנסות לזחול - חלק יסחוב/תסחוב גוף על הבטן, חלק יזחל/תזחל על ארבע, וחלק "ירכב/תרכב" על הישבן. כל אחד מהמסלולים תקין ומפתח שרירים שונים. זמן לאבטחת הבית: לבדוק שאין חפצים קטנים על הרצפה, לנעול ארונות, ולשים גדרות בסף מדרגות.' },
+          { icon: '🎯', label: 'תפיסה', text: 'Pincer Grip בהתפתחות - מנסה/ת לאחוז בחפצים קטנים בין האגודל לאצבע הראשונה. מעביר/ה חפצים מיד ליד בזריזות ובמכוון. מתחיל/ה לאסוף חפצים לתוך קופסה - פעולה מורכבת שדורשת תכנון!' },
+          { icon: '🎶', label: 'לפת ושפה', text: 'לפת מגוונת ועשירה: "בבב", "ממם", "דדד", "זזז". מתחיל/ה לקשר צלילים לאנשים - "מממ" נאמר לעיתים בכוונה לכיוון אמא. מגיב/ה בבירור לשמו/ה ולמילים מוכרות. "שפה פסיבית" מוסיפה מילים בקצב מהיר.' },
+          { icon: '🍴', label: 'טעימות', text: 'מרחיבים לשילובי ירקות ומוסיפים דייסות. 1-2 ארוחות קטנות ביום. זה גם הזמן להתחיל חשיפה לאלרגנים - השיטה המומלצת במדריך הטעימות. חלב אם או פורמולה עדיין המזון העיקרי - כ-5 פעמים ביום.' },
+          { icon: '😴', label: 'שינה', text: 'סה"כ 15 שעות ביממה, 10-12 שעות בלילה ו-3-5 שעות ביום (3-4 שינות). שינה לילית של 6-9 שעות ברצף - אפשרית! אם לא - גם זה תקין. 2-3 יקיצות עדיין שכיחות בגיל הזה.' }
+        ],
+        tip: 'זחילה - כל תינוק/ת בקצב שלו/ה! חלקם עוקפים זחילה לגמרי וקופצים להליכה. שני המסלולים תקינים לחלוטין ואינם משפיעים על ההתפתחות הכוללת.'
+      },
+      8: {
+        title: 'חודש 8',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.0-9.3 ק"ג, גובה 67-72 ס"מ. הרגליים מתחזקות עם כל שעת זחילה - מתכונן/ת לצעד הגדול הראשון.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'זוחל/ת מהר ועם תיאום מלא (יד ורגל נגדית יחד). מתרומם/ת לעמידה תוך אחיזה בריהוט ומתקדם/ת בצעדים קטנים לאורך הספה תוך אחיזה בה. עולה על כל מה שניתן לטפס עליו - סקרנות ללא גבולות!' },
+          { icon: '🎯', label: 'Pincer Grip', text: 'אוחז/ת חפצים קטנים בין קצה האגודל לאצבע הראשונה - Pincer Grip! זה צעד ענק במוטוריקה העדינה שיאפשר בעתיד לכתוב, לצייר, ולהשתמש בכלי אוכל.' },
+          { icon: '💕', label: 'חרדת זרים', text: 'חרדת זרים בשיאה - מוציא/ה בכי כשאת עוזב/ת ומתרגש/ת מאוד כשאת חוזר/ת. זה סימן מצוין: מראה שנוצרה התקשרות בריאה וחזקה. לא לכפות מגע עם זרים - לתת להתרגל בהדרגה ובזמן שלו/ה.' },
+          { icon: '🗣', label: 'שפה', text: 'מחקה/ת צלילים, קצב דיבור, ואפילו אינטונציה. מבין/ה "לא" ו"ביי-ביי" וכבר מגיב/ה בהתאמה. מקרקר/ת בהנאה בשיחות, ומשמיע/ה צלילים שונים לצרכים שונים - כועס/ת, שמח/ה, עייף/ה, רוצה תשומת לב.' },
+          { icon: '🍴', label: 'אוכל', text: '2-3 ארוחות קטנות ביום. מוסיפים חלבונות לראשונה: עוף, ביצה, דג, קטניות. חלב אם או פורמולה עדיין המזון העיקרי. לפירוט מלא - ראו מדריך הטעימות.' }
+        ],
+        tip: 'תינוק שמתחיל לעמוד מגיע לגובה חדש - עגנו ריהוט כבד לקיר! ספריות וכוניות יכולות להתהפך כשהוא נאחז בהן. בדקו פינות חדות בגובה הראש.'
+      },
+      9: {
+        title: 'חודש 9',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.3-9.6 ק"ג, גובה 68-73 ס"מ. האנרגיה עוברת לפיתוח מוח ומוטוריקה - קצב הגדילה הפיזית מאט, וזה מצוין. כל גרם שמוסיפ/ים כעת הוא שריר, עצם וסינפסות חדשות.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'עומד/ת עם אחיזה ו"מטייל/ת" לאורך הספה (Cruising). יכול/ה לעבור מיד ליד לאורך הריהוט בצעד אחר צעד. מיומנות האצבעות גבוהה - הופך/ת עמודים בספר, מרים גרגרים קטנים, מכניס/ה חפצים לחרירים. חלק מהתינוקות עושים צעדים עצמאיים ראשונים בגיל הזה!' },
+          { icon: '🧠', label: 'קביעות חפץ', text: 'מחפש/ת צעצוע שנפל מחוץ לשדה הראייה - כי הבין/ה שחפצים ממשיכים להתקיים גם כשאינם נראים. פיאז\'ה קרא לזה "Object Permanence". זה גם למה כעת מוציא/ה בכי כשאת עוזב/ת - יודע/ת שאת קיימת, ורוצה שתחזור!' },
+          { icon: '🗣', label: 'שפה', text: '"מאמא", "דאדא" - עם כוונה מלאה! מבין/ה מילים ספציפיות: "תן", "בוא", "לא", שמות של חברים ומשפחה. מגיב/ה להוראות פשוטות כמו "תן לי" ו"תנפנף ביי-ביי". משמיע/ה צלילים מגוונים עם אינטונציות שונות - שמחה, כעס, התלהבות.' },
+          { icon: '💕', label: 'חברתי', text: 'משחק/ת "תן-קח" ו-Peek-a-Boo בהנאה גדולה. מחקה/ת מחוות ידיים: "ביי-ביי", מחיאות כפיים. מתחיל/ה לבצע הוראות פשוטות: "תעשה/י ככה", "תנפנף". מבחין/ה בין זרים לאנשים מוכרים ומגיב/ה בהתאמה.' },
+          { icon: '😴', label: 'שינה', text: '13-15 שעות ביממה, 10-12 שעות בלילה. ייתכן רגרסיית שינה 9 חודשים - קשורה בפריצת התפתחות מוטורית ושפתית גדולה. שינות היום מצטמצמות ל-2, אך ייתכן עדיין 3.' }
+        ],
+        tip: 'שינת יום: מעבר מ-3 שינות ל-2 מתרחש לרוב בגיל זה - לפעמים מבלבל כי התינוק/ת עייף/ה אך מתקשה להירדם. שגרת שינה קבועה תעזור.'
+      },
+      10: {
+        title: 'חודש 10',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.5-9.9 ק"ג, גובה 69-74 ס"מ. הגוף מתחיל להתארך ולהצטמצם בהיקפו - שומן תינוק מתחלף בשריר. זה גורם לו/ה להיראות "גדול/ה" יותר, לפעמים "רזה" יותר - זו לא ירידה במשקל - אלא שינוי תקין בהרכב הגוף: פחות שומן, יותר שריר.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'הולך/ת כשמחזיקים לו/ה בשתי הידיים. עומד/ת לבד לרגעים קצרים. עולה ויורד מדרגות נמוכות עם פיקוח. מנסה/ת לנעול ולפתוח ריהוט, לפתוח מגירות' },
+          { icon: '👆', label: 'הצבעה', text: 'מצביע/ה על חפצים שרוצה ומחכה לתגובתך - זוהי תקשורת מכוונת מפותחת! הצבעה עם אצבע המורה היא Milestone תקשורתי חשוב: מעיד על הבנה שניתן לשתף תשומת לב עם אחר (Joint Attention). בסיס לשיחה ולהצביע על עצמים בספרים.' },
+          { icon: '🗣', label: 'שפה', text: '1-2 מילים ברורות בעלות משמעות: "מאמא", "דאדא", ולעתים "אמ-אמ" (אוכל), "אאא" (אני רוצה). מחקה/ת מחוות ומחיאות כפיים. מבין/ה הוראות בשתי מילים: "תן לאמא", "שב פה". אוצר מילים פסיבי גדל מהיר.' },
+          { icon: '💕', label: 'חברתי', text: 'משחק/ת Peek-a-Boo (מסתירים את הפנים ומגלים) ומחיאות כפיים בקצב בהנאה. בודק/ת תגובות ההורים - "מותר? אסור?" ומשתמש/ת בהבעות פנים שלך כדי לנווט התנהגות. זוהי "Social Referencing" - ניווט חברתי ראשוני שמפתח אמפתיה.' },
+          { icon: '🍴', label: 'אוכל', text: 'Finger Foods - אוחז/ת ואוכל/ת לבד! מגוון טקסטורות: רך, קשה קצת, פריך-רך. מנסה/ת להשתמש בכפית (עם הצלחה חלקית). 3 ארוחות ביום בתוספת חלב אם או פורמולה.' }
+        ],
+        tip: 'Finger Foods בגודל בוטן (לא עגול!) כדי למנוע חנק: בננה, אבוקדו, ביצה מקושקשת, בטטה מבושלת רכה. לאפשר לאכול לבד גם אם זה מבלגן - זה חלק מהלמידה.',
+        foodHTML: `<div class="dev-food-section"><div class="dev-food-title">👐 Finger Foods מומלצים</div><div class="dev-food-grid"><span class="food-item">🍌 בננה</span><span class="food-item">🥑 אבוקדו</span><span class="food-item">🥚 ביצה מקושקשת</span><span class="food-item">🍠 בטטה רכה</span><span class="food-item">🧀 גבינה צהובה</span><span class="food-item">🍗 עוף קצוץ</span></div></div>`
+      },
+      11: {
+        title: 'חודש 11',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.7-10.1 ק"ג, גובה 71-76 ס"מ. עוד חודש אחד לשנה! הגוף שילש את משקל הלידה ויותר. כל שבוע מביא Milestone חדש - ועכשיו הם כל כך מרגשים שקשה להספיק לצלם.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'הולך/ת עם אחיזה ביד אחת. חלק מהתינוקות כבר עושים צעדים עצמאיים! עולה ויורד מהספה. מטפס/ת בביטחון. מיומנות ידיים: מסובב/ת ידית, פותח/ת מיכל, שם/שמה חפץ לתוך תיבה ומוציא/ה.' },
+          { icon: '🗣', label: 'שפה', text: '2-4 מילים בעלות משמעות ברורה. מבין/ה עשרות מילים ומשפטים קצרים. מצביע/ה על תמונות בספר ומחכה שתגיד/י מה זה. מגיב/ה להוראות בשתי מילים. מחא כפיים ומנפנף ביי-ביי בכוונה ובעיתוי הנכון.' },
+          { icon: '🎭', label: 'משחק סמלי', text: 'מחקה/ת פעולות יומיומיות: "מדבר/ת" בטלפון (אפילו בבננה!), "מאכיל/ה" בובה, "מנגב/ת" עם מגבת. זהו המשחק הסמלי הראשון - היכולת לייצג את המציאות בפעולה. בסיס לדמיון ולמשחק יצירתי שיתפתח בשנים הבאות.' },
+          { icon: '🧠', label: 'הבנה וזיכרון', text: 'מבין/ה "לא" ו"כן" ומגיב/ה בהתאמה. מחפש/ת עצמים שהוסתרו - זוכר/ת איפה! מגיב/ה להוראות בשתי מילים: "תני לאמא", "שב על הכיסא". הסקרנות בשיאה - פותח/ת מגירות, ארונות וכל מה שמגיע אליו/ה.' },
+          { icon: '😴', label: 'שינה', text: '13 שעות ביממה, 10-12 שעות בלילה. שינת הצהריים השנייה מתחילה להיעלם - ייתכן מעבר לשינת יום אחת ארוכה. תקופת מעבר זאת יכולה להיות מסובכת - לא עייף/ה ל-2 שינות אבל עייף/ה מדי לשינה אחת בלבד. סבלנות!' }
+        ],
+        tip: 'ספרים עם דפים עבים (Board Books) - כבר הופך/ת דפים בעצמו/ה! קריאה יומית של 10 דקות בונה אוצר מילים ואהבה לספרים לכל החיים. להצביע על תמונות ולשאול "מה זה?" - גם אם לא עונה עדיין.'
+      },
+      12: {
+        title: 'חודש 12 🎂',
+        items: [
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 9.0-10.4 ק"ג, גובה 72-77 ס"מ. שנה שלמה! בממוצע שילש/ה את משקל הלידה וגדל/ה ב-25 ס"מ. כ-8 שיניים. כל מדד הוא עדות לגדילה המרשימה שהתרחשה בשנה הראשונה הזאת.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'חלק מהתינוקות הולכים עצמאית - חלק עוד לא, ועד גיל 15-18 חודשים זה תקין לחלוטין! מטפס/ת ויורד/ת. מוריד/ה ספרים מהמדף. פותח/ת ומוציא/ה מכל ארון שמגיע אליו/ה.' },
+          { icon: '🗣', label: 'שפה', text: '5-10 מילים בעלות משמעות - חלקן ברורות, חלקן מובנות רק לך. מבין/ה עשרות מילים ומשפטים. מחקה/ת מילים חדשות בנחת. מצביע/ה על תמונות בספר. מבין/ה "לא", "בוא", "שב", ועוד.' },
+          { icon: '💕', label: 'חברתי', text: 'מחבק/ת ומנשק/ת מיוזמתו/ה. מחקה/ת פעולות יומיומיות - מדבר/ת בטלפון, מערבב/ת בסיר, מנגב/ת עם מגבת. מבין/ה הוראות פשוטות ומגיב/ה אליהן. מתחיל/ה לגלות דעות משל עצמו/ה - ולא תמיד מסכים/ה.' },
+          { icon: '🧠', label: 'קוגניציה', text: 'פותר/ת בעיות פשוטות: מבין/ה שצריך להזיז חפץ כדי להגיע לדבר שמאחוריו. מחפש/ת עצמים שהוסתרו - זוכר/ת איפה. מגלה/ת שפעולות גורמות לתוצאות: לוחץ/ת כפתור, קורה משהו. סיבה ותוצאה בפעולה.' },
+          { icon: '🍴', label: 'אוכל', text: 'כל מה שהמשפחה אוכלת ניתן לתת קצוץ דק, ללא דבש, ללא מלח גס, ללא סכנת חנק. 3 ארוחות ביום. משתמש/ת בכפית בחצי הצלחה. שותה מכוס. העצמאות באכילה מתפתחת.' }
+        ],
+        tip: 'שנה שלמה עברה. כל הישג שהגיע - גדול כקטן - הוא עדות לאהבה ולהשקעה שהושקעה בו/ה. גיל שנה פותח פרק חדש - פעוט/ה עם אישיות, דעות, ורצונות. ולפעמים גם התנגדויות - זה חלק בריא מההתפתחות.'
+      }
+    }
+  };
+
+  // Maps age in days to period key
+  function getPeriodKey(ageDays) {
+    const weeks = Math.floor(ageDays / 7) + 1;
+    if (weeks <= 4) return { type: 'week', key: Math.min(weeks, 4) };
+    let months;
+    if (birthDate) {
+      const today = new Date();
+      months = (today.getFullYear() - birthDate.getFullYear()) * 12 + (today.getMonth() - birthDate.getMonth());
+      if (today.getDate() < birthDate.getDate()) months--;
+      months = Math.max(1, months);
+    } else {
+      months = Math.max(1, Math.floor(ageDays / 30.44));
+    }
+    return { type: 'month', key: Math.min(months, 12) };
+  }
+
+  // All periods in order
+  const allPeriods = [
+    { type:'week',  key:1,  label:'שבוע 1' },
+    { type:'week',  key:2,  label:'שבוע 2' },
+    { type:'week',  key:3,  label:'שבוע 3' },
+    { type:'week',  key:4,  label:'שבוע 4' },
+    { type:'month', key:1,  label:'חודש 1' },
+    { type:'month', key:2,  label:'חודש 2' },
+    { type:'month', key:3,  label:'חודש 3' },
+    { type:'month', key:4,  label:'חודש 4' },
+    { type:'month', key:5,  label:'חודש 5' },
+    { type:'month', key:6,  label:'חודש 6' },
+    { type:'month', key:7,  label:'חודש 7' },
+    { type:'month', key:8,  label:'חודש 8' },
+    { type:'month', key:9,  label:'חודש 9' },
+    { type:'month', key:10, label:'חודש 10' },
+    { type:'month', key:11, label:'חודש 11' },
+    { type:'month', key:12, label:'חודש 12 🎂' },
+  ];
+
+  let currentPeriodIndex = 0;
+  let birthDate = null;
+
+  document.getElementById('hiddenDatePicker').addEventListener('change', function() {
+    const val = this.value; // YYYY-MM-DD
+    if (val) {
+      const [y, m, d] = val.split('-');
+      document.getElementById('birthDateDisplay').value = d + '/' + m + '/' + y;
+      localStorage.setItem('mbd_birthdate', val);
+    }
+  });
+
+  // ===== RESTORE SAVED BIRTH DATE =====
+  (function() {
+    const saved = localStorage.getItem('mbd_birthdate');
+    if (!saved) return;
+    const picker = document.getElementById('hiddenDatePicker');
+    picker.value = saved;
+    const [y, m, d] = saved.split('-');
+    document.getElementById('birthDateDisplay').value = d + '/' + m + '/' + y;
+    // מפעיל אוטומטית את החישוב
+    setTimeout(() => calcAge(), 0);
+  })();
+
+  // ===== GROWTH PERCENTILE CALCULATOR =====
+  // WHO monthly data (months 0-12)
+  // נתוני WHO Child Growth Standards (2006) — מאומתים מול קבצי CSV רשמיים
+  // מקור: wfa_boys/girls_0-to-5-years_zscores.csv, lhfa_boys/girls_0-to-2-years_zscores.csv
+  const whoMonthly = {
+    weight: {
+      boy:  [[0,0.3487,3.3464,0.14602],[1,0.2297,4.4709,0.13395],[2,0.1970,5.5675,0.12385],
+             [3,0.1738,6.3762,0.11727],[4,0.1553,7.0023,0.11316],[5,0.1395,7.5105,0.11080],
+             [6,0.1257,7.9340,0.10958],[7,0.1134,8.2970,0.10902],[8,0.1021,8.6151,0.10882],
+             [9,0.0917,8.9014,0.10881],[10,0.0820,9.1649,0.10891],[11,0.0730,9.4122,0.10906],
+             [12,0.0644,9.6479,0.10925]],
+      girl: [[0,0.3809,3.2322,0.14171],[1,0.1714,4.1873,0.13724],[2,0.0962,5.1282,0.13000],
+             [3,0.0402,5.8458,0.12619],[4,-0.0050,6.4237,0.12402],[5,-0.0430,6.8985,0.12274],
+             [6,-0.0756,7.2970,0.12204],[7,-0.1039,7.6422,0.12178],[8,-0.1288,7.9487,0.12181],
+             [9,-0.1507,8.2254,0.12199],[10,-0.1700,8.4800,0.12223],[11,-0.1872,8.7192,0.12247],
+             [12,-0.2024,8.9481,0.12268]]
+    },
+    height: {
+      boy:  [[0,1,49.8842,0.03795],[1,1,54.7244,0.03557],[2,1,58.4249,0.03424],
+             [3,1,61.4292,0.03328],[4,1,63.8860,0.03257],[5,1,65.9026,0.03204],
+             [6,1,67.6236,0.03165],[7,1,69.1645,0.03139],[8,1,70.5994,0.03124],
+             [9,1,71.9687,0.03117],[10,1,73.2812,0.03118],[11,1,74.5388,0.03125],
+             [12,1,75.7488,0.03137]],
+      girl: [[0,1,49.1477,0.03790],[1,1,53.6872,0.03640],[2,1,57.0673,0.03568],
+             [3,1,59.8029,0.03520],[4,1,62.0899,0.03486],[5,1,64.0301,0.03463],
+             [6,1,65.7311,0.03448],[7,1,67.2873,0.03441],[8,1,68.7498,0.03440],
+             [9,1,70.1435,0.03444],[10,1,71.4818,0.03452],[11,1,72.7710,0.03464],
+             [12,1,74.0150,0.03479]]
+    }
+  };
+
+  // WHO weekly data (weeks 0-13) - נתונים רשמיים WHO Child Growth Standards (2006)
+  // מקור: WHO weight-for-age & length-for-age, 0-13 weeks z-score tables
+  // [week, L, M, S]
+  const whoWeekly = {
+    weight: {
+      boy:  [[0,0.3487,3.3464,0.14602],[1,0.2776,3.4879,0.14483],[2,0.2581,3.7529,0.14142],
+             [3,0.2442,4.0603,0.13807],[4,0.2331,4.3671,0.13497],[5,0.2237,4.6590,0.13215],
+             [6,0.2155,4.9303,0.12960],[7,0.2081,5.1817,0.12729],[8,0.2014,5.4149,0.12520],
+             [9,0.1952,5.6319,0.12330],[10,0.1894,5.8346,0.12157],[11,0.1840,6.0242,0.12001],
+             [12,0.1789,6.2019,0.11860],[13,0.1740,6.3690,0.11732]],
+      girl: [[0,0.3809,3.2322,0.14171],[1,0.2671,3.3388,0.14600],[2,0.2304,3.5693,0.14339],
+             [3,0.2024,3.8352,0.14060],[4,0.1789,4.0987,0.13805],[5,0.1582,4.3476,0.13583],
+             [6,0.1395,4.5793,0.13392],[7,0.1224,4.7950,0.13228],[8,0.1065,4.9959,0.13087],
+             [9,0.0918,5.1842,0.12966],[10,0.0779,5.3618,0.12861],[11,0.0648,5.5295,0.12770],
+             [12,0.0525,5.6883,0.12691],[13,0.0407,5.8393,0.12622]]
+    },
+    height: {
+      boy:  [[0,1,49.8842,0.03795],[1,1,51.1152,0.03723],[2,1,52.3461,0.03652],[3,1,53.3905,0.03609],
+             [4,1,54.3881,0.03570],[5,1,55.3374,0.03534],[6,1,56.2357,0.03501],[7,1,57.0851,0.03470],
+             [8,1,57.8889,0.03442],[9,1,58.6536,0.03416],[10,1,59.3872,0.03392],[11,1,60.0894,0.03369],
+             [12,1,60.7605,0.03348],[13,1,61.4013,0.03329]],
+      girl: [[0,1,49.1477,0.03790],[1,1,50.3298,0.03742],[2,1,51.5120,0.03694],[3,1,52.4695,0.03669],
+             [4,1,53.3809,0.03647],[5,1,54.2454,0.03627],[6,1,55.0642,0.03609],[7,1,55.8406,0.03593],
+             [8,1,56.5767,0.03578],[9,1,57.2761,0.03564],[10,1,57.9436,0.03552],[11,1,58.5816,0.03540],
+             [12,1,59.1922,0.03530],[13,1,59.7773,0.03520]]
+    }
+  };
+
+  function normalCDF(z) {
+    const a1=0.254829592, a2=-0.284496736, a3=1.421413741, a4=-1.453152027, a5=1.061405429, p=0.3275911;
+    const sign = z < 0 ? -1 : 1;
+    const x = Math.abs(z) / Math.sqrt(2);
+    const t = 1 / (1 + p * x);
+    const y = 1 - (((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+    return 0.5 * (1 + sign * y);
+  }
+
+  function calcLMSPercentile(value, L, M, S) {
+    const z = Math.abs(L) < 0.0001 ? Math.log(value/M)/S : (Math.pow(value/M, L)-1)/(L*S);
+    return Math.min(99, Math.max(1, Math.round(normalCDF(z) * 1000) / 10));
+  }
+
+  function getInterpolatedLMS(gender, measure, ageDays, born, measureDate) {
+    if (ageDays <= 91) {
+      // שבועות 0-13: אינטרפולציה שבועית לינארית
+      const table = whoWeekly[measure][gender];
+      const ageWeeks = ageDays / 7;
+      const w0 = Math.min(13, Math.floor(ageWeeks));
+      const w1 = Math.min(13, w0 + 1);
+      const frac = ageWeeks - w0;
+      const r0 = table[w0], r1 = table[w1];
+      return {
+        L: r0[1] + frac * (r1[1] - r0[1]),
+        M: r0[2] + frac * (r1[2] - r0[2]),
+        S: r0[3] + frac * (r1[3] - r0[3])
+      };
+    } else {
+      // חודשים 3-12: אינטרפולציה לינארית בין חודשים לפי ימים/30.4375 — כמו משרד הבריאות
+      const table = whoMonthly[measure][gender];
+      const ageMonthsFrac = ageDays / 30.4375;
+      const m0 = Math.min(12, Math.max(0, Math.floor(ageMonthsFrac)));
+      const m1 = Math.min(12, m0 + 1);
+      const frac = ageMonthsFrac - m0;
+      const r0 = table[m0], r1 = table[m1];
+      return {
+        L: r0[1] + frac * (r1[1] - r0[1]),
+        M: r0[2] + frac * (r1[2] - r0[2]),
+        S: r0[3] + frac * (r1[3] - r0[3])
+      };
+    }
+  }
+
+  function formatDateIL(dateObj) {
+    return String(dateObj.getDate()).padStart(2,'0') + '/' +
+           String(dateObj.getMonth()+1).padStart(2,'0') + '/' +
+           dateObj.getFullYear();
+  }
+
+  function calcAgeLabel(born, measureDate) {
+    const ageDays = Math.floor((measureDate - born) / 86400000);
+    if (ageDays < 0) return null;
+    let months = (measureDate.getFullYear() - born.getFullYear()) * 12 + (measureDate.getMonth() - born.getMonth());
+    if (measureDate.getDate() < born.getDate()) months--;
+    months = Math.max(0, months);
+    const afterMonths = new Date(born.getFullYear(), born.getMonth() + months, born.getDate());
+    const remDays = Math.floor((measureDate - afterMonths) / 86400000);
+    return months > 0
+      ? `גיל בתאריך המדידה: ${months} חודשים ו-${remDays} ימים (${ageDays} ימים סה"כ)`
+      : `גיל בתאריך המדידה: ${ageDays} ימים`;
+  }
+
+  function updateGrowthAgeDisplay() {
+    const birthRaw   = document.getElementById('growthHiddenDate').value;
+    const measureRaw = document.getElementById('growthMeasureHidden').value;
+    if (!birthRaw) return;
+    const [by, bm, bd] = birthRaw.split('-').map(Number);
+    const born = new Date(by, bm-1, bd);
+    const measureDate = measureRaw
+      ? (() => { const [my,mm,md] = measureRaw.split('-').map(Number); return new Date(my,mm-1,md); })()
+      : new Date();
+    const label = calcAgeLabel(born, measureDate);
+    const el = document.getElementById('growthAgeDisplay');
+    if (label) { el.textContent = label; el.style.display = 'block'; }
+    else { el.style.display = 'none'; }
+  }
+
+  function updateGrowthDateDisplay() {
+    const raw = document.getElementById('growthHiddenDate').value;
+    if (!raw) return;
+    document.getElementById('growthHiddenDate').dataset.manualOverride = '1';
+    const [y, m, d] = raw.split('-').map(Number);
+    document.getElementById('growthDateDisplay').value =
+      String(d).padStart(2,'0') + '/' + String(m).padStart(2,'0') + '/' + y;
+    updateGrowthAgeDisplay();
+  }
+
+  function updateGrowthMeasureDisplay() {
+    const raw = document.getElementById('growthMeasureHidden').value;
+    if (!raw) return;
+    const [y, m, d] = raw.split('-').map(Number);
+    document.getElementById('growthMeasureDisplay').value =
+      String(d).padStart(2,'0') + '/' + String(m).padStart(2,'0') + '/' + y;
+    updateGrowthAgeDisplay();
+  }
+
+  // set measurement date default to today
+  (function() {
+    const today = new Date();
+    const iso = today.getFullYear() + '-' +
+      String(today.getMonth()+1).padStart(2,'0') + '-' +
+      String(today.getDate()).padStart(2,'0');
+    const el = document.getElementById('growthMeasureHidden');
+    if (el) {
+      el.value = iso;
+      document.getElementById('growthMeasureDisplay').value = formatDateIL(today);
+    }
+  })();
+
+  let growthGender = 'boy';
+
+  function updateGrowthGender(input) {
+    growthGender = input.value;
+    const isBoy = growthGender === 'boy';
+    const activeStyle  = { border:'2px solid var(--pink)', background:'rgba(255,107,157,0.15)', color:'var(--pink)' };
+    const inactiveStyle = { border:'2px solid var(--glass-border)', background:'var(--glass)', color:'var(--text-muted)' };
+    const boyBtn  = document.getElementById('genderBoyBtn');
+    const girlBtn = document.getElementById('genderGirlBtn');
+    Object.assign(boyBtn.style,  isBoy  ? activeStyle : inactiveStyle);
+    Object.assign(girlBtn.style, !isBoy ? activeStyle : inactiveStyle);
+  }
+
+  function getPercentileColor(p) {
+    if (p < 3 || p > 97) return '#ef4444';
+    if (p < 10 || p > 90) return '#f97316';
+    return '#2dd4bf';
+  }
+
+  function getPercentileLabel(p) {
+    if (p < 3)  return 'מתחת לטווח הרגיל - מומלץ להתייעץ עם רופא/ת ילדים';
+    if (p < 10) return 'נמוך - כדאי לעקוב ולדון עם רופא/ת הילדים';
+    if (p <= 90) return 'טווח תקין';
+    if (p <= 97) return 'גבוה - כדאי לעקוב ולדון עם רופא/ת הילדים';
+    return 'מעל לטווח הרגיל - מומלץ להתייעץ עם רופא/ת ילדים';
+  }
+
+  function calcGrowthPercentile() {
+    const raw        = document.getElementById('growthHiddenDate').value;
+    const measureRaw = document.getElementById('growthMeasureHidden').value;
+    const weight = parseFloat(document.getElementById('growthWeight').value);
+    const height = parseFloat(document.getElementById('growthHeight').value);
+    if (!raw) { showError('growthError','growthErrorMsg','אנא הזיני תאריך לידה'); return; }
+    if (isNaN(weight) && isNaN(height)) { showError('growthError','growthErrorMsg','אנא הזיני לפחות משקל או גובה'); return; }
+    const [y, m, d] = raw.split('-').map(Number);
+    const born  = new Date(y, m-1, d);
+    const measureDate = measureRaw
+      ? (() => { const [my,mm,md] = measureRaw.split('-').map(Number); return new Date(my,mm-1,md); })()
+      : new Date();
+    const ageDays = Math.floor((measureDate - born) / 86400000);
+    if (ageDays < 0)   { showError('growthError','growthErrorMsg','תאריך הלידה לא יכול להיות בעתיד'); return; }
+    if (ageDays > 400) { showError('growthError','growthErrorMsg','המחשבון מיועד לגיל 0-12 חודשים בלבד'); return; }
+    const wLMS = getInterpolatedLMS(growthGender, 'weight', ageDays, born, measureDate);
+    const hLMS = getInterpolatedLMS(growthGender, 'height', ageDays, born, measureDate);
+    let html = '<div style="display:flex; flex-direction:column; gap:1.25rem;">';
+    if (!isNaN(weight) && weight > 0) {
+      const p = calcLMSPercentile(weight, wLMS.L, wLMS.M, wLMS.S);
+      const c = getPercentileColor(p);
+      html += `<div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+          <span style="font-weight:700;">⚖️ משקל</span>
+          <span style="font-size:1.5rem; font-weight:900; color:${c};">אחוזון ${p}</span>
+        </div>
+        <div style="height:10px; background:rgba(255,255,255,0.08); border-radius:10px; overflow:hidden;">
+          <div style="height:100%; width:${p}%; background:${c}; border-radius:10px;"></div>
+        </div>
+        <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.4rem;">${getPercentileLabel(p)}</div>
+      </div>`;
+    }
+    if (!isNaN(height) && height > 0) {
+      const p = calcLMSPercentile(height, hLMS.L, hLMS.M, hLMS.S);
+      const c = getPercentileColor(p);
+      html += `<div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+          <span style="font-weight:700;">📏 גובה / אורך</span>
+          <span style="font-size:1.5rem; font-weight:900; color:${c};">אחוזון ${p}</span>
+        </div>
+        <div style="height:10px; background:rgba(255,255,255,0.08); border-radius:10px; overflow:hidden;">
+          <div style="height:100%; width:${p}%; background:${c}; border-radius:10px;"></div>
+        </div>
+        <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.4rem;">${getPercentileLabel(p)}</div>
+      </div>`;
+    }
+    html += '</div>';
+    const el = document.getElementById('growthResults');
+    el.innerHTML = html;
+    el.style.display = 'block';
+  }
+
+  function toggleGrowthInfo() {
+    const modal = document.getElementById('growthInfoModal');
+    modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+  }
+  // ===== END GROWTH CALCULATOR =====
+
+  function calcAge() {
+    const raw = document.getElementById('hiddenDatePicker').value;
+    if (!raw) { showError('trackerError','trackerErrorMsg','אנא בחרי תאריך לידה'); return; }
+    const [y, m, d] = raw.split('-').map(Number);
+    birthDate = new Date(y, m - 1, d);
+    const today = new Date();
+    const ageDays = Math.floor((today - birthDate) / 86400000);
+    if (ageDays < 0) { showError('trackerError','trackerErrorMsg','תאריך הלידה לא יכול להיות בעתיד'); return; }
+    if (ageDays > 400) { showError('trackerError','trackerErrorMsg','המדריך הוא לגיל 0-12 חודשים'); return; }
+
+    const period = getPeriodKey(ageDays);
+    currentPeriodIndex = allPeriods.findIndex(p => p.type === period.type && p.key === period.key);
+    if (currentPeriodIndex === -1) currentPeriodIndex = allPeriods.length - 1;
+
+    renderPeriod(ageDays);
+    document.getElementById('periodDisplay').classList.add('active');
+    document.getElementById('periodDisplay').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // auto-fill growth calculator if user hasn't manually overridden it
+    const growthField = document.getElementById('growthHiddenDate');
+    if (growthField && !growthField.dataset.manualOverride) {
+      growthField.value = raw;
+      updateGrowthDateDisplay();
+    }
+  }
+
+  function navigate(dir) {
+    const newIndex = currentPeriodIndex + dir;
+    if (newIndex < 0 || newIndex >= allPeriods.length) return;
+    currentPeriodIndex = newIndex;
+    const ageDays = birthDate ? Math.floor((new Date() - birthDate) / 86400000) : 0;
+    renderPeriod(ageDays);
+  }
+
+  function jumpToPeriod(index) {
+    currentPeriodIndex = index;
+    const ageDays = birthDate ? Math.floor((new Date() - birthDate) / 86400000) : 0;
+    renderPeriod(ageDays);
+  }
+
+  function renderPeriod(ageDays) {
+    const period = allPeriods[currentPeriodIndex];
+    const data = period.type === 'week'
+      ? devData.weeks[period.key]
+      : devData.months[period.key];
+
+    // Age badge
+    const weeks = Math.floor(ageDays / 7);
+    let months;
+    if (birthDate) {
+      const today = new Date();
+      months = (today.getFullYear() - birthDate.getFullYear()) * 12 + (today.getMonth() - birthDate.getMonth());
+      if (today.getDate() < birthDate.getDate()) months--;
+      months = Math.max(1, months);
+    } else {
+      months = Math.floor(ageDays / 30.44);
+    }
+    const ageText = ageDays < 57
+      ? `תינוק/ת שלך בן/בת ${weeks} שבועות ו-${ageDays % 7} ימים`
+      : `תינוק/ת שלך בן/בת ${months} חודשים`;
+    document.getElementById('ageBadge').textContent = ageText;
+
+    // Title
+    document.getElementById('periodTitle').textContent = data.title;
+
+    // Carousel - all periods
+    const carouselEl = document.getElementById('carouselPeriods');
+    carouselEl.innerHTML = '';
+    let currentBtn = null;
+    for (let i = 0; i < allPeriods.length; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'carousel-period-item' + (i === currentPeriodIndex ? ' current' : '');
+      btn.textContent = allPeriods[i].label;
+      const idx = i;
+      btn.onclick = () => jumpToPeriod(idx);
+      carouselEl.appendChild(btn);
+      if (i === currentPeriodIndex) currentBtn = btn;
+    }
+    // Center current item - before browser paints (no visible jump)
+    if (currentBtn) {
+      requestAnimationFrame(() => {
+        const containerRect = carouselEl.getBoundingClientRect();
+        const btnRect = currentBtn.getBoundingClientRect();
+        const offset = btnRect.left - containerRect.left - containerRect.width / 2 + btnRect.width / 2;
+        carouselEl.scrollLeft += offset;
+      });
+    }
+
+    // Arrows
+    document.getElementById('prevBtn').disabled = currentPeriodIndex === 0;
+    document.getElementById('nextBtn').disabled = currentPeriodIndex === allPeriods.length - 1;
+
+    // Dev items
+    const grid = document.getElementById('devGrid');
+    grid.innerHTML = data.items.map(item => `
+      <div class="dev-item">
+        <div class="dev-item-header">
+          <span class="dev-item-icon">${item.icon}</span>
+          <span>${item.label}</span>
+        </div>
+        <div class="dev-item-text">${item.text}</div>
+      </div>
+    `).join('');
+
+    // Tip
+    document.getElementById('devTip').innerHTML = `<span style="font-size:1.2rem">💡</span> ${data.tip}`;
+
+    // Extra food content
+    let foodEl = document.getElementById('devFoodExtra');
+    if (!foodEl) {
+      foodEl = document.createElement('div');
+      foodEl.id = 'devFoodExtra';
+      document.getElementById('devTip').after(foodEl);
+    }
+    foodEl.innerHTML = data.foodHTML || '';
+  }
+
+  // ===== CAROUSEL DRAG =====
+  (function() {
+    const el = document.getElementById('carouselPeriods');
+    let isDown = false, startX, scrollLeft;
+    el.addEventListener('mousedown', e => {
+      isDown = true; el.classList.add('dragging');
+      startX = e.pageX - el.offsetLeft; scrollLeft = el.scrollLeft;
+    });
+    el.addEventListener('mouseleave', () => { isDown = false; el.classList.remove('dragging'); });
+    el.addEventListener('mouseup', () => { isDown = false; el.classList.remove('dragging'); });
+    el.addEventListener('mousemove', e => {
+      if (!isDown) return; e.preventDefault();
+      const x = e.pageX - el.offsetLeft;
+      el.scrollLeft = scrollLeft - (x - startX);
+    });
+    // Touch
+    let touchStartX, touchScrollLeft;
+    el.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].pageX; touchScrollLeft = el.scrollLeft;
+    }, { passive: true });
+    el.addEventListener('touchmove', e => {
+      const x = e.touches[0].pageX;
+      el.scrollLeft = touchScrollLeft - (x - touchStartX);
+    }, { passive: true });
+  })();
+
+  // ===== WEEK ACCORDION =====
+  function toggleWeek(header) {
+    const card = header.closest('.week-card');
+    const isOpen = card.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.week-card.open').forEach(c => c.classList.remove('open'));
+    // Toggle current
+    if (!isOpen) card.classList.add('open');
+  }
+
+  // ===== MONTH ACCORDION =====
+  function toggleMonth(header) {
+    const card = header.closest('.month-card');
+    card.classList.toggle('open');
+  }
+
+  // ===== SPA NAVIGATION =====
+  function showPage(pageId) {
+    // Hide hero
+    document.getElementById('hero').style.display = 'none';
+    // Hide all page sections
+    document.querySelectorAll('.page-section').forEach(p => { p.style.display = 'none'; });
+    // Show the requested page
+    if (pageId === 'hero') {
+      document.getElementById('hero').style.display = 'flex';
+    } else {
+      const el = document.getElementById(pageId);
+      if (el) el.style.display = 'block';
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    closeMobile();
+  }
+
+  // ===== HAMBURGER =====
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  // ===== SCROLL PROGRESS =====
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const pct = scrolled / maxScroll;
+    progressBar.style.transform = `scaleX(${pct})`;
+  });
+
+  // ===== COLLAPSIBLE TIP CARDS =====
+  document.querySelectorAll('.tip-card').forEach(card => {
+    const icon = card.querySelector('.tip-icon');
+    const title = card.querySelector('.tip-title');
+    if (!icon || !title) return;
+    const header = document.createElement('div');
+    header.className = 'tip-header';
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+    const chevron = document.createElement('span');
+    chevron.className = 'tip-chevron';
+    chevron.textContent = '▼';
+    card.insertBefore(header, icon);
+    header.appendChild(icon);
+    header.appendChild(title);
+    header.appendChild(chevron);
+    header.addEventListener('click', () => card.classList.toggle('open'));
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.classList.toggle('open'); }
+    });
+  });
+
+  // ===== INTERSECTION OBSERVER for entrance animations =====
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = el.dataset.delay || 0;
+        setTimeout(() => {
+          el.classList.add('visible');
+        }, delay * 100);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.month-card, .tip-card').forEach((el, i) => {
+    el.dataset.delay = i % 4;
+    observer.observe(el);
+  });
+
+  // ===== ACTIVE NAV LINK =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // ===== OPEN FIRST WEEK CARD =====
+  // no static week cards
+
+  // ===== BACK TO TOP =====
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== INLINE ERROR HELPERS =====
+  function showError(id, msgId, msg) {
+    const box = document.getElementById(id);
+    document.getElementById(msgId).textContent = msg;
+    box.classList.add('show');
+    setTimeout(() => box.classList.remove('show'), 4000);
+  }
+  function hideError(id) {
+    document.getElementById(id).classList.remove('show');
+  }
+</script>
+</body>
+</html>
