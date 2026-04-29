@@ -1,6 +1,6 @@
 # Baby Development Guide
 
-A free, comprehensive web app for tracking baby development from birth to one year.
+A free, comprehensive Hebrew web app for tracking baby development from birth to one year.
 
 **[Open the app](https://yuliamam639.github.io/baby-development-guide/)**
 
