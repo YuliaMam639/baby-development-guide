@@ -66,15 +66,16 @@
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(192,132,252,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(192,132,252,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
+      radial-gradient(circle, rgba(255,180,210,0.18) 1px, transparent 1px),
+      radial-gradient(circle, rgba(200,165,255,0.12) 1px, transparent 1px);
+    background-size: 48px 48px, 80px 80px;
+    background-position: 0 0, 24px 24px;
   }
   .orb {
     position: absolute;
     border-radius: 50%;
     filter: blur(90px);
-    opacity: 0.45;
+    opacity: 0.55;
     animation: orbFloat 12s ease-in-out infinite;
   }
   .orb-1 { width: 550px; height: 550px; background: radial-gradient(circle, #9333ea, transparent); top: -200px; right: -150px; animation-delay: 0s; }
@@ -100,12 +101,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(7, 8, 15, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(192, 132, 252, 0.15);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    box-shadow: none;
   }
+  nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(255,180,210,0.22) 1px, transparent 1px),
+      radial-gradient(circle, rgba(200,165,255,0.16) 1px, transparent 1px);
+    background-size: 48px 48px, 80px 80px;
+    background-position: 0 0, 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  nav > *, footer > * { position: relative; z-index: 1; }
   .nav-logo {
     display: flex;
     align-items: center;
@@ -188,7 +202,7 @@
 
   /* ===== HERO ===== */
   .hero-logo {
-    width: 360px;
+    width: 540px;
     max-width: 85vw;
     height: auto;
     margin-bottom: 1.5rem;
@@ -251,125 +265,94 @@
   }
   .hero-card {
     border-radius: 20px;
-    padding: 1.75rem 1.1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.9rem;
     cursor: pointer;
-    transition: transform 260ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 260ms ease, border-color 260ms ease;
-    text-align: center;
+    transition: transform 260ms cubic-bezier(0.34,1.56,0.64,1), box-shadow 260ms ease;
     position: relative;
-    background: var(--card-bg, linear-gradient(160deg, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.05) 100%));
-    border: 1px solid var(--card-border, rgba(255,255,255,0.13));
     overflow: hidden;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-  }
-  /* shimmer line at top */
-  .hero-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 15%; right: 15%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-  }
-  /* colored inner glow — appears on hover */
-  .hero-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 20px;
-    background: radial-gradient(ellipse at 50% -10%, var(--card-glow) 0%, transparent 68%);
-    opacity: 0;
-    transition: opacity 260ms ease;
-    pointer-events: none;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
   }
   .hero-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255,255,255,0.15);
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.55);
   }
-  .hero-card:hover::after { opacity: 1; }
-  .hero-card:active { transform: translateY(-2px); transition-duration: 80ms; }
+  .hero-card:active { transform: translateY(-2px) scale(1.01); transition-duration: 80ms; }
 
-  .hero-card-icon {
-    width: 50px; height: 50px;
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--card-icon-bg, rgba(255,255,255,0.08));
-    border: 1px solid var(--card-icon-border, rgba(255,255,255,0.12));
-    color: var(--card-icon-color, rgba(255,255,255,0.75));
-    transition: color 260ms ease, background 260ms ease, border-color 260ms ease, transform 260ms cubic-bezier(0.34,1.56,0.64,1);
-    position: relative; z-index: 1;
-  }
-  .hero-card:hover .hero-card-icon {
-    background: var(--card-icon-bg, rgba(255,255,255,0.08));
-    filter: brightness(1.25);
-    color: #fff;
-    transform: scale(1.08);
-  }
-  .hero-card-label {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: rgba(240,232,255,0.65);
-    line-height: 1.4;
-    transition: color 260ms ease;
-    position: relative; z-index: 1;
-  }
-  .hero-card:hover .hero-card-label { color: rgba(240,232,255,0.93); }
+  .card-tracker { background-image: url('1.מעקב.png'); }
+  .card-growth  { background-image: url('2.גדילה.png'); }
+  .card-tastes  { background-image: url('3.טעמים.png'); }
+  .card-tips    { background-image: url('4.טיפים.png'); }
+  .card-about   { background-image: url('5.אודות.png'); }
 
-  /* זכוכית צבועה — כל כרטיסייה עם זהות צבעונית ברורה */
-  .card-tracker {
-    --card-glow: rgba(255,107,157,0.25);
-    --card-bg: linear-gradient(145deg, rgba(255,107,157,0.18) 0%, rgba(255,107,157,0.07) 60%, rgba(180,50,100,0.12) 100%);
-    --card-border: rgba(255,107,157,0.35);
-    --card-icon-bg: rgba(255,107,157,0.18);
-    --card-icon-border: rgba(255,107,157,0.30);
-    --card-icon-color: rgba(255,160,190,0.95);
-    box-shadow: 0 0 18px rgba(255,107,157,0.20), 0 0 40px rgba(255,107,157,0.08);
+  /* ===== HERO SPARKLES ===== */
+  #hero { position: relative; overflow: hidden; }
+  .hero-sparkle {
+    position: absolute;
+    pointer-events: none;
+    font-style: normal;
+    user-select: none;
+    animation: sparkleFloat ease-in-out infinite;
+    z-index: 1;
   }
-  .card-growth {
-    --card-glow: rgba(45,212,191,0.22);
-    --card-bg: linear-gradient(145deg, rgba(45,212,191,0.15) 0%, rgba(45,212,191,0.06) 60%, rgba(10,140,130,0.11) 100%);
-    --card-border: rgba(45,212,191,0.30);
-    --card-icon-bg: rgba(45,212,191,0.16);
-    --card-icon-border: rgba(45,212,191,0.28);
-    --card-icon-color: rgba(100,240,220,0.95);
-    box-shadow: 0 0 18px rgba(45,212,191,0.16), 0 0 36px rgba(45,212,191,0.07);
+  .hero-sparkle.sp-1 { top: 15%; right: 8%;  font-size: 1.1rem; color: rgba(255,107,157,0.65); animation: sparkleRoam1 75s ease-in-out infinite; }
+  .hero-sparkle.sp-2 { top: 25%; left: 6%;   font-size: 1.0rem; color: rgba(192,132,252,0.58); animation: sparkleRoam2 90s ease-in-out infinite; }
+  .hero-sparkle.sp-4 { top: 70%; left: 8%;   font-size: 0.9rem; color: rgba(255,140,175,0.58); animation: sparkleRoam4 82s ease-in-out infinite; }
+  .hero-sparkle.sp-5 { top: 40%; right: 30%; font-size: 1.5rem; color: rgba(255,107,157,0.52); animation: sparkleRoam5 100s ease-in-out infinite; }
+  .hero-sparkle.sp-6 { top: 80%; right: 20%; font-size: 1.1rem; color: rgba(192,132,252,0.52); animation: sparkleRoam6 88s ease-in-out infinite; }
+  @keyframes sparkleRoam1 {
+    0%   { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
+    18%  { transform: translate(-25vw, -60px)   rotate(20deg);  opacity: 1;   }
+    42%  { transform: translate(-55vw,  80px)   rotate(-15deg); opacity: 0.85;}
+    67%  { transform: translate(-30vw,  150px)  rotate(28deg);  opacity: 1;   }
+    85%  { transform: translate(-10vw, -40px)   rotate(-8deg);  opacity: 0.9; }
+    100% { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
   }
-  .card-tastes {
-    --card-glow: rgba(251,191,36,0.20);
-    --card-bg: linear-gradient(145deg, rgba(251,191,36,0.15) 0%, rgba(251,191,36,0.05) 60%, rgba(180,130,10,0.10) 100%);
-    --card-border: rgba(251,191,36,0.28);
-    --card-icon-bg: rgba(251,191,36,0.15);
-    --card-icon-border: rgba(251,191,36,0.26);
-    --card-icon-color: rgba(255,215,100,0.95);
-    box-shadow: 0 0 16px rgba(251,191,36,0.16), 0 0 34px rgba(251,191,36,0.07);
+  @keyframes sparkleRoam2 {
+    0%   { transform: translate(0,     0)       rotate(0deg);   opacity: 0.8; }
+    22%  { transform: translate(30vw, -90px)    rotate(-22deg); opacity: 1;   }
+    48%  { transform: translate(65vw,  50px)    rotate(14deg);  opacity: 0.85;}
+    72%  { transform: translate(40vw,  130px)   rotate(-18deg); opacity: 1;   }
+    100% { transform: translate(0,     0)       rotate(0deg);   opacity: 0.8; }
   }
-  .card-tips {
-    --card-glow: rgba(192,132,252,0.24);
-    --card-bg: linear-gradient(145deg, rgba(192,132,252,0.17) 0%, rgba(192,132,252,0.07) 60%, rgba(120,60,200,0.12) 100%);
-    --card-border: rgba(192,132,252,0.33);
-    --card-icon-bg: rgba(192,132,252,0.17);
-    --card-icon-border: rgba(192,132,252,0.30);
-    --card-icon-color: rgba(215,175,255,0.95);
-    box-shadow: 0 0 18px rgba(192,132,252,0.22), 0 0 40px rgba(192,132,252,0.09);
+  @keyframes sparkleRoam3 {
+    0%   { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
+    28%  { transform: translate(-40vw, -100px)  rotate(25deg);  opacity: 1;   }
+    55%  { transform: translate(-70vw,  60px)   rotate(-12deg); opacity: 0.85;}
+    78%  { transform: translate(-20vw,  120px)  rotate(20deg);  opacity: 1;   }
+    100% { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
   }
-  .card-about {
-    --card-glow: rgba(56,189,248,0.22);
-    --card-bg: linear-gradient(145deg, rgba(56,189,248,0.16) 0%, rgba(56,189,248,0.06) 60%, rgba(10,100,180,0.11) 100%);
-    --card-border: rgba(56,189,248,0.32);
-    --card-icon-bg: rgba(56,189,248,0.16);
-    --card-icon-border: rgba(56,189,248,0.28);
-    --card-icon-color: rgba(130,210,255,0.95);
-    box-shadow: 0 0 18px rgba(56,189,248,0.20), 0 0 40px rgba(56,189,248,0.08);
+  @keyframes sparkleRoam4 {
+    0%   { transform: translate(0,     0)       rotate(0deg);   opacity: 0.8; }
+    30%  { transform: translate(45vw, -70px)    rotate(-28deg); opacity: 1;   }
+    58%  { transform: translate(72vw,  90px)    rotate(16deg);  opacity: 0.85;}
+    80%  { transform: translate(25vw,  140px)   rotate(-20deg); opacity: 1;   }
+    100% { transform: translate(0,     0)       rotate(0deg);   opacity: 0.8; }
   }
-
-  .card-tracker:hover { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(255,107,157,0.55), 0 0 60px rgba(255,107,157,0.22); }
-  .card-growth:hover  { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(45,212,191,0.50),  0 0 60px rgba(45,212,191,0.18);  }
-  .card-tastes:hover  { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(251,191,36,0.48),  0 0 60px rgba(251,191,36,0.16);  }
-  .card-tips:hover    { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(192,132,252,0.55), 0 0 60px rgba(192,132,252,0.22); }
-  .card-about:hover   { box-shadow: 0 16px 44px rgba(0,0,0,0.5), 0 0 28px rgba(56,189,248,0.52),  0 0 60px rgba(56,189,248,0.20);  }
+  @keyframes sparkleRoam5 {
+    0%   { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
+    20%  { transform: translate(-35vw,  90px)   rotate(18deg);  opacity: 1;   }
+    45%  { transform: translate(20vw,   160px)  rotate(-14deg); opacity: 0.85;}
+    68%  { transform: translate(50vw,  -50px)   rotate(24deg);  opacity: 1;   }
+    85%  { transform: translate(15vw,   80px)   rotate(-10deg); opacity: 0.9; }
+    100% { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
+  }
+  @keyframes sparkleRoam6 {
+    0%   { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
+    25%  { transform: translate(-50vw, -80px)   rotate(-20deg); opacity: 1;   }
+    52%  { transform: translate(-75vw,  70px)   rotate(15deg);  opacity: 0.85;}
+    76%  { transform: translate(-35vw,  130px)  rotate(-25deg); opacity: 1;   }
+    100% { transform: translate(0,      0)      rotate(0deg);   opacity: 0.8; }
+  }
+  #hero .hero-logo,
+  #hero .hero-badge,
+  #hero .hero-title,
+  #hero .hero-sub,
+  #hero .hero-cards { position: relative; z-index: 2; }
 
   /* ===== SPA PAGES ===== */
   .page-section { display: none; }
@@ -759,8 +742,9 @@
     font-size: 0.85rem;
   }
   footer {
-    border-top: 1px solid rgba(192,132,252,0.15);
-    background: rgba(7,8,15,0.5);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: transparent;
+    color: var(--text-muted);
   }
   footer .footer-logo {
     font-family: 'Heebo', sans-serif;
@@ -1271,6 +1255,11 @@
 
   <!-- ===== HERO ===== -->
   <section id="hero" class="hero">
+    <i class="hero-sparkle sp-1">✦</i>
+    <i class="hero-sparkle sp-2">✧</i>
+    <i class="hero-sparkle sp-4">✦</i>
+    <i class="hero-sparkle sp-5">⋆</i>
+    <i class="hero-sparkle sp-6">✧</i>
     <img src="My_baby_dev_logo.png" alt="My Baby Dev" class="hero-logo">
     <div class="hero-badge">מהלידה ועד גיל שנה</div>
     <h1 class="hero-title">
@@ -1284,46 +1273,11 @@
     </p>
 
     <div class="hero-cards">
-      <div class="hero-card card-tracker" onclick="showPage('tracker')">
-        <div class="hero-card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-        </div>
-        <div class="hero-card-label">המעקב שלי</div>
-      </div>
-      <div class="hero-card card-growth" onclick="showPage('growth')">
-        <div class="hero-card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-          </svg>
-        </div>
-        <div class="hero-card-label">גדילה ומשקל</div>
-      </div>
-      <div class="hero-card card-tastes" onclick="showPage('tastes')">
-        <div class="hero-card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><line x1="7" y1="2" x2="7" y2="22"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3v7"/>
-          </svg>
-        </div>
-        <div class="hero-card-label">יוצאים למסע של טעמים</div>
-      </div>
-      <div class="hero-card card-tips" onclick="showPage('tips')">
-        <div class="hero-card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14z"/>
-          </svg>
-        </div>
-        <div class="hero-card-label">טיפים</div>
-      </div>
-      <div class="hero-card card-about" onclick="showPage('about')">
-        <div class="hero-card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
-          </svg>
-        </div>
-        <div class="hero-card-label">אודות</div>
-      </div>
+      <div class="hero-card card-tracker" onclick="showPage('tracker')" role="button" aria-label="המעקב שלי"></div>
+      <div class="hero-card card-growth"  onclick="showPage('growth')"  role="button" aria-label="גדילה ומשקל"></div>
+      <div class="hero-card card-tastes"  onclick="showPage('tastes')"  role="button" aria-label="יוצאים למסע של טעמים"></div>
+      <div class="hero-card card-tips"    onclick="showPage('tips')"    role="button" aria-label="טיפים"></div>
+      <div class="hero-card card-about"   onclick="showPage('about')"   role="button" aria-label="אודות"></div>
     </div>
   </section>
 
@@ -1526,8 +1480,12 @@
     <!-- GENERAL PRINCIPLES BANNER -->
     <div style="background: linear-gradient(135deg, rgba(251,191,36,0.12), rgba(255,107,157,0.08)); border:1px solid rgba(251,191,36,0.25); border-radius:20px; padding:1.5rem 2rem; margin-bottom:2rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
       <div style="display:flex; gap:0.75rem; align-items:flex-start;">
-        <span style="font-size:1.4rem; flex-shrink:0;">🍼</span>
-        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">חלב - עדיין עיקר התפריט</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">מגיל 6-9 חודשים הטעימות הן חשיפה בלבד - חלב אם/פורמולה ממשיך להיות מקור האנרגיה הראשי</div></div>
+        <span style="font-size:1.4rem; flex-shrink:0;">🙅</span>
+        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">לא לפני גיל 6 חודשים!</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">גם אם התינוק/ת מביט/ה בצלחת שלך בעניין רב - מערכת העיכול לא בשלה לזה לפני 6 חודשים מלאים</div></div>
+      </div>
+      <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+        <span style="font-size:1.4rem; flex-shrink:0;">🪑</span>
+        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">ישיבה זקופה - תנאי להתחלת הטעימות</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">התינוק לא חייב לשבת עצמאית אבל חייב לשבת זקוף. אם מושיבים אותו והוא נוטה לצדדים - ממתינים. אם נשאר זקוף עם תמיכה - אפשר להתחיל. מושיבים בכיסא רק לזמן הטעימות, ולא לפרקים ארוכים</div></div>
       </div>
       <div style="display:flex; gap:0.75rem; align-items:flex-start;">
         <span style="font-size:1.4rem; flex-shrink:0;">⏱️</span>
@@ -1536,10 +1494,6 @@
       <div style="display:flex; gap:0.75rem; align-items:flex-start;">
         <span style="font-size:1.4rem; flex-shrink:0;">♨️</span>
         <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">אידוי - שיטת הבישול הטובה ביותר</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">שומר על ויטמינים ומינרלים. ירקות קשים: לאדות עד ריכוך ולטחון חלק. אחר כך לעבור למרקמים גסים יותר</div></div>
-      </div>
-      <div style="display:flex; gap:0.75rem; align-items:flex-start;">
-        <span style="font-size:1.4rem; flex-shrink:0;">🙅</span>
-        <div><div style="font-weight:700; color:var(--amber); font-size:0.9rem; margin-bottom:0.2rem;">לא לפני גיל 6 חודשים!</div><div style="font-size:0.83rem; color:var(--text-muted); line-height:1.5;">גם אם התינוק/ת מביט/ה בצלחת שלך בעניין רב - מערכת העיכול לא בשלה לזה לפני 6 חודשים מלאים</div></div>
       </div>
     </div>
 
@@ -1566,12 +1520,12 @@
             <div class="milestone-divider"></div>
             <div class="milestone-row">
               <div class="milestone-label">ירקות</div>
-              <div class="milestone-text">מתחילים בירק אחד בכל פעם - מבושל היטב ומרוסק לפירה חלק. ממתינים 3-4 ימים לפני הוספת ירק חדש כדי לזהות תגובה אלרגית. מומלץ לפתוח עם טעמים עדינים (קישוא, בטטה) ולהתקדם לגזר, דלעת ותפוח אדמה.</div>
+              <div class="milestone-text">פעם ההנחיה הייתה להתחיל ירק ירק בנפרד — ההנחיה העדכנית של משרד הבריאות מדגישה גיוון וחשיפה לטעמים ומרקמים שונים ואין סדר מחייב. מבשלים היטב ומרסקים לפירה חלק. עגבניה - מגיל 9-10 חודשים.</div>
             </div>
             <div class="milestone-divider"></div>
             <div class="milestone-row">
               <div class="milestone-label">פירות</div>
-              <div class="milestone-text">פירות רכים (בננה, אבוקדו) אפשר להגיש טריים מרוסקים. תפוח ואגס - לאדות ולרסק. פירות מוסיפים מתיקות טבעית ומסייעים בעיכול. גם כאן - פרי אחד בכל פעם, 3-4 ימים המתנה בין הוספות.</div>
+              <div class="milestone-text">פירות רכים (בננה, אבוקדו) אפשר להגיש טריים מרוסקים. תפוח ואגס - לאדות, לבשל או לאפות ולרסק למחית, או לגרד בפומפייה (מגיל 7). פירות מוסיפים מתיקות טבעית ומסייעים בעיכול. פירות חומציים (תות, קיווי, תפוז, אננס) - להמתין עד גיל 9-10 חודשים.</div>
             </div>
             <div class="milestone-divider"></div>
             <div class="milestone-row">
@@ -1579,9 +1533,14 @@
               <div class="milestone-text">אחד המזונות הראשונים והטובים ביותר! דייסת אורז ללא חלב (rice cereal), דייסת כוסמת, דייסת שיבולת שועל - מדוללת עם מים, חלב אם או פורמולה. עשירה בברזל, קל לעיכול.</div>
             </div>
             <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">חלבון וברזל — כבר מחודש 6</div>
+              <div class="milestone-text">קטניות (עדשים, אפונה) ובשר טחון מבושל היטב ניתן להתחיל כבר מחודש 6 — מקורות ברזל חשובים.</div>
+            </div>
+            <div class="milestone-divider"></div>
             <div class="milestone-label" style="margin-bottom:0.5rem">ירקות ופירות מומלצים</div>
             <div class="food-grid">
-              <div class="food-item"><span>🥒</span>קישוא (מתחילים!)</div>
+              <div class="food-item"><span>🥒</span>קישוא</div>
               <div class="food-item"><span>🥕</span>גזר</div>
               <div class="food-item"><span>🍠</span>בטטה</div>
               <div class="food-item"><span>🎃</span>דלעת</div>
@@ -1596,7 +1555,11 @@
               <div class="milestone-label">BLW או פירה?</div>
               <div class="milestone-text">שתי הגישות תקינות. פירה חלק מאפשר כמות מדויקת ותגובה ברורה. BLW (Baby Led Weaning - האכלה בהנחיית התינוק) - חתיכות מזון רכות מבושלות שהתינוק/ת אוחז/ת ואוכל/ת בעצמ/ה - מפתח עצמאות ומוטוריקה עדינה.</div>
             </div>
-            <div class="food-warn">שיטת אידוי שומרת על ויטמינים. לאחר הבישול - לטחון חלק. אחרי שבועיים-שלושה אפשר לעבור למרקם גרגרי יותר.</div>
+            <div class="milestone-divider"></div>
+            <div class="milestone-row">
+              <div class="milestone-label">חשיפה לאלרגנים</div>
+              <div class="milestone-text">כחלק מהמעבר למזון משלים, מומלץ לחשוף את התינוק גם למזונות אלרגניים — חשיפה מוקדמת מסביב לגיל 6 חודשים דווקא מסייעת בהפחתת הסיכון לפתח אלרגיה. ניתן לעשות זאת בשיטת גרגר האורז: מציעים לתינוק כמות קטנה מהמזון החדש ומגדילים בהדרגה לאורך שלושה ניסיונות — ניסיון ראשון בגודל גרגר אורז אחד, ניסיון שני בגודל שני גרגרים, ניסיון שלישי בגודל ארבעה גרגרים. לא חייב יום אחרי יום — אפשר לחכות כמה ימים בין ניסיון לניסיון. אחרי שלושה ניסיונות ללא תגובה, ניתן לשלב את המזון בתפריט הרגיל. רשימת האלרגנים הנפוצים מופיעה בהמשך.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1621,7 +1584,7 @@
             <div class="milestone-divider"></div>
             <div class="milestone-row">
               <div class="milestone-label">פירה בשר עוף</div>
-              <div class="milestone-text">עוף מבושל היטב + ירק = פירה מזין ועשיר בברזל וחלבון. טוחנים בבלנדר עם קצת ציר בישול לפירה חלק. לאחר כמה שבועות, כשהתינוק/ת מורגל/ת לטעימות - אפשר לעבור למרקם גס יותר ולרסק במזלג. גם הודו וגם בקר מתאימים - מבושלים היטב, ללא תיבול.</div>
+              <div class="milestone-text">עוף מבושל היטב + ירק = פירה מזין ועשיר בברזל וחלבון. טוחנים בבלנדר עם קצת ציר בישול לפירה חלק. לאחר כמה שבועות, כשהתינוק/ת מורגל/ת לטעימות - אפשר לעבור למרקם גס יותר ולרסק במזלג. גם הודו וגם בקר מתאימים - מבושלים היטב, טחונים וללא תיבול.</div>
             </div>
             <div class="milestone-divider"></div>
             <div class="milestone-row">
@@ -1631,7 +1594,7 @@
             <div class="milestone-divider"></div>
             <div class="milestone-row">
               <div class="milestone-label">ביסקוויטים לתינוקות</div>
-              <div class="milestone-text">ביסקוויטים ייעודיים לתינוקות (ללא מלח/סוכר) - נהדרים לאחיזה ולגירוי של ציצת הבקיעה. הם נמסים בפה, כך שאין סכנת חנק.</div>
+              <div class="milestone-text">ביסקוויטים ייעודיים לתינוקות (ללא מלח/סוכר) - נהדרים לאחיזה ולגירוי של חניכיים. הם נמסים בפה, כך שאין סכנת חנק.</div>
             </div>
             <div class="milestone-divider"></div>
             <div class="milestone-label" style="margin-bottom:0.5rem">שילובים מומלצים</div>
@@ -1648,10 +1611,6 @@
               <div class="food-item"><span>🥑🥚🍠</span>אבוקדו + חלמון ביצה + בטטה</div>
             </div>
             <div class="milestone-divider"></div>
-            <div class="milestone-row">
-              <div class="milestone-label">אלרגנים - מתחילים בזהירות</div>
-              <div class="milestone-text">שיטת גרגר האורז: ניסיון 1 = גרגר אחד, ניסיון 2 = שניים, ניסיון 3 = ארבעה. בין ניסיון לניסיון - לא חייב יום אחרי יום, אפשר כל כמה ימים. אחרי 3 ניסיונות ללא תגובה - משלבים בשגרה!</div>
-            </div>
           </div>
         </div>
       </div>
@@ -1691,8 +1650,6 @@
                   <div class="food-item"><span>🥛</span>כפיר/יוגורט תינוקות</div>
                   <div class="food-item"><span>🐟</span>דג לבן מבושל (טונה, בורי)</div>
                   <div class="food-item"><span>🍞</span>לחם רך/קרקר תינוקות</div>
-                  <div class="food-item"><span>🧃</span>מיץ פירות מדולל (1:3)</div>
-                  <div class="food-item"><span>🍝</span>פסטה מבושלת היטב</div>
                   <div class="food-item"><span>🫛</span>קטניות (עדשים, אפונה)</div>
                   <div class="food-item"><span>🥚</span>ביצה שלמה מגיל 9 חודשים</div>
                   <div class="food-item"><span>🥣</span>טחינה (50% שומשום)</div>
@@ -1879,7 +1836,7 @@
           { icon: '👁', label: 'ראייה', text: 'הראייה מטושטשת ומוגבלת לטווח של 20-30 ס"מ בלבד - בדיוק המרחק מפניך אל פניו/ה בזמן הנקה. אמנם הוא/היא לא רואה/ה את כל החדר, אבל עיניו/ה כבר מחפשות פרצופים, צבעים ניגודיים ותנועה. שחור-לבן הוא הצבע הכי מושך בשלב זה.' },
           { icon: '👂', label: 'שמיעה', text: 'השמיעה פיתחה את עצמה כבר ברחם - קולך מוכר ומרגיע יותר מכל דבר אחר. קולות חזקים ופתאומיים יכולים להבהיל ולגרום לבכי, ואילו רעש לבן, רעש מונוטוני (כמו מאוורר), ושירי ערש מרגיעים את המערכת העצבית.' },
           { icon: '👐', label: 'רפלקסים', text: 'המוח של הרך הנולד שולט על הגוף באמצעות רפלקסים מולדים: רפלקס יניקה (לפה כל מה שנוגע בשפתיים), רפלקס חיפוש (מסובב/ת ראש לכיוון הגירוי), רפלקס אחיזה (אוחז/ת אצבע בחוזקה), רפלקס הצעד האוטומטי ורפלקס הזחילה - כולם ביחד מצביעים על מוח בריא ומתפקד.' },
-          { icon: '💪', label: 'טונוס שרירים', text: 'בשבוע הראשון שרירי הכיפוף שולטים - ידיים ורגליים מכופפות ומוצמדות לגוף בתנוחה עוברית מוכרת. זה לא חוסר שליטה אלא טונוס גבוה (היפרטוניה) שמגן על הגפיים. בהדרגה, עם הזמן, שרירי המתיחה יתחזקו והגפיים יתחילו להשתחרר.' }
+          { icon: '💪', label: 'טונוס שרירים', text: 'בשבוע הראשון שרירי הכיפוף שולטים - ידיים ורגליים מכופפות ומוצמדות לגוף בתנוחה עוברית שמוכרת לו עוד מהרחם. זה לא חוסר שליטה אלא טונוס גבוה (היפרטוניה) שמגן על הגפיים. בהדרגה, עם הזמן, שרירי המתיחה יתחזקו והגפיים יתחילו להשתחרר.' }
         ],
         tip: 'שמרי על קשר עין ישיר בזמן ההנקה - זה הרגע שבו נרקמת ההתקשרות הרגשית הכי עמוקה. אין צעצוע בעולם שמחליף את הפנים שלך.'
       },
@@ -1905,15 +1862,15 @@
           { icon: '🤲', label: 'מוטוריקה', text: 'ב-Tummy Time (שכיבה על הבטן) כבר מרים/ה ראש לשניות בודדות ומחפשת/ת לאן לפנות. בזמן ערות, ידיו/ה מתחילות לנוע פחות בצורה כאוטית ויותר בכיוון מרכז הגוף - תחילתה של כוונה מוטורית.' },
           { icon: '💕', label: 'קשר רגשי', text: 'קרבה פיזית היא הצורך הגדול ביותר בשלב זה. עור-לעור (קנגורו) ממשיך לווסת טמפרטורת גוף, קצב לב, נשימה, ורמות קורטיזול (הורמון לחץ). זה לא פינוק - זה פיזיולוגיה. הנשיאה הקרובה בונה ביטחון שיישאר לכל החיים.' }
         ],
-        tip: 'Babywearing - נשיאה בעיגול (בד ארוך שעוטפים את התינוק וקושרים על הגוף) או מנשא ארגונומי מרגיעה גזים, מפחיתה בכי ומחזקת קשר. ידיים שלך חופשיות לטפל בדברים אחרים.'
+        tip: 'Babywearing - נשיאה בעיגול (בד ארוך שעוטפים את התינוק וקושרים על הגוף) או מנשא ארגונומי מרגיעה גזים, מפחיתה בכי ומחזקת קשר. הידיים שלך חופשיות לטפל בדברים אחרים.'
       },
       4: {
         title: 'שבוע 4',
         items: [
-          { icon: '👁', label: 'ראייה', text: 'עוקב/ת אחרי עצמים נעים בטווח של 30-40 ס"מ, וסובב/ת ראש עד 90 מעלות כדי לעקוב אחרי פנים. אם העיניים נראות קצת לא מיושרות (פזילה קלה) - זה תקין בגיל הזה, שרירי העיניים עוד מתחזקים. מתעניין/ת בפרצופים ומנסה לשמור על קשר עין.' },
+          { icon: '👁', label: 'ראייה', text: 'עוקב/ת אחרי עצמים נעים בטווח של 30-40 ס"מ, ומסובב/ת ראש עד 90 מעלות כדי לעקוב אחרי פנים. אם העיניים נראות קצת לא מיושרות (פזילה קלה) - זה תקין בגיל הזה, שרירי העיניים עוד מתחזקים. מתעניין/ת בפרצופים ומנסה לשמור על קשר עין.' },
           { icon: '😊', label: 'חיוך חברתי!', text: 'לקראת סוף השבוע הרביעי עשוי להופיע החיוך החברתי הראשון - מגיב/ה לחיוכך בחיוך מכוון! זה שונה מהחיוך הרפלקסי של השבועות הראשונים: הוא מגיע בתגובה לקולך, לפניך, לקשר עין. זו פריצת הדרך הרגשית הראשונה שלו/ה, ואולי הרגע הכי מרגש בחודש הראשון 🎉' },
           { icon: '🤲', label: 'מוטוריקה', text: 'ב-Tummy Time (שכיבה על הבטן) מרים/ה ראש לזווית של כ-45 מעלות ושומר/ת מספר שניות. שרירי הצוואר מתחזקים בקצב מדהים. הידיים מתחילות להיפתח בהדרגה - האגרוף הסגור הנצחי של השבועות הראשונים מתחיל להשתחרר.' },
-          { icon: '😴', label: 'שינה', text: 'מתחיל/ה להבחין בין יום ולילה - השעון הביולוגי מתחיל להתכייל. לעזור לתהליך: לחשוף לאור שמש ורעש ביום, לשמור על לילה כהה, שקט ורגוע. ההבדל בין שני הסביבות "מלמד" את המוח מתי לישון עמוק.' },
+          { icon: '😴', label: 'שינה', text: 'מתחיל/ה להבחין בין יום ולילה - השעון הביולוגי מתחיל להתכייל. על מנת לעזור לתהליך: לחשוף לאור שמש ורעש ביום, לשמור על לילה כהה, שקט ורגוע. ההבדל בין שתי הסביבות "מלמד" את המוח מתי לישון עמוק.' },
           { icon: '👂', label: 'שמיעה', text: 'מפנה ראש בצורה ברורה יותר לכיוון קולות מוכרים, ובמיוחד לקולך. כבר יכול/ה להגיב לשמו/ה. שמיעתו/ה מפותחת יותר מאשר נדמה: מבחין/ה בניגודי עוצמה, גובה, ומקצב בדיבור.' },
           { icon: '📈', label: 'גדילה', text: 'חודש ראשון מאחורינו - עלייה ממוצעת של 600-900 גרם ו-3-4 ס"מ. כל גרם מעבר למשקל הלידה הוא עדות להנקה/האכלה מוצלחת.' }
         ],
@@ -1936,7 +1893,7 @@
       2: {
         title: 'חודש 2',
         items: [
-          { icon: '📏', label: 'גדילה', text: 'בסוף החודש השני: משקל ממוצע 5.1-6 ק"ג, גובה 58-63 ס"מ. מוסיף/ה בממוצע 800 גרם ו-3-4 ס"מ בחודש. עכשיו מתחיל להצטבר השומן התת-עורי ומשכבת השריר - הגוף מאבד את המראה "המקומט" של הרך הנולד ומתעגל לתינוק/ת ורוד/ה ושמנמן/ה.' },
+          { icon: '📏', label: 'גדילה', text: 'בסוף החודש השני: משקל ממוצע 5.1-6 ק"ג, גובה 58-63 ס"מ. מוסיף/ה בממוצע 800 גרם ו-3-4 ס"מ בחודש. עכשיו מתחיל להצטבר שומן תת-עורי ורקמת שריר - הגוף מאבד את המראה "המקומט" של הרך הנולד ומתעגל לתינוק/ת ורוד/ה ושמנמן/ה.' },
           { icon: '🤲', label: 'מוטוריקה', text: 'מחזיק/ה ראש בזקיפות לשניות בודדות כשנישא/ת על הידיים. ב-Tummy Time (שכיבה על הבטן) כבר מרים/ה חזה וחלק מהבטן מהמשטח - שרירי הגב מתחזקים! התנועות הופכות מעט מעט חלקות יותר, פחות כאוטיות, כששרירי הגו מתפתחים.' },
           { icon: '👁', label: 'ראייה', text: 'עוקב/ת 180 מעלות עם העיניים - מצד לצד! מבחין/ה בפרצופים מוכרים ומגיב/ה אליהם בהתרגשות ברורה שאינה נראית כמו תגובה לזרים. קשר עין ממושך יותר, ותשומת לב מוגברת לפרטים בפנים.' },
           { icon: '😄', label: 'שיחה ראשונה', text: 'מחייך/ת בתגובה לחיוכך, ומנהל/ת "שיחה" אמיתית - שומע/ת אותך מדברת, ממתין/ה, ואז מגיב/ה בצליל או בחיוך. זהו "Turn-Taking" - לימוד תורות בשיחה - אחד הכישורים החברתיים הכי יסודיים שיש.' },
@@ -1974,9 +1931,9 @@
         items: [
           { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 7.0-8.1 ק"ג, גובה 62-67 ס"מ. מוסיף/ה כ-700 גרם ו-2.5 ס"מ בחודש - הקצב מאט בהשוואה לחודשים הראשונים, וזה נורמלי לחלוטין. בגיל 5 חודשים כבר נראה/ית כמו תינוק/ת "גדול/ה", שלב הרך הנולד כבר חלף.' },
           { icon: '🤲', label: 'מוטוריקה', text: 'מתהפך/ת לשני הכיוונים בצורה יציבה. יושב/ת עם תמיכה. מופיעות תנועות "תפיסה דו-ידנית" - שתי הידיים נעות יחד לכיוון חפץ בו-זמנית, מה שמחייב תיאום בין שתי חצאי המוח. מעביר/ה חפצים מיד ליד בקלות.' },
-          { icon: '🎯', label: 'תפיסה ופה', text: 'אוחז/ת חפצים בכף כל היד (Palm Grasp) - מחזיק/ה מה שנותנים ומביא/ה ישר לפה. הפה הוא כלי החקירה העיקרי בגיל הזה: כל מה שנוגע בשפתיים נבדק - מרקם, טמפרטורה, קשיות.' },
+          { icon: '🎯', label: 'תפיסה ופה', text: 'אוחז/ת חפצים בכף כל היד (Palm Grasp) - מחזיק/ה מה שנותנים ומביא/ה ישר לפה. הפה הוא כלי החקירה העיקרי בגיל הזה: כל מה שנוגע בשפתיים נבדק - מרקם, טמפרטורה, נוקשות.' },
           { icon: '🦷', label: 'שיניים בדרך', text: 'ייתכן שן ראשונה - לרוב האמצעיות התחתונות. הסימנים יכולים להופיע שבועות לפני השן עצמה: ריר מוגבר, נשיכות על כל דבר, עצבנות, ולפעמים חום נמוך. לא כל ריר הוא שיניים - לפעמים ריר מוגבר הוא פשוט הבשלת בלוטות הרוק.' },
-          { icon: '😄', label: 'חברתי', text: 'מגיב/ה לשמו/ה בסיבוב ראש ברור - כבר מזהה/ת שזה השם שלו/ה. מבחין/ה בין מוכרים לזרים ומביע/ה זאת בהבעת פנים, בכי, או ריחוק. צוחק/ת בקול ומשחק/ת "פיקאבו" בהנאה - המשחק של עכשיו אתה נמצא ועכשיו אתה נעלם.' },
+          { icon: '😄', label: 'חברתי', text: 'מגיב/ה לשמו/ה בסיבוב ראש ברור - כבר מזהה שזה השם שלו/ה. מבחין/ה בין מוכרים לזרים ומביע/ה זאת בהבעת פנים, בכי, או ריחוק. צוחק/ת בקול ומשחק/ת "פיקאבו" בהנאה - המשחק של עכשיו אתה נמצא ועכשיו אתה נעלם.' },
           { icon: '😴', label: 'שינה', text: '14-16 שעות ביממה, 3-4 שינות יום. חלק מהתינוקות מגיעים ל-6-8 שעות ברצף בלילה - אם לא, גם זה נורמלי. בגיל 5 חודשים עדיין לא "צריכים" לישון שינת לילה רצופה - הגוף המתפתח עדיין זקוק להאכלות לילה.' }
         ],
         tip: 'שיניים בדרך: טבעת שיניים קרה (מהמקרר, לא מהמקפיא) ועיסוי עדין של החניכיים עוזרים מאוד. לא לתת ג\'ל שיניים עם בנזוקאין - לא מומלץ לגיל זה.'
@@ -1984,11 +1941,11 @@
       6: {
         title: 'חודש 6',
         items: [
-          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 7.4-8.5 ק"ג, גובה 64-69 ס"מ. חצי שנה! מהלידה עד כאן - הגוף הכפיל את משקלו לפחות פעם אחת. בחצי שנה הקרובה הגדילה תהיה איטית יותר, אך כל Milestone מוטורי ושפתי יהיה מדהים להשגחה.' },
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 7.4-8.5 ק"ג, גובה 64-69 ס"מ. חצי שנה! מהלידה עד כאן - הגוף הכפיל את משקלו לפחות פעם אחת. בחצי שנה הקרובה הגדילה תהיה איטית יותר, אך כל Milestone מוטורי ושפתי יהיה מדהים לצפייה.' },
           { icon: '🤲', label: 'מוטוריקה', text: 'יושב/ת עם תמיכה קלה ובדרך לישיבה עצמאית - חלק כבר יושבים לבד! מגיע/ה לחפצים ואוחז/ת בכוונה ברורה. מתחיל/ה לנסות להיאחז בריהוט ולמשוך עצמו/ה לעמידה - ה"חיפוש" לאחר אתגר חדש מניע את ההתפתחות.' },
-          { icon: '🥣', label: 'טעימות - מתחילים!', text: 'גיל 6 חודשים הוא החלון האידיאלי להתחלת אוכל מוצק - לא לפני, ולא הרבה אחרי. מתחילים בירק אחד מבושל (בטטה, גזר, קישוא), ממתינים 3-4 ימים לפני הוספת מזון חדש כדי לזהות תגובה אלרגית. חלב אם או פורמולה עדיין המזון העיקרי - האוכל המוצק משלים, לא מחליף. למדריך טעימות מפורט - ראו בהמשך.' },
-          { icon: '🎶', label: 'לפת ושפה', text: 'מתחיל/ה לבטא צלילים - "בבב", "ממם", "זזז" - צלילים דו-שפתיים ראשונים! מגיב/ה לשמו/ה בסיבוב ראש לכיוון הקול. מתחיל/ה להבין מילים בודדות - מפנה ראש לכיוון עצם שנקרא בשמו. זוהי "שפה פסיבית" - הבנה לפני דיבור.' },
-          { icon: '👁', label: 'ראייה ושמיעה', text: 'ראייה כמעט כשל מבוגר/ת - חדה, עם תיאום ידניים-עיניים מצוין. עוקב/ת אחרי עצמים קטנים ומהירים. השמיעה מבחינה בין צלילים הנבדלים בחצי טון בלבד - בסיס מצוין ללימוד מוזיקה ושפה.' },
+          { icon: '🥣', label: 'טעימות - מתחילים!', text: 'גיל 6 חודשים הוא החלון האידיאלי להתחלת אוכל מוצק - לא לפני, ולא הרבה אחרי. מתחילים בירקות מבושלים ומרוסקים - ההנחיה העדכנית מדגישה גיוון ואין סדר מחייב של הכנסת ירק ירק. ממתינים 3-4 ימים לפני הוספת מזון חדש כדי לזהות תגובה אלרגית. חלב אם או פורמולה עדיין המזון העיקרי - האוכל המוצק משלים, לא מחליף. למדריך טעימות מפורט - ראו בהמשך.' },
+          { icon: '🎶', label: 'קולות ושפה', text: 'מתחיל/ה לבטא צלילים - "בבב", "ממם", "זזז" - צלילים ראשונים! מגיב/ה לשמו/ה בסיבוב ראש לכיוון הקול. מתחיל/ה להבין מילים בודדות - מפנה ראש לכיוון עצם שנקרא בשמו. זוהי "שפה פסיבית" - הבנה לפני דיבור.' },
+          { icon: '👁', label: 'ראייה ושמיעה', text: 'ראייה כמעט כשל מבוגר/ת - חדה, עם תיאום עין-יד מצוין. עוקב/ת אחרי עצמים קטנים ומהירים. השמיעה מבחינה בין צלילים הנבדלים בחצי טון בלבד - בסיס מצוין ללימוד מוזיקה ושפה.' },
           { icon: '😴', label: 'שינה', text: '15 שעות ביממה, 10-12 שעות בלילה ו-3-5 שעות שינות יום (3-4 שינות). ישנה אפשרות לשינה רצופה של 8-10 שעות בלילה - ואם לא, גם 3-4 יקיצות נחשבות נורמה בגיל הזה.' }
         ],
         tip: 'שלושת סימני המוכנות לטעימות: יושב/ת עם תמיכה, מוציא/ה פחות לשון (רפלקס דחיית מזון פוחת), ומתעניין/ת בצלחת שלך. שלושתם יחד = מוכן/ה! לא לפני גיל 6 חודשים מלאים.'
@@ -1997,10 +1954,10 @@
         title: 'חודש 7',
         items: [
           { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 7.7-8.9 ק"ג, גובה 65-70 ס"מ. לפעמים מופיעה ירידה זמנית בתיאבון - האנרגיה מופנית להתפתחות מוטורית מואצת. ירידה זמנית בהאכלה כשיש שינוי התפתחותי גדול - נורמלי.' },
-          { icon: '🤲', label: 'מוטוריקה', text: 'יושב/ת לבד! זו פריצת הדרך הגדולה של החודש הזה. מתחיל/ה לנסות לזחול - חלק יסחוב/תסחוב גוף על הבטן, חלק יזחל/תזחל על ארבע, וחלק "ירכב/תרכב" על הישבן. כל אחד מהמסלולים תקין ומפתח שרירים שונים. זמן לאבטחת הבית: לבדוק שאין חפצים קטנים על הרצפה, לנעול ארונות, ולשים גדרות בסף מדרגות.' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'יושב/ת לבד! זו פריצת הדרך הגדולה של החודש הזה. מתחיל/ה לנסות לזחול - חלק יסחוב/תסחוב את הגוף על הבטן, חלק יזחל/תזחל על ארבע, וחלק "ירכב/תרכב" על הישבן. כל אחד מהמסלולים תקין ומפתח שרירים שונים. זמן לאבטחת הבית: לבדוק שאין חפצים קטנים על הרצפה, לנעול ארונות, ולשים גדרות בסף מדרגות.' },
           { icon: '🎯', label: 'תפיסה', text: 'Pincer Grip בהתפתחות - מנסה/ת לאחוז בחפצים קטנים בין האגודל לאצבע הראשונה. מעביר/ה חפצים מיד ליד בזריזות ובמכוון. מתחיל/ה לאסוף חפצים לתוך קופסה - פעולה מורכבת שדורשת תכנון!' },
-          { icon: '🎶', label: 'לפת ושפה', text: 'לפת מגוונת ועשירה: "בבב", "ממם", "דדד", "זזז". מתחיל/ה לקשר צלילים לאנשים - "מממ" נאמר לעיתים בכוונה לכיוון אמא. מגיב/ה בבירור לשמו/ה ולמילים מוכרות. "שפה פסיבית" מוסיפה מילים בקצב מהיר.' },
-          { icon: '🍴', label: 'טעימות', text: 'מרחיבים לשילובי ירקות ומוסיפים דייסות. 1-2 ארוחות קטנות ביום. זה גם הזמן להתחיל חשיפה לאלרגנים - השיטה המומלצת במדריך הטעימות. חלב אם או פורמולה עדיין המזון העיקרי - כ-5 פעמים ביום.' },
+          { icon: '🎶', label: 'קולות ושפה', text: 'קולות מגוונים ועשירים: "בבב", "ממם", "דדד", "זזז". מתחיל/ה לקשר צלילים לאנשים - "מממ" נאמר לעיתים בכוונה לכיוון אמא. מגיב/ה בבירור לשמו/ה ולמילים מוכרות. "שפה פסיבית" - נוספות מילים בקצב מהיר.' },
+          { icon: '🍴', label: 'טעימות', text: '2-3 ארוחות קטנות ביום. מוסיפים בשר מבושל טחון (עוף, הודו, בקר) וחלמון ביצה - עשירים בברזל וחלבון. ממשיכים עם חלב אם/פורמולה 3-4 פעמים ביום. לשילובים מומלצים - ראו מדריך הטעימות.' },
           { icon: '😴', label: 'שינה', text: 'סה"כ 15 שעות ביממה, 10-12 שעות בלילה ו-3-5 שעות ביום (3-4 שינות). שינה לילית של 6-9 שעות ברצף - אפשרית! אם לא - גם זה תקין. 2-3 יקיצות עדיין שכיחות בגיל הזה.' }
         ],
         tip: 'זחילה - כל תינוק/ת בקצב שלו/ה! חלקם עוקפים זחילה לגמרי וקופצים להליכה. שני המסלולים תקינים לחלוטין ואינם משפיעים על ההתפתחות הכוללת.'
@@ -2013,17 +1970,17 @@
           { icon: '🎯', label: 'Pincer Grip', text: 'אוחז/ת חפצים קטנים בין קצה האגודל לאצבע הראשונה - Pincer Grip! זה צעד ענק במוטוריקה העדינה שיאפשר בעתיד לכתוב, לצייר, ולהשתמש בכלי אוכל.' },
           { icon: '💕', label: 'חרדת זרים', text: 'חרדת זרים בשיאה - מוציא/ה בכי כשאת עוזב/ת ומתרגש/ת מאוד כשאת חוזר/ת. זה סימן מצוין: מראה שנוצרה התקשרות בריאה וחזקה. לא לכפות מגע עם זרים - לתת להתרגל בהדרגה ובזמן שלו/ה.' },
           { icon: '🗣', label: 'שפה', text: 'מחקה/ת צלילים, קצב דיבור, ואפילו אינטונציה. מבין/ה "לא" ו"ביי-ביי" וכבר מגיב/ה בהתאמה. מקרקר/ת בהנאה בשיחות, ומשמיע/ה צלילים שונים לצרכים שונים - כועס/ת, שמח/ה, עייף/ה, רוצה תשומת לב.' },
-          { icon: '🍴', label: 'אוכל', text: '2-3 ארוחות קטנות ביום. מוסיפים חלבונות לראשונה: עוף, ביצה, דג, קטניות. חלב אם או פורמולה עדיין המזון העיקרי. לפירוט מלא - ראו מדריך הטעימות.' }
+          { icon: '🍴', label: 'אוכל', text: '3 ארוחות ביום - התפריט מתרחב! מוסיפים לראשונה מוצרי חלב (גבינת קוטג\', כפיר, יוגורט תינוקות), דג לבן מבושל וקטניות. הלחם הרך הראשון מתווסף בשלב זה. חלב אם או פורמולה ממשיכים להיות חשובים - 2-3 פעמים ביום. לשילובים ורעיונות נוספים - ראו מדריך הטעימות.' }
         ],
-        tip: 'תינוק שמתחיל לעמוד מגיע לגובה חדש - עגנו ריהוט כבד לקיר! ספריות וכוניות יכולות להתהפך כשהוא נאחז בהן. בדקו פינות חדות בגובה הראש.'
+        tip: 'תינוק שמתחיל לעמוד מגיע לגובה חדש - עגנו ריהוט כבד לקיר! ספריות וכונניות יכולות להתהפך כשהוא נאחז בהן. בדקו פינות חדות בגובה הראש.'
       },
       9: {
         title: 'חודש 9',
         items: [
           { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.3-9.6 ק"ג, גובה 68-73 ס"מ. האנרגיה עוברת לפיתוח מוח ומוטוריקה - קצב הגדילה הפיזית מאט, וזה מצוין. כל גרם שמוסיפ/ים כעת הוא שריר, עצם וסינפסות חדשות.' },
           { icon: '🤲', label: 'מוטוריקה', text: 'עומד/ת עם אחיזה ו"מטייל/ת" לאורך הספה (Cruising). יכול/ה לעבור מיד ליד לאורך הריהוט בצעד אחר צעד. מיומנות האצבעות גבוהה - הופך/ת עמודים בספר, מרים גרגרים קטנים, מכניס/ה חפצים לחרירים. חלק מהתינוקות עושים צעדים עצמאיים ראשונים בגיל הזה!' },
-          { icon: '🧠', label: 'קביעות חפץ', text: 'מחפש/ת צעצוע שנפל מחוץ לשדה הראייה - כי הבין/ה שחפצים ממשיכים להתקיים גם כשאינם נראים. פיאז\'ה קרא לזה "Object Permanence". זה גם למה כעת מוציא/ה בכי כשאת עוזב/ת - יודע/ת שאת קיימת, ורוצה שתחזור!' },
-          { icon: '🗣', label: 'שפה', text: '"מאמא", "דאדא" - עם כוונה מלאה! מבין/ה מילים ספציפיות: "תן", "בוא", "לא", שמות של חברים ומשפחה. מגיב/ה להוראות פשוטות כמו "תן לי" ו"תנפנף ביי-ביי". משמיע/ה צלילים מגוונים עם אינטונציות שונות - שמחה, כעס, התלהבות.' },
+          { icon: '🧠', label: 'Object Permanence', text: 'מחפש/ת צעצוע שנפל מחוץ לשדה הראייה - כי הבין/ה שחפצים ממשיכים להתקיים גם כשאינם נראים. פיאז\'ה קרא לזה "Object Permanence". זה גם למה כעת מוציא/ה בכי כשאת עוזב/ת - יודע/ת שאת קיימת, ורוצה שתחזור!' },
+          { icon: '🗣', label: 'שפה', text: '"אמא", "אבא" - עם כוונה מלאה! מבין/ה מילים ספציפיות: "תן", "בוא", "לא", שמות של חברים ומשפחה. מגיב/ה להוראות פשוטות כמו "תן לי" ו"תנפנף ביי-ביי". משמיע/ה צלילים מגוונים עם אינטונציות שונות - שמחה, כעס, התלהבות.' },
           { icon: '💕', label: 'חברתי', text: 'משחק/ת "תן-קח" ו-Peek-a-Boo בהנאה גדולה. מחקה/ת מחוות ידיים: "ביי-ביי", מחיאות כפיים. מתחיל/ה לבצע הוראות פשוטות: "תעשה/י ככה", "תנפנף". מבחין/ה בין זרים לאנשים מוכרים ומגיב/ה בהתאמה.' },
           { icon: '😴', label: 'שינה', text: '13-15 שעות ביממה, 10-12 שעות בלילה. ייתכן רגרסיית שינה 9 חודשים - קשורה בפריצת התפתחות מוטורית ושפתית גדולה. שינות היום מצטמצמות ל-2, אך ייתכן עדיין 3.' }
         ],
@@ -2033,9 +1990,9 @@
         title: 'חודש 10',
         items: [
           { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.5-9.9 ק"ג, גובה 69-74 ס"מ. הגוף מתחיל להתארך ולהצטמצם בהיקפו - שומן תינוק מתחלף בשריר. זה גורם לו/ה להיראות "גדול/ה" יותר, לפעמים "רזה" יותר - זו לא ירידה במשקל - אלא שינוי תקין בהרכב הגוף: פחות שומן, יותר שריר.' },
-          { icon: '🤲', label: 'מוטוריקה', text: 'הולך/ת כשמחזיקים לו/ה בשתי הידיים. עומד/ת לבד לרגעים קצרים. עולה ויורד מדרגות נמוכות עם פיקוח. מנסה/ת לנעול ולפתוח ריהוט, לפתוח מגירות' },
+          { icon: '🤲', label: 'מוטוריקה', text: 'הולך/ת כשמחזיקים לו/ה בשתי הידיים. עומד/ת לבד לרגעים קצרים. עולה ויורד מדרגות נמוכות עם פיקוח. מנסה/ת לנעול ולפתוח ריהוט, לפתוח מגירות.' },
           { icon: '👆', label: 'הצבעה', text: 'מצביע/ה על חפצים שרוצה ומחכה לתגובתך - זוהי תקשורת מכוונת מפותחת! הצבעה עם אצבע המורה היא Milestone תקשורתי חשוב: מעיד על הבנה שניתן לשתף תשומת לב עם אחר (Joint Attention). בסיס לשיחה ולהצביע על עצמים בספרים.' },
-          { icon: '🗣', label: 'שפה', text: '1-2 מילים ברורות בעלות משמעות: "מאמא", "דאדא", ולעתים "אמ-אמ" (אוכל), "אאא" (אני רוצה). מחקה/ת מחוות ומחיאות כפיים. מבין/ה הוראות בשתי מילים: "תן לאמא", "שב פה". אוצר מילים פסיבי גדל מהיר.' },
+          { icon: '🗣', label: 'שפה', text: '1-2 מילים ברורות בעלות משמעות: "אמא", "אבא", ולעתים "אמ-אמ" (אוכל), "אאא" (אני רוצה). מחקה/ת מחוות ומחיאות כפיים. מבין/ה הוראות בשתי מילים: "תן לאמא", "שב פה". אוצר מילים פסיבי גדל מהר.' },
           { icon: '💕', label: 'חברתי', text: 'משחק/ת Peek-a-Boo (מסתירים את הפנים ומגלים) ומחיאות כפיים בקצב בהנאה. בודק/ת תגובות ההורים - "מותר? אסור?" ומשתמש/ת בהבעות פנים שלך כדי לנווט התנהגות. זוהי "Social Referencing" - ניווט חברתי ראשוני שמפתח אמפתיה.' },
           { icon: '🍴', label: 'אוכל', text: 'Finger Foods - אוחז/ת ואוכל/ת לבד! מגוון טקסטורות: רך, קשה קצת, פריך-רך. מנסה/ת להשתמש בכפית (עם הצלחה חלקית). 3 ארוחות ביום בתוספת חלב אם או פורמולה.' }
         ],
@@ -2045,7 +2002,7 @@
       11: {
         title: 'חודש 11',
         items: [
-          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.7-10.1 ק"ג, גובה 71-76 ס"מ. עוד חודש אחד לשנה! הגוף שילש את משקל הלידה ויותר. כל שבוע מביא Milestone חדש - ועכשיו הם כל כך מרגשים שקשה להספיק לצלם.' },
+          { icon: '📏', label: 'גדילה', text: 'משקל ממוצע 8.7-10.1 ק"ג, גובה 71-76 ס"מ. עוד חודש אחד לשנה! הגוף שילש את משקל הלידה ויותר. כל שבוע מביא Milestone חדש - ועכשיו הם כל כך מרגשים שקשה להפסיק לצלם.' },
           { icon: '🤲', label: 'מוטוריקה', text: 'הולך/ת עם אחיזה ביד אחת. חלק מהתינוקות כבר עושים צעדים עצמאיים! עולה ויורד מהספה. מטפס/ת בביטחון. מיומנות ידיים: מסובב/ת ידית, פותח/ת מיכל, שם/שמה חפץ לתוך תיבה ומוציא/ה.' },
           { icon: '🗣', label: 'שפה', text: '2-4 מילים בעלות משמעות ברורה. מבין/ה עשרות מילים ומשפטים קצרים. מצביע/ה על תמונות בספר ומחכה שתגיד/י מה זה. מגיב/ה להוראות בשתי מילים. מחא כפיים ומנפנף ביי-ביי בכוונה ובעיתוי הנכון.' },
           { icon: '🎭', label: 'משחק סמלי', text: 'מחקה/ת פעולות יומיומיות: "מדבר/ת" בטלפון (אפילו בבננה!), "מאכיל/ה" בובה, "מנגב/ת" עם מגבת. זהו המשחק הסמלי הראשון - היכולת לייצג את המציאות בפעולה. בסיס לדמיון ולמשחק יצירתי שיתפתח בשנים הבאות.' },
