@@ -1,36 +1,36 @@
-# 👶 מדריך התפתחות תינוק
+# Baby Development Guide
 
-**אפליקציית ווב חינמית ומקיפה למעקב אחר התפתחות התינוק מלידה עד גיל שנה**
+A free, comprehensive web app for tracking baby development from birth to one year.
 
-🔗 **[פתח את האפליקציה](https://yuliamam639.github.io/baby-development-guide/)**
-
----
-
-## מה יש באפליקציה?
-
-### 📅 מעקב התפתחות
-מדריך שבוע-שבוע וחודש-חודש — מוטוריקה, שפה, חברתי, שינה, תזונה ועוד. מלידה ועד גיל שנה, בשפה ברורה וידידותית.
-
-### 📏 מחשבון גדילה (WHO)
-חישוב אחוזון משקל וגובה לפי טבלאות ה-WHO הרשמיות, מותאם לתקנות משרד הבריאות הישראלי. תקף לבנים ובנות, מלידה עד גיל שנה.
-
-### 🥕 מדריך טעימות ראשונות
-מדריך מפורט להכנסת מזון מוצק — ירקות, פירות, חלבונות, אלרגנים ושילובים מומלצים לפי גיל. מבוסס על ההנחיות העדכניות של משרד הבריאות.
-
-### 💡 טיפים להורים
-טיפים מעשיים לשינה, התפתחות, בטיחות ועוד.
+**[Open the app](https://yuliamam639.github.io/baby-development-guide/)**
 
 ---
 
-## טכנולוגיה
+## Features
 
-- קובץ HTML בודד — ללא התקנה, ללא שרת, נפתח ישירות בדפדפן
-- עיצוב Glassmorphism כהה, RTL עברית מלאה
-- מחשבון WHO מבוסס שיטת LMS — מאומת מול מחשבון משרד הבריאות
-- מותאם למובייל ולמחשב
+### Development Tracker
+Week-by-week and month-by-month guide covering motor skills, language, social development, sleep, and nutrition — from birth to 12 months.
+
+### WHO Growth Calculator
+Calculates weight and height percentiles using official WHO tables, validated against the Israeli Ministry of Health calculator. Supports boys and girls, birth to 12 months.
+
+### First Foods Guide
+A detailed guide for introducing solid foods — vegetables, fruits, proteins, allergens, and age-appropriate food combinations, based on current Ministry of Health guidelines.
+
+### Tips for Parents
+Practical tips on sleep, development, safety, and more.
 
 ---
 
-## רישיון
+## Technology
 
-האפליקציה חופשית לשימוש אישי. המידע מבוסס על מקורות רפואיים מוכרים ואינו מחליף ייעוץ רפואי מקצועי.
+- Single HTML file — no installation, no server, opens directly in any browser
+- Dark glassmorphism design, full RTL Hebrew
+- WHO percentile calculator using the LMS method, validated against official references
+- Fully responsive — mobile and desktop
+
+---
+
+## Disclaimer
+
+This app is free for personal use. The information is based on recognized medical sources and does not replace professional medical advice.
