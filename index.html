@@ -824,6 +824,7 @@
   @media (max-width: 480px) {
     .hero-logo { width: 95vw; max-width: 95vw; }
     .hero-cards { grid-template-columns: repeat(2, 1fr) !important; }
+    .hero-cards .card-about { grid-column: 1 / -1; justify-self: center; width: calc(50% - 0.4375rem); }
     .allergens-grid { flex-direction: column !important; }
     .allergens-grid .food-grid { grid-template-columns: 1fr 1fr; }
     .food-grid { grid-template-columns: 1fr; }
@@ -1554,12 +1555,12 @@
             <div class="milestone-divider"></div>
             <div class="milestone-row">
               <div class="milestone-label">BLW או פירה?</div>
-              <div class="milestone-text">שתי הגישות תקינות. פירה חלק מאפשר כמות מדויקת ותגובה ברורה. BLW (Baby Led Weaning - האכלה בהנחיית התינוק) - חתיכות מזון רכות מבושלות שהתינוק/ת אוחז/ת ואוכל/ת בעצמ/ה - מפתח עצמאות ומוטוריקה עדינה.</div>
+              <div class="milestone-text">שתי הגישות תקינות. פירה חלק מאפשר כמות מדויקת ותגובה ברורה. BLW (Baby Led Weaning - האכלה בהנחיית התינוק) - חתיכות מזון רכות מבושלות שהתינוק/ת אוחז/ת ואוכל/ת בעצמו/ה - מפתח עצמאות ומוטוריקה עדינה.</div>
             </div>
             <div class="milestone-divider"></div>
             <div class="milestone-row">
               <div class="milestone-label">חשיפה לאלרגנים</div>
-              <div class="milestone-text">כחלק מהמעבר למזון משלים, מומלץ לחשוף את התינוק גם למזונות אלרגניים — חשיפה מוקדמת מסביב לגיל 6 חודשים דווקא מסייעת בהפחתת הסיכון לפתח אלרגיה. ניתן לעשות זאת בשיטת גרגר האורז: מציעים לתינוק כמות קטנה מהמזון החדש ומגדילים בהדרגה לאורך שלושה ניסיונות — ניסיון ראשון בגודל גרגר אורז אחד, ניסיון שני בגודל שני גרגרים, ניסיון שלישי בגודל ארבעה גרגרים. לא חייב יום אחרי יום — אפשר לחכות כמה ימים בין ניסיון לניסיון. אחרי שלושה ניסיונות ללא תגובה, ניתן לשלב את המזון בתפריט הרגיל. רשימת האלרגנים הנפוצים מופיעה בהמשך.</div>
+              <div class="milestone-text">כחלק מהמעבר למזון משלים, מומלץ לחשוף את התינוק גם למזונות אלרגניים — חשיפה מוקדמת סביב גיל 6 חודשים דווקא מסייעת בהפחתת הסיכון לפתח אלרגיה. ניתן לעשות זאת בשיטת גרגר האורז: מציעים לתינוק כמות קטנה מהמזון החדש ומגדילים בהדרגה לאורך שלושה ניסיונות — ניסיון ראשון בגודל גרגר אורז אחד, ניסיון שני בגודל שני גרגרים, ניסיון שלישי בגודל ארבעה גרגרים. לא חייב יום אחרי יום — אפשר לחכות כמה ימים בין ניסיון לניסיון. אחרי שלושה ניסיונות ללא תגובה, ניתן לשלב את המזון בתפריט הרגיל. רשימת האלרגנים הנפוצים מופיעה בהמשך.</div>
             </div>
           </div>
         </div>
@@ -1635,7 +1636,7 @@
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:14px; padding:1rem;">
                   <div class="milestone-label" style="margin-bottom:0.5rem">כמות ותדירות</div>
-                  <div class="milestone-text">3 ארוחות ביום + 2 חטיפים קטנים (פרי, יוגורט, ביסקוויט תינוקות). חלב 2-3 פעמים ביום. בגיל 9-12 חודשים אוכלים כמעט כמו שאר המשפחה - רק במרקם מרוסק.</div>
+                  <div class="milestone-text">3 ארוחות ביום + 2 חטיפים קטנים (פרי, יוגורט, ביסקוויט תינוקות). חלב אם או פורמולה 2-3 פעמים ביום. בגיל 9-12 חודשים אוכלים כמעט כמו שאר המשפחה - רק במרקם מרוסק.</div>
                 </div>
                 <div style="background:var(--glass); border:1px solid var(--glass-border); border-radius:14px; padding:1rem;">
                   <div class="milestone-label" style="margin-bottom:0.5rem">מעבר לחתיכות אצבע</div>
@@ -1649,7 +1650,7 @@
                 <div class="food-grid">
                   <div class="food-item"><span>🧀</span>גבינת קוטג'/ריקוטה</div>
                   <div class="food-item"><span>🥛</span>כפיר/יוגורט תינוקות</div>
-                  <div class="food-item"><span>🐟</span>דג לבן מבושל (טונה, בורי)</div>
+                  <div class="food-item"><span>🐟</span>דג לבן מבושל ללא עצמות (בורי, אמנון, פורל, דניס, סול)</div>
                   <div class="food-item"><span>🍞</span>לחם רך/קרקר תינוקות</div>
                   <div class="food-item"><span>🫛</span>קטניות (עדשים, אפונה)</div>
                   <div class="food-item"><span>🥚</span>ביצה שלמה מגיל 9 חודשים</div>
@@ -1714,7 +1715,6 @@
           <div class="week-item"><span class="week-item-icon">🍬</span><span class="week-item-text"><strong>סוכר וממתיקים:</strong> עד גיל שנתיים - ללא סוכר, סילאן, מייפל או דבש תמרים</span></div>
           <div class="week-item"><span class="week-item-icon">🥛</span><span class="week-item-text"><strong>חלב בקר כמשקה:</strong> רק מגיל 12 חודשים. גבינת קוטג'/יוגורט - מגיל 8 חודשים</span></div>
           <div class="week-item"><span class="week-item-icon">🥜</span><span class="week-item-text"><strong>אגוזים שלמים:</strong> אסורים עד גיל 5 - סכנת חנק! חמאת אגוזים/בוטנים מרוסקת - מגיל 6 חודשים</span></div>
-          <div class="week-item"><span class="week-item-icon">♨️</span><span class="week-item-text"><strong>אידוי</strong> - שיטת הבישול הטובה ביותר לשימור ויטמינים ומינרלים</span></div>
         </div>
       </div>
 
@@ -1752,7 +1752,7 @@
       <div class="tip-card">
         <div class="tip-icon">👐</div>
         <div class="tip-title">Tummy Time (שכיבה על הבטן)</div>
-        <div class="tip-text">מהשבוע הראשון - 3-5 פעמים ביום, 2-3 דקות. מחזק צוואר, גב וכתפיים. מונע Flat Head (שיטוח הראש מכיוון ששוכבים תמיד באותה תנוחה). אם בוכ/ה - זה בסדר! להמשיך בהדרגה ולהגיע ל-30 דקות ביום עד חודש 3.</div>
+        <div class="tip-text">מהשבוע הראשון - 3-5 פעמים ביום, 2-3 דקות. מחזק צוואר, גב וכתפיים. מונע Flat Head (שיטוח הראש מכיוון ששוכבים תמיד באותה תנוחה). אם בוכ/ה — מרימים, מרגיעים ומנסים שוב מאוחר יותר. להמשיך בהדרגה ולהגיע ל-30 דקות ביום עד חודש 3.</div>
       </div>
       <div class="tip-card">
         <div class="tip-icon">🗣️</div>
@@ -1777,7 +1777,7 @@
       <div class="tip-card" style="border-color: rgba(251,191,36,0.3);">
         <div class="tip-icon">⚠️</div>
         <div class="tip-title">לא לכפות ישיבה ועמידה</div>
-        <div class="tip-text">להושיב תינוק/ת לפני 6 חודשים עלול לפגוע בעמוד השדרה - עדיין לא יציב. בעמידה - להחזיק תינוק/ת זקוף/ה בידיים או לתת להיאחז בריהוט כשהוא/היא מושך/ת בעצמ/ה - בסדר גמור.</div>
+        <div class="tip-text">ישיבה לפני גיל 6 חודשים — לא מומלץ, עמוד השדרה עדיין לא בשל. כשהתינוק/ת מושך/ת את עצמו/ה לעמידה מרצון — הגוף מוכן ואפשר לאפשר זאת.</div>
       </div>
       <div class="tip-card" style="border-color: rgba(255,107,157,0.3);">
         <div class="tip-icon">🌀</div>
@@ -1851,7 +1851,7 @@
           { icon: '🫧', label: 'גזים ראשונים', text: 'הגזים מתחילים להופיע - מערכת העיכול מסתגלת לעבוד. עיסוי בטן עדין בכיוון השעון ("I Love You" - אותיות אנגליות על הבטן) עוזר. תנוחת "אופנוע" - רגליים מקופלות לכיוון הבטן - מוציאה גז ביעילות. שכיבה בתנוחת הנמר (הרך הנולד שוכב על הזרוע, פניו כלפי מטה) יכולה אף היא להקל מאוד על כאבי גזים.' },
           { icon: '👂', label: 'שמיעה', text: 'מגיב/ה לקולות חזקים בתגובת בהלה - עשוי/ה להרחיב עיניים, לפרוש ידיים או לבכות. זוהי תגובת הבהלה (Moro Reflex) שמעידה על מוח בריא. דיבור רך ועקבי הוא התרופה - הקול שלך יוצר תחושת ביטחון.' }
         ],
-        tip: 'Tummy Time (שכיבה על הבטן) - מהיום! 2-3 פעמים ביום, כל פעם 2-3 דקות. גם אם בוכ/ה - זה בסדר, להמשיך בהדרגה. שרירי צוואר חזקים = פחות Flat Head (שיטוח הראש מכיוון ששוכבים תמיד באותה תנוחה) = התפתחות מוטורית טובה יותר'
+        tip: 'Tummy Time (שכיבה על הבטן) - מהיום! 2-3 פעמים ביום, כל פעם 2-3 דקות. אם בוכ/ה — מרימים, מרגיעים ומנסים שוב מאוחר יותר. שרירי צוואר חזקים = פחות Flat Head (שיטוח הראש מכיוון ששוכבים תמיד באותה תנוחה) = התפתחות מוטורית טובה יותר'
       },
       3: {
         title: 'שבוע 3',
@@ -2175,7 +2175,7 @@
         S: r0[3] + frac * (r1[3] - r0[3])
       };
     } else {
-      // חודשים 3-12: אינטרפולציה לינארית בין חודשים לפי ימים/30.4375 — כמו משרד הבריאות
+      // חודשים 3-12: אינטרפולציה לינארית בין חודשים לפי ימים/30.4375
       const table = whoMonthly[measure][gender];
       const ageMonthsFrac = ageDays / 30.4375;
       const m0 = Math.min(12, Math.max(0, Math.floor(ageMonthsFrac)));
@@ -2197,7 +2197,7 @@
   }
 
   function calcAgeLabel(born, measureDate) {
-    const ageDays = Math.floor((measureDate - born) / 86400000);
+    const ageDays = Math.round((measureDate - born) / 86400000);
     if (ageDays < 0) return null;
     let months = (measureDate.getFullYear() - born.getFullYear()) * 12 + (measureDate.getMonth() - born.getMonth());
     if (measureDate.getDate() < born.getDate()) months--;
@@ -2295,7 +2295,7 @@
     const measureDate = measureRaw
       ? (() => { const [my,mm,md] = measureRaw.split('-').map(Number); return new Date(my,mm-1,md); })()
       : new Date();
-    const ageDays = Math.floor((measureDate - born) / 86400000);
+    const ageDays = Math.round((measureDate - born) / 86400000);
     if (ageDays < 0)   { showError('growthError','growthErrorMsg','תאריך הלידה לא יכול להיות בעתיד'); return; }
     if (ageDays > 400) { showError('growthError','growthErrorMsg','המחשבון מיועד לגיל 0-12 חודשים בלבד'); return; }
     const wLMS = getInterpolatedLMS(growthGender, 'weight', ageDays, born, measureDate);
