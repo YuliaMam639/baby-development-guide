@@ -271,8 +271,7 @@
     overflow: hidden;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    aspect-ratio: 1;
-    width: 100%;
+    height: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -287,8 +286,8 @@
   .card-tracker { background-image: url('1.מעקב.png'); }
   .card-growth  { background-image: url('2.גדילה.png'); }
   .card-tastes  { background-image: url('3.טעמים.png'); }
-  .card-tips    { background-image: url('4.טיפים.png'); background-position: right center; }
-  .card-about   { background-image: url('5.אודות.png'); background-position: right center; }
+  .card-tips    { background-image: url('4.טיפים.png'); }
+  .card-about   { background-image: url('5.אודות.png'); }
 
   /* ===== HERO SPARKLES ===== */
   #hero { position: relative; overflow: hidden; }
@@ -813,6 +812,9 @@
     .nav-links { display: none; }
     .hamburger { display: flex; }
     .hero-cards { grid-template-columns: repeat(3, 1fr); }
+    .hero-card { height: 130px; }
+    .card-tips  { background-position: right center; }
+    .card-about { background-position: right center; }
     .months-grid { grid-template-columns: 1fr; }
     .about-wrap { grid-template-columns: 1fr; }
     section { padding: 60px 1.25rem; }
