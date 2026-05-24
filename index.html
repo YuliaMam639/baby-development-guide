@@ -1300,10 +1300,10 @@
       <h3>מתי נולד/ה התינוק/ת שלך?</h3>
       <p>הכניסי תאריך לידה ונראה יחד מה קורה השבוע/החודש</p>
       <div class="date-input-row">
-        <div class="date-il-wrap" onclick="document.getElementById('hiddenDatePicker').showPicker()">
+        <div class="date-il-wrap">
           <input type="text" id="birthDateDisplay" placeholder="DD/MM/YYYY" readonly class="date-il-text">
           <span class="date-il-cal">📅</span>
-          <input type="date" id="hiddenDatePicker" min="2025-01-01" max="2026-12-31" style="position:absolute;opacity:0;pointer-events:none;width:0;height:0;">
+          <input type="date" id="hiddenDatePicker" min="2025-01-01" max="2026-12-31" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer;">
         </div>
         <button class="tracker-btn" onclick="calcAge()">הצגי לי!</button>
       </div>
@@ -1373,13 +1373,13 @@
           <!-- BIRTH DATE -->
           <div>
             <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-bottom:0.6rem;">תאריך לידה</div>
-            <div class="date-il-wrap" onclick="document.getElementById('growthHiddenDate').showPicker()" style="position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
+            <div class="date-il-wrap" style="position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
               <input type="text" id="growthDateDisplay" placeholder="DD/MM/YYYY" readonly
                 style="background:transparent; border:none; color:var(--text); font-size:0.95rem; font-family:inherit; cursor:pointer; outline:none; width:100%; pointer-events:none;">
               <span style="font-size:1.1rem; flex-shrink:0;">📅</span>
               <input type="date" id="growthHiddenDate" min="2024-01-01" max="2026-12-31"
                 onchange="updateGrowthDateDisplay()"
-                style="position:absolute; opacity:0; pointer-events:none; width:0; height:0;">
+                style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; cursor:pointer;">
             </div>
           </div>
 
@@ -1388,13 +1388,13 @@
             <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-bottom:0.6rem;">תאריך המדידה
               <span style="font-size:0.75rem; font-weight:400; margin-right:0.4rem; color:var(--text-muted); opacity:0.7;">(ברירת מחדל: היום)</span>
             </div>
-            <div class="date-il-wrap" onclick="document.getElementById('growthMeasureHidden').showPicker()" style="position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
+            <div class="date-il-wrap" style="position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:12px; padding:0.7rem 1rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
               <input type="text" id="growthMeasureDisplay" placeholder="DD/MM/YYYY" readonly
                 style="background:transparent; border:none; color:var(--text); font-size:0.95rem; font-family:inherit; cursor:pointer; outline:none; width:100%; pointer-events:none;">
               <span style="font-size:1.1rem; flex-shrink:0;">📅</span>
               <input type="date" id="growthMeasureHidden" min="2024-01-01" max="2026-12-31"
                 onchange="updateGrowthMeasureDisplay()"
-                style="position:absolute; opacity:0; pointer-events:none; width:0; height:0;">
+                style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; cursor:pointer;">
             </div>
             <div id="growthAgeDisplay" style="display:none; margin-top:0.5rem; font-size:0.82rem; color:var(--teal); text-align:center; font-weight:600;"></div>
           </div>
@@ -1930,7 +1930,7 @@
           { icon: '😄', label: 'צחוק בקול!', text: 'צוחק/ת בקול גדול וממש נוגע/ת בלב! מזהה את אמא מכל מרחק, ומגיב/ה לאנשים זרים בתגובת "עצירה-בדיקה-עניין" - מקפיא/ה תנועה, פוקח/ת עיניים, ואז - אם אוהב/ת מה שרואה - מגלגל/ת חיוך.' },
           { icon: '🎯', label: 'תנועה מכוונת', text: 'מושיט/ה יד בכוונה ברורה לחפצים ולא עוד רק במקרה! יכול/ה להחזיק צעצוע בשתי ידיים ולהעביר מיד ליד. מחקה/ת תנועות פנים שמוצגות לפניה/ו - הוצאת לשון, פתיחת פה, חיוך.' },
           { icon: '🗣', label: 'קולות מגוונים', text: 'מגרגר/ת, מקרקר/ת, ומנסה לחקות צלילים וביטויים שנשמעים מסביב. ה"שיחות" הופכות ארוכות יותר - עם הפסקות, ציפייה לתשובה, ותגובה לתגובתך. זהו לימוד השפה הראשוני: מילה, תגובה, חיוך - מחזור של תקשורת.' },
-          { icon: '😴', label: 'שינה', text: '14-17 שעות ביממה, 4-5 שינות יום. כאן מגיעה לפעמים רגרסיית שינה 4 חודשים - פתאום מתעורר/ת יותר בלילה. זה לא נסיגה: המוח עובר שינוי מבני אמיתי ומחזורי השינה משתנים להיות דומים לאלה של מבוגרים.' }
+          { icon: '😴', label: 'שינה', text: '14-16 שעות ביממה, 4-5 שינות יום. כאן מגיעה לפעמים רגרסיית שינה 4 חודשים - פתאום מתעורר/ת יותר בלילה. זה לא נסיגה: המוח עובר שינוי מבני אמיתי ומחזורי השינה משתנים להיות דומים לאלה של מבוגרים.' }
         ],
         tip: 'רגרסיית שינה 4 חודשים - הנפוצה ביותר ולעתים הקשה ביותר. המוח עובר ארגון מחדש, ומחזורי השינה משתנים לצמיתות. להישאר עקביים בשגרת ההשכבה - אותו סדר, אותה שעה. ככל שהשגרה עקבית יותר - כך ההסתגלות תהיה מהירה יותר.'
       },
@@ -2354,7 +2354,7 @@
     const [y, m, d] = raw.split('-').map(Number);
     birthDate = new Date(y, m - 1, d);
     const today = new Date();
-    const ageDays = Math.floor((today - birthDate) / 86400000);
+    const ageDays = Math.round((today - birthDate) / 86400000);
     if (ageDays < 0) { showError('trackerError','trackerErrorMsg','תאריך הלידה לא יכול להיות בעתיד'); return; }
     if (ageDays > 400) { showError('trackerError','trackerErrorMsg','המדריך הוא לגיל 0-12 חודשים'); return; }
 
@@ -2378,13 +2378,13 @@
     const newIndex = currentPeriodIndex + dir;
     if (newIndex < 0 || newIndex >= allPeriods.length) return;
     currentPeriodIndex = newIndex;
-    const ageDays = birthDate ? Math.floor((new Date() - birthDate) / 86400000) : 0;
+    const ageDays = birthDate ? Math.round((new Date() - birthDate) / 86400000) : 0;
     renderPeriod(ageDays);
   }
 
   function jumpToPeriod(index) {
     currentPeriodIndex = index;
-    const ageDays = birthDate ? Math.floor((new Date() - birthDate) / 86400000) : 0;
+    const ageDays = birthDate ? Math.round((new Date() - birthDate) / 86400000) : 0;
     renderPeriod(ageDays);
   }
 
